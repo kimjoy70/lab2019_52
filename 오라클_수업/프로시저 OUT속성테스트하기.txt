@@ -1,0 +1,10 @@
+sqlplus jsp/123@192.168.0.17:1521/orcl11
+
+variable msg varchar2(100);
+
+exec proc_emp_sal_update2(7369,:msg);
+
+print msg;
+
+
+--select * from emp
