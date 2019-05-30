@@ -1,0 +1,11 @@
+alter system set processes=1000 scope=spfile;
+
+alter system set sessions=1248 scope=spfile;
+
+show parameter sessions
+
+show parameter processes
+
+show parameter transactions
+
+Sys계정에서 한문장씩 실행시킴
