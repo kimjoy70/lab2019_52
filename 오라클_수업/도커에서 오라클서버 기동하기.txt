@@ -33,7 +33,7 @@ description : 포트 확인
 docker port oracle11g
 description : oracle11g 컨테이너 포트 확인
 
-docker exec -it oracle11g sqlplus
+docker exec -it oracle11g sqlplus hr/tiger@192.168.0.68:1521/orcl11g
 description : -it옵션은 콘솔에 결과 출력. sqlplus 실행
 컨테이너 내부 프로세스 실행
 system/oracle
