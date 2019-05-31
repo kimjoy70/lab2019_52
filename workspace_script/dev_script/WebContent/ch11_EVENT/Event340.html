@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//윈도우가 로드 될 때 - 실습실패
+    window.attachEvent('onload', function(){
+        var header = document.getElementById('my-header');
+        //이벤트를 연결합니다.
+        header.attachEvent('onclick', function(){ alert('클릭')});
+        header.attachEvent('onclick', function(){ alert('클릭')});
+        header.attachEvent('onclick', function(){ alert('클릭')});
+    });
+</script>
+</head>
+<body>
+    <h1 id="my-header">Click</h1>
+</body>
+</html>

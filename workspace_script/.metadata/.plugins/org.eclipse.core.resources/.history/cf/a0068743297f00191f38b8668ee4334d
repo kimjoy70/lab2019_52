@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>특정태그선택</title>
+</head>
+<body>
+<script type="text/javascript">
+	var xml = '';
+	xml +='<friends>';
+	xml +='	<friend>';
+	xml +='		<name>김동현</name>';
+	xml +='		<language>김동현</language>';
+</script>
+</body>
+</html>

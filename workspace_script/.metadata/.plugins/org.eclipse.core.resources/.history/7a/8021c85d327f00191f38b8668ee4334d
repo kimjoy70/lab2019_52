@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체의 속성 추가 </title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<!-- 
+	attr속성은 다음 세가지 형태로 가능
+	$(selector).attr(name, value);
+	$(selector).attr(name, function (index, attr){});
+	$(selector).attr(object);
+ -->
+	<img src="huga1.jpeg"/>
+	<img src="huga2.jpeg"/>
+	<img src="huga3.jpeg"/>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			$('img').attr('width', function (index) {
+				return (index + 1) * 150;
+			});
+		});
+	</script>
+</body>
+</html>

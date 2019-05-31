@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>특정태그선택</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	var xml = '';
+	xml +='<friends>';
+	xml +='	<friend>';
+	xml +='		<name>김동현</name>';
+	xml +='		<language>Ruby</language>';
+	xml +='	</friend>';
+	xml +='	<friend>';
+	xml +='		<name>김유신</name>';
+	xml +='		<language>Java</language>';
+	xml +='	</friend>';
+	xml +='	<friend>';
+	xml +='		<name>김승수</name>';
+	xml +='		<language>Javascript</language>';
+	xml +='	</friend>';
+	xml +='</friends>';
+	$(document).ready(function (){
+		var xmlDoc = $.parseXML(xml);
+		$(xmlDoc).find('friend').each(function (index){
+			var output = '';
+			output += '<div>';
+			output += '	<h1>'+$(this).find('name').text()+'</h1>');
+			output += '	<p>'+$(this).find('language').text()+'</p>');
+			output += '</div>';
+			//출력합니다.
+		document.body.innerHTML += output;
+		});
+	});
+</script>
+</body>
+</html>

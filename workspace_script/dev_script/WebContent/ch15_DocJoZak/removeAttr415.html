@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서객체의 클래스 속성 제거 </title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<h1 data-index="0">Header-0</h1>
+	<h1 data-index="1">Header-1</h1>
+	<h1 data-index="2">Header-2</h1>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			$('h1').removeAttr('data-index');
+		});
+	</script>
+	<p>
+	removeClass()메소드와 removeAttr() 메소드 모두 클래스의 속성을 제거할 수 있다.
+	하지만 removeAttr()사용하면 모든 클래스 속성이 한 번에 제거되는 것과 달리
+    removeClass()사용하면 여러개의 클래스 속성 중 선택적으로 제거할 수 있다.
+    </p>
+</body>
+</html>

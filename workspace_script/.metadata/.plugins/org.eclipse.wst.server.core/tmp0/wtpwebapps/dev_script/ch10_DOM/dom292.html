@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+    window.onload = function(){
+        var img = document.createElement('img');
+        //img.getAttribute(name)객체의 속성을 가져옴.
+        img.setAttribute('src','flower.jpg');//객체의 속성을 지정함.
+        img.setAttribute('width',500);
+        img.setAttribute('height',350);
+        //img.setAttribute('data-property',350);
+        //노드를 연결합니다.
+        document.body.appendChild(img);
+    }
+</script>
+</body>
+</html>

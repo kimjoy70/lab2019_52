@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 삽입 -append</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+$(A).appendTo(B) A를 B의 뒷부분에 추가합니다.
+$(A).prependTo(B) A를 B의 부분에 추가합니다.
+$(A).insertAfter(B) A를 B의 에 추가합니다.
+$(A).insertBefore(B) A를 B의 앞에 추가합니다.
+</body>
+</html>

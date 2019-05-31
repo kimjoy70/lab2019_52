@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+	.high-light{
+		background:yellow;
+	}
+	.high-light1-0 { background:yellow;}
+	.high-light1-1 { background:orange;}
+	.high-light1-2 { background:blue;}
+	.high-light1-3 { background:green;}
+	.high-light1-4 { background:red;}
+</style>
+</head>
+<body>
+ctrl+alt -> 맥에서는  왼쪽 command+오른쪽option
+<script>
+	$(document).ready(function (){
+		//$('h1').addClass('high-light');
+		$('h1').each(function (index, item){
+			//$(item).addClass('high-light-' + index);
+			$(this).addClass('high-light1-' + index);			
+		});
+	});
+</script>
+<h1>item - 0</h1>
+<h1>item - 1</h1>
+<h1>item - 2</h1>
+<h1>item - 3</h1>
+<h1>item - 4</h1>
+</body>
+</html>

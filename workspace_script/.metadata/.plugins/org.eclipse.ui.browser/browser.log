@@ -1,0 +1,11 @@
+
+5월 12, 2019 07:47:27.65 NEW SESSION
+5월 12, 2019 07:47:27.65 [8076:18328:0512/074727.643:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5월 12, 2019 07:47:28.46 [8076:5040:0512/074728.465:ERROR:socket_stream.cc(219)] Closing stream with result -2
+5월 12, 2019 07:47:33.33 [8076:5040:0512/074733.339:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+5월 12, 2019 11:43:26.19 [8076:18328:0512/114326.195:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5월 12, 2019 11:43:26.49 [8076:5040:0512/114326.491:ERROR:socket_stream.cc(219)] Closing stream with result -2
+5월 12, 2019 11:43:31.26 [8076:5040:0512/114331.264:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+5월 12, 2019 22:51:45.54 [8076:5040:0512/225145.545:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -105
+5월 12, 2019 22:51:46.44 [8076:18328:0512/225145.550:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5월 12, 2019 22:51:51.37 [8076:5040:0512/225151.379:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21

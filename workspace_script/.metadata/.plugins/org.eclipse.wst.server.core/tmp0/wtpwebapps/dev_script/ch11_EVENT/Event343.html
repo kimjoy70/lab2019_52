@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+    window.onload = function(){
+        var header = document.getElementById('my-header');
+/*         header.addEventListener('click', function(){
+            this.innerHTML += '+';
+        }); */
+        if(header.attachEvent){
+        	var handler = function(){
+        		window.event.srcElement.style.color = 'red';
+        		window.event.srcElement.detachEvent('onclick',handler);
+        	};
+        	header.attachEvent('onclick', handler);
+        }
+        else{
+        	var handler = function(){
+        		this.style.color = 'red';
+        		this.removeEventListener('click',handler);
+        	};
+        	header.addEventListener('click', handler);        	
+        	header.addEventListener('click', handler);        	
+        }
+    };
+</script>
+</head>
+<body>
+    <h1 id="my-header">Click</h1>
+</body>
+</html>
