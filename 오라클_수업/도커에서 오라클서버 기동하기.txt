@@ -1,0 +1,63 @@
+도커에서 오라클 서버 기동하기
+
+도커 실행
+Spotlight -> Terminal
+
+Terminal CLI 환경에서 도커 명령어로 제어해보자.
+docker rm oracle11g
+description : 해당 이름의 도커 이미지를 삭제합니다.
+
+docker pull sath89/oracle-xe-11g
+description : 도커 이미지를 가져옵니다.
+
+docker run --name oracle11g -d -p 8080:8080 -p 1521:1521 -v ~/my/oracle/data:/u01/app/oracle sath89/oracle-xe-11g
+description : docker run (도커 컨테이너를 생성 혹은 실행)
+--name 옵션으로 컨테이너 이름을 지정
+-d  분리된 컨테이너. 백그라운드에서 실행하는 옵션
+-p 플래그를 사용하여 호스트포트와 컨테이너포트를 매핑시킵니다. (호스트포트:컨테이너포트)
+-v 옵션으로 데이터를 외부에 저장해 공유할 수 있게 해줍니다.
+호스트디렉터리:컨테이너디렉터리
+(volume의 약자. 이렇게 하면 컨테이너를 종료해도 데이터가 유지됩니다.)
+마지막으로 도커허브에 올라와 있는 빌드 이미지 이름을 입력합니다.
+
+
+
+기타 참고 명령어
+docker logs -f oracle11g
+description : 컨테이너 log출력상황을 볼 수 있다.
+
+lsof -PiTCP -sTCP:LISTEN
+description : 포트 확인
+docker port oracle11g
+description : oracle11g 컨테이너 포트 확인
+
+docker exec -it oracle11g sqlplus
+description : -it옵션은 콘솔에 결과 출력. sqlplus 실행
+컨테이너 내부 프로세스 실행
+system/oracle
+
+docker ps
+description : 컨테이너 상태 확인
+
+docker stats oracle11g
+description : 컨테이너 상태 확인
+CONTAINER : 컨테이너명
+CPU % : CPU 사용률
+MEM USAGE/LIMIT : 메모리 사용량, 컨테이너에서 사용할 수 있는 메모리 제한
+MEM % : 메모리 사용률
+NET I/O : 네트워크 I/O
+
+docker stop oracle11g
+description : 컨테이너 중지
+docker restart oracle11g
+description : 컨테이너 재시작
+docker pause oracle11g
+description : 컨테이너 일시정지
+docker unpause oracle11g
+description : 컨테이너 일시정지 재시작
+
+docker rmi sath89/oracle-xe-11g
+description : 도커 이미지 삭제
+
+docker images
+description : 도커 이미지 리스트 출력
