@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+        	/*
+        	on메소드는 현재 존재하는 태그 h1에만 이벤트를 연결하기 때문	에 추가 되는 태그에는 이벤트가 안먹힘.
+        	이러한 경우 상위태그 wrap태그에 이벤트를 연결하고 h1태그를 클릭했을 때를 검출해야 함.
+        	*/
+            $('#wrap').on('click', 'h1', function () {
+                var length = $('h1').length;
+                var targetHTML = $(this).html();
+                $('#wrap').append('<h1>' + length + ' - ' + targetHTML + '</h1>');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Header</h1>
+    </div>
+</body>
+</html>
