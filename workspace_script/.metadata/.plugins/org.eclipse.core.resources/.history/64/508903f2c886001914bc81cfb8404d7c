@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- 
+	box-sizing은 border까지 width에 포
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 레이아웃 </title>
+<style type="text/css">
+	body{
+		margin: 0;
+		font-size: 2em;
+	}
+	h1, p {
+		margin: 0;
+	}
+	.container {
+	
+	}
+	.item {
+	
+	}
+	.item-a {
+		background-color: yellow;
+	}
+	.item-b {
+		background-color: yellowgreen;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<section class="item item-a">
+			<h1>Section a</h1>
+		</section>
+		<section class="item item-b">
+			<h1>Section b</h1>
+		</section>
+	</div>
+</body>
+</html>

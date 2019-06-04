@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- 
+	box-sizing은 border까지 width에 포
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 레이아웃 </title>
+</head>
+<body>
+	<div class="container">
+		<section class="item item-a">
+			<h1>Section a</h1>
+		</section>
+		<section class="item item-b">
+			<h1>Section b</h1>
+		</section>
+	</div>
+</body>
+</html>

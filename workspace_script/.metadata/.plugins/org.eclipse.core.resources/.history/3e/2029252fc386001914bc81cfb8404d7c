@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--  
+	span태그는 폭과 높이를 주어도 먹지 않는다.
+	자체 크기를 가지지 않기때문에 크기를 지정할 수 없다.
+	블록요소는 크기를 변경할 수 있다.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인라인요소와 블록요</title>
+<style type="text/css">
+	div {
+		display: block;
+		width: 300px;
+		height:200px;
+		background-color: red
+	}
+	span {
+		display: inline;
+		width: 200px;
+		height: 500px;
+		background-color: blue;
+	}
+	span#sp_1 {
+		display: inline-block;
+		width: 200px;
+		height: 500px;
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+<div>Div</div>
+<span>Span</span>
+<span id="sp_1">Span_1</span>
+<h1>h1</h1>
+</body>
+</html>

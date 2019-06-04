@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인라인요소와 블록요</title>
+<style type="text/css">
+	div {
+		display: block;
+		width: 300px;
+		height:200px;
+		background-color: red
+	}
+	span {
+		display: inline;
+		width: 200px;
+		height: 500px;
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+<div>Div</div>
+<span>Span</span>
+</body>
+</html>

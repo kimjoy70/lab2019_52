@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>inline-block 과 float의 차</title>
+<style type="text/css">
+	body {
+        background-color: #222222;
+    }
+    .grid {
+        width: 500px;
+        margin: 0 auto;
+        background-color: white;
+    }
+    .grid-item {
+        width: 100px;
+        height: 100px;
+        /* float	를 사용하면 부모의 높이가 0이되는 문제가 있다. */
+        float: left;
+    }
+    .grid-item.a { background-color: orange; }
+    .grid-item.b { background-color: orangered; }
+    .grid-item.c { background-color: red; }
+</style>
+</head>
+<body>
+    <div>
+              Apple
+    		  Bannana
+    		  Cherry
+    </div>
+    <div class="grid">
+        <div class="grid-item a">a</div>
+        <div class="grid-item b">b</div>
+        <div class="grid-item c">c</div>
+        <div class="content">wow wow wow wow wow wowwow wow wowwow wow wowwow wow wow
+                   wow wow wowwow wow wowwow wow wowwow wow wowwow wow wowwow wow wow
+                   wow wow wowwow wow wowwow wow wowwow wow wowwow wow wowwow wow wow
+        </div>
+        ypgab
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+        background-color: #222222;
+    }
+    .grid {
+        width: 500px;
+        margin: 0 auto;
+        background-color: white;
+    }
+    .grid-item {
+        width: 100px;
+        height: 100px;
+    }
+    .grid-item.a { background-color: orange; }
+    .grid-item.b { background-color: orangered; }
+    .grid-item.c { background-color: red; }
+</style>
+</head>
+<body>
+
+</body>
+</html>

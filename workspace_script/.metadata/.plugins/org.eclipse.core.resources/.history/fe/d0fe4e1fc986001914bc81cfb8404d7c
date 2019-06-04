@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- 
+	box-sizing은 border까지 width에 포
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 레이아웃 </title>
+<style type="text/css">
+	body{
+		margin: 0;
+		font-size: 2em;
+	}
+	h1, p {
+		margin: 0;
+	}
+	.container {
+	
+	}
+	.item {
+	
+	}
+	.item-a {
+		background-color: yellow;
+	}
+	.item-b {
+		background-color: yellowgreen;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<section class="item item-a">
+			<h1>Section a</h1>
+			<p>
+			CSS는 1994년에 버너스 리의 동료인 하콤 비움리(Hakon Wium Lie)가 처음 제안하여 도입되었다. 스타일 정보를 페이지 내용과 별도로 
+			저장하여 내용에 영향을 주지 않고 쉽게 스타일을 조정하자는 것이 주된 아이디어였다. 실제로 HTML은 전혀 손대지 않고 CSS만 변경하여 
+			웹페이지의 모습과 레이아웃을 완전히 바꿀 수 있다.
+			</p>
+		</section>
+		<section class="item item-b">
+			<h1>Section b</h1>
+			<p>
+			
+			</p>
+		</section>
+	</div>
+</body>
+</html>
