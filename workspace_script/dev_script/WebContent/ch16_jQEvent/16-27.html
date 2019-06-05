@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+        	/*
+        		코드를 실행하고 h1태그를 누르면 h1태그가 추가됨. 그러나 새로 생긴 h1 태그에는 이벤트가 안일어남.
+        	*/
+            $('h1').on('click', function () {
+                var length = $('h1').length;
+                var targetHTML = $(this).html();
+                $('#wrap').append('<h1>' + length + ' - ' + targetHTML + '</h1>');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Header</h1>
+    </div>
+</body>
+</html>

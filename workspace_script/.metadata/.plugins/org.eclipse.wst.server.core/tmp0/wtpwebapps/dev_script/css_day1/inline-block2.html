@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>inline-block 과 float의 차</title>
+<style type="text/css">
+	body {
+        background-color: #222222;
+    }
+    .grid {
+        width: 500px;
+        margin: 0 auto;
+        background-color: white;
+        text-align: center;
+    }
+    .grid-item {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .grid-item.a { background-color: orange; }
+    .grid-item.b { background-color: orangered; }
+    .grid-item.c { background-color: red; }
+</style>
+</head>
+<body>
+    <div></div>
+    <div class="grid">
+        <div class="grid-item a"></div>
+        <div class="grid-item b"></div>
+        <div class="grid-item c"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 이벤트를 연결합니다.
+            $('h1').click(function () {
+                // 출력합니다.
+                $(this).html('CLICK');
+                alert('이벤트가 발생했습니다.');
+
+                // 이벤트를 제거합니다.
+                /*
+                1. $(selector).off(): 해당 문서 객체와 관련된 모든 이벤트 제거 
+                2. $(selector).off(eventName) : 해당 문서 객체의 특정 이벤트와 관련된 모든 이벤트 제거 
+                3. $(selector).off(eventName, function) :특정 이벤트 리스너를 제거한다.
+                */
+                $(this).off();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>
