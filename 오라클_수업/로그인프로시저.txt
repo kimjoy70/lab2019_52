@@ -13,3 +13,14 @@ begin
     end if;
     
 end;
+
+SQL> variable r_name varchar2(400);
+SQL> exec proc_login2019('haha','123',:r_name);
+
+PL/SQL 처리가 정상적으로 완료되었습니다.
+
+SQL> print r_name;
+
+R_NAME
+--------------------------------------------------------------------------------
+아이디가 존재하지 않습니다.
