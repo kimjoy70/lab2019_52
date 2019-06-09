@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		#parent{
+		/* 아래보더 속성을 주석 처리하면 마진 겹칩현상이 발생함.
+			부모태그가 시각적인  효과가 없는 투명상태가 되면 부모태그와 자식태그의 마진값이 합쳐지는 현상 발생함.
+			부모태그 마진값과 자식태그 마진값 중 큰 마진값이 사용된다.
+		 */
+			/*border:1px solid tomato;*/
+			margin-top:100px;
+		}
+		#child{
+			background-color:powderblue;
+			margin-top:50px;
+		}
+	</style>
+</head>
+<body>
+	<div id="parent">
+		<div id="child">
+			Hello World
+		</div>
+	</div>
+</body>
+</html>
