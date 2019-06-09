@@ -1,0 +1,26 @@
+create or replace procedure proc_login2019(p_id IN varchar2, p_pw IN varchar2, r_name OUT varchar2)
+is
+    r_status number;
+begin
+    select nvl((select 1 from member2019 where mem_id=p_id),-1) into r_status
+    from dual;
+    if r_status=1 then
+        select nvl((select mem_name||'님 환영합니다' from member2019 
+                     where mem_id=p_id and mem_pw=p_pw),'비밀번호가 틀립니다') into r_name
+          from dual;
+    elsif r_status=-1 then
+        r_name:='아이디가 존재하지 않습니다.';      
+    end if;
+    
+end;
+
+SQL> variable r_name varchar2(400);
+SQL> exec proc_login2019('haha','123',:r_name);
+
+PL/SQL 처리가 정상적으로 완료되었습니다.
+
+SQL> print r_name;
+
+R_NAME
+--------------------------------------------------------------------------------
+아이디가 존재하지 않습니다.
