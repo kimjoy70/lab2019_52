@@ -4,15 +4,24 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 	<style>
+        /*
+        시각적인 요소가 없다면 위 마진과 아래 마진 사이에 큰 값이 마진값이 된다.
+        */
 		#empty{
-			background-color:powderblue;
 			margin-top:50px;
+            margin-bottom: 100px;
+            border: 1px solid tomato;
 		}
+		#normal{
+			background-color: powderblue;
+            margin-top: 100px;
+		}
+
 	</style>
 </head>
 <body>
     <!-- shift+option+화살표 아래 하면 복제 -->
 	<div id="empty"></div>
-	<div id="normal"></div>
+	<div id="normal">normal</div>
 </body>
 </html>
