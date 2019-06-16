@@ -6,6 +6,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
     <script>
         function choHangul(str){
             //alert("str:"+str);
@@ -49,5 +50,46 @@
     </script>
     <input type="text" id="word" name="word" onkeyup="b_search()">
     <button onkeyup="b_search()">조회</button>
+=======
+<script>
+  function choHangul(str){
+  //alert("str:"+str);
+  cho = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
+  result ="";
+  for(i=0;i<str.length;i++){
+  //alert("길이:"+str.length);
+  code = str.charCodeAt(i)-44032;
+  //alert("code:"+code);
+  if(code>-1 && code<11172) result += cho[Math.floor(code/588)];
+  }
+  return result;
+  }
+  function b_search(){
+  //alert("vb_title : "+$("#sb_title").val());
+  var vb_title = $("#sb_title").val().toUpperCase();
+  var choKeyword = choHangul($("#sb_title").val());
+  //초성 검색 구분
+  if(vb_title!="" && choKeyword==""){
+  choKeyword = vb_title;
+  choMode ="Y";
+  }
+  else{
+  choKeyword = vb_title;
+  choMode="N";
+  }
+  //alert("제목:"+$("#sb_title").val());
+  //var vb_title = $("#sb_title").val();
+  var vb_author = $("#sb_author").val();
+  var vb_date = $("#sb_date").val();
+  alert("choMode: "+choMode+"choKeyword: "+choKeyword);
+$("#tb_bookList").datagrid({
+url:"./getBookList.bk?b_title="+choKeyword
+  +"&b_author="+vb_author
+  +"&b_date="+vb_date
+  +"&choMode="+choMode
+});
+  }
+</script>
+>>>>>>> e48245762dcd6420450722f34a3221ff56f94d2e
 </body>
 </html>
