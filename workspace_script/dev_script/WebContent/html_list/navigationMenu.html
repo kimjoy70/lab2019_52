@@ -2,18 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- 
-부트 스트랩은 먼저 모바일을 개발하여 모바일 장치의 코드를 최적화한 다음 CSS미디어 쿼리를 사용하여 필요에 따라 구성 요소를 확장하는 전략입니다. 
-모든 장치에 대한 올바른 렌더링 및 터치 줌을 보장하려면 반응성 뷰 포트 메타 데이터 태그를 사용한다.
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>부트스트랩 메뉴구성하</title>
 <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container-fruid">
             <div class="navbar-header">
             <!-- 햄버거 버튼 추가 시작  -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -56,11 +50,7 @@
             </div>
         </div>
     </nav>
-    <!-- contents 시작 
- 컨테이너는 부트 스트랩에서 가장 기본적인 레이아웃 요소이며, 기본 그리드 시스템을 사용할 때 필요합니다. 
- 반응성이 뛰어난 고정 너비의 컨테이너 중에서 선택(즉,max-width각 중단점에 대한 변경 사항 또는 유체 너비(즉,100%항상 넓게)
-용기는 중첩될 수 있지만 대부분의 레이아웃에는 중첩된 용기가 필요하지 않습니다.   
-     -->
+    <!-- contents 시작  -->
     <div class="container">
     	<div class="row">
     		<div class="col-sm-4"><h4>코딩놀이의 특징</h4></div>
@@ -75,8 +65,9 @@
         <br>
         <div class="row">
         <!-- 12개 범위에서 맞추어 준다. -->
-            <div class="col-sm-9" style="text-align: center;"><h5>회사소개 | 회사연혁 | 회원가입 | 오시는길 </h5></div>
-            <div class="col-sm-3" style="text-align: center;"><h5>Copyright &copy;2019&nbsp;&nbsp;by&nbsp;김유신</h5></div>
+            <div class="col-sm-2">&nbsp;&nbsp;</div>
+            <div class="col-sm-8" style="text-align: center;"><h5>회사소개 | 회사연혁 | 회원가입 | 오시는길 </h5></div>
+            <div class="col-sm-2" style="text-align: center;"><h5>Copyright &copy; 2019&nbsp;&nbsp; by &nbsp;김유신</h5></div>
 
         </div>
     </div>
