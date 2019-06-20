@@ -1,0 +1,14 @@
+package com.basic;
+
+public class ThrowTest {
+
+	public static void main(String[] args) {
+		String smm = args[0];
+		int imm = Integer.parseInt(smm);
+		if(imm<0 || imm>11) {
+			throw new IllegalArgumentException("달은 0과 1사이의 값이어야 합니다.");
+		}
+		System.out.println("여기 ");
+	}
+
+}
