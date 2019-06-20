@@ -1,0 +1,18 @@
+package com.instance;
+
+import javax.swing.JFrame;
+
+public class JFrameTest {
+	JFrame jf = null;
+	public JFrameTest() {
+		initDisplay();
+	}
+	public void initDisplay() {
+		jf.setSize(500, 400);
+		jf.setVisible(true);
+	}
+	public static void main(String[] args) {
+		new JFrameTest();
+	}
+
+}
