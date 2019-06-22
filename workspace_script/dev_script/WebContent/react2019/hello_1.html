@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<!-- 
+    첫번째와 두번째는 CDN를 리액트를 사용하기 위한 리액트의 핵심 라이브러리 입니다.
+ -->
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<!-- 
+    아래는 CDN은 바벨(Babel)이라는 자바스크립트 컴파일러로 JSX를 자바스크립트 파일로 변환하기 위해 추가했습니다.
+ -->
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+<!-- 
+    script type에 text/babel를 명시해주면 바벨이 알아서 JSX를 JS로 변환시킵니다.
+ -->
+<script type="text/babel">
+    ReactDOM.render(
+        <h1>Master Test</h1>,
+        document.body
+    );
+</script>
+</body>
+</html>
