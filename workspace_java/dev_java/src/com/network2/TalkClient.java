@@ -1,15 +1,16 @@
+
 package com.network2;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.Image;
-import java.awt.ScrollPane;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.net.Socket;
 
 import javax.swing.ImageIcon;
@@ -21,7 +22,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.colorchooser.ColorSelectionModel;
@@ -34,15 +34,15 @@ import javax.swing.text.StyledDocument;
 
 import javax.swing.text.DefaultStyledDocument;
 import javax.swing.text.StyleContext;
-public class TalkClient extends JFrame implements ActionListener{
+public class TalkClient extends JFrame implements ActionListener, Serializable{
 	Socket mySocket = null;
 	ObjectInputStream ois  = null;
 	ObjectOutputStream oos = null;	
 	//JTextArea jta_display 	= new JTextArea();
-	//JTextPane¿¡ ½ºÅ¸ÀÏÀ» Àû¿ëÇÏ±â À§ÇØ¼­´Â ½ºÅ¸ÀÏÀ» Áö¿øÇÏ´Â Å¬·¡½º¸¦ Ãß°¡·Î ¸ÅÇÎÇÏ¿©
-	//»ç¿ëÇØ¾ß ÇÑ´Ù.
-	//¿Ö³ÄÇÏ¸é ¹®ÀÚÀÇ °æ¿ìµµ ±×¸®´Â °³³äÀ¸·Î ÀÌÇØÇØ¾ß ÇÏ¹Ç·Î ±Û²ÃÀ» º¯°æ½ÃÅ°°Å³ª ±ÛÅ©±â¸¦ º¯°æÇÏ´Â
-	//ºÎºĞµµ ¹İ¿µÇÏ·Á¸é ²À ÇÊ¿ä
+	//JTextPaneì— ìŠ¤íƒ€ì¼ì„ ì ìš©í•˜ê¸° ìœ„í•´ì„œëŠ” ìŠ¤íƒ€ì¼ì„ ì§€ì›í•˜ëŠ” í´ë˜ìŠ¤ë¥¼ ì¶”ê°€ë¡œ ë§¤í•‘í•˜ì—¬
+	//ì‚¬ìš©í•´ì•¼ í•œë‹¤.
+	//ì™œëƒí•˜ë©´ ë¬¸ìì˜ ê²½ìš°ë„ ê·¸ë¦¬ëŠ” ê°œë…ìœ¼ë¡œ ì´í•´í•´ì•¼ í•˜ë¯€ë¡œ ê¸€ê¼´ì„ ë³€ê²½ì‹œí‚¤ê±°ë‚˜ ê¸€í¬ê¸°ë¥¼ ë³€ê²½í•˜ëŠ”
+	//ë¶€ë¶„ë„ ë°˜ì˜í•˜ë ¤ë©´ ê¼­ í•„ìš”
 	StyledDocument sd_display = 
 						new DefaultStyledDocument(
 								new StyleContext());
@@ -54,21 +54,21 @@ public class TalkClient extends JFrame implements ActionListener{
 	JScrollPane jsp_display 
 				= new JScrollPane(jtp_display,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 						        , JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-	JPanel jp_first 		= new JPanel();//±âÁ¸ ¹èÄ¡ÇÑ ÄÄÆ÷³ÍÆ® ´ã±â
+	JPanel jp_first 		= new JPanel();//ê¸°ì¡´ ë°°ì¹˜í•œ ì»´í¬ë„ŒíŠ¸ ë‹´ê¸°
 	JPanel jp_first_south   = new JPanel();//BorderLayout
 	JTextField jtf_msg 		= new JTextField();//Center
-	JButton jbtn_send 		= new JButton("Àü¼Û");//East
-	JPanel jp_second 		= new JPanel();//»õ·Î Ãß°¡ÇÏ´Â ÄÄÆ÷³ÍÆ® ´ã±â-JTable - Center:JTable, South:¹öÆ° 6°³
-	JPanel jp_second_south 	= new JPanel();//»õ·Î Ãß°¡ÇÏ´Â ÄÄÆ÷³ÍÆ® ´ã±â-JButton 6°³ - GridLayout(3,2)
+	JButton jbtn_send 		= new JButton("ì „ì†¡");//East
+	JPanel jp_second 		= new JPanel();//ìƒˆë¡œ ì¶”ê°€í•˜ëŠ” ì»´í¬ë„ŒíŠ¸ ë‹´ê¸°-JTable - Center:JTable, South:ë²„íŠ¼ 6ê°œ
+	JPanel jp_second_south 	= new JPanel();//ìƒˆë¡œ ì¶”ê°€í•˜ëŠ” ì»´í¬ë„ŒíŠ¸ ë‹´ê¸°-JButton 6ê°œ - GridLayout(3,2)
 	JButton jbtn_whisper	= new JButton("1:1");//East
-	JButton jbtn_change		= new JButton("´ëÈ­¸íº¯°æ");//East
-	JButton jbtn_fontColor	= new JButton("±ÛÀÚ»ö");//East
-	JButton jbtn_emoticon	= new JButton("ÀÌ¸ğÆ¼ÄÜ");//East
+	JButton jbtn_change		= new JButton("ëŒ€í™”ëª…ë³€ê²½");//East
+	JButton jbtn_fontColor	= new JButton("ê¸€ììƒ‰");//East
+	JButton jbtn_emoticon	= new JButton("ì´ëª¨í‹°ì½˜");//East
 	JButton jbtn_blank 		= new JButton("");//East
-	JButton jbtn_exit 		= new JButton("Á¾·á");//East
-	String cols[] = {"´ëÈ­¸í"};
+	JButton jbtn_exit 		= new JButton("ì¢…ë£Œ");//East
+	String cols[] = {"ëŒ€í™”ëª…"};
 	String data[][] = new String[0][1];
-	//DataSetÀÇ ¿ªÇÒÀ» ¼öÇàÇÏ´Â DefaultTableModelÀ» ¸ÕÀú ¼±¾ğÇÏ°í ÃÊ±âÈ­ ÇÏ±â
+	//DataSetì˜ ì—­í• ì„ ìˆ˜í–‰í•˜ëŠ” DefaultTableModelì„ ë¨¼ì € ì„ ì–¸í•˜ê³  ì´ˆê¸°í™” í•˜ê¸°
 	DefaultTableModel dtm_nick = new DefaultTableModel(data,cols); 
 	JTable 			  jtb_nick = new JTable(dtm_nick);
 	JScrollPane 	  jsp_nick = new JScrollPane(jtb_nick
@@ -78,83 +78,83 @@ public class TalkClient extends JFrame implements ActionListener{
 	String ip = "127.0.0.1";
 	int port = 3001;
 	String nickName = null;
-	//»ö»ó Á¤º¸¸¦ ³Ñ±æ ¶§ Color°´Ã¼¸¦ »ç¿ëÇØ¾ßÇÏÁö¸¸ Åë½Å½Ã Object¸¦ ³Ñ±æ ¼ö ¾ø¾î¼­
-	//String Å¸ÀÔÀ¸·Î »ö»ó°ªÀ» ³Ñ°Ü¾ß ÇÔ.
+	//ìƒ‰ìƒ ì •ë³´ë¥¼ ë„˜ê¸¸ ë•Œ Colorê°ì²´ë¥¼ ì‚¬ìš©í•´ì•¼í•˜ì§€ë§Œ í†µì‹ ì‹œ Objectë¥¼ ë„˜ê¸¸ ìˆ˜ ì—†ì–´ì„œ
+	//String íƒ€ì…ìœ¼ë¡œ ìƒ‰ìƒê°’ì„ ë„˜ê²¨ì•¼ í•¨.
 	String fontColor = "0";	
 	JFrame jf_fontColor = null;
 	JTableHeader jth_nick = jtb_nick.getTableHeader();
 	PictureMessage  pm = new PictureMessage(this);
 	public TalkClient() {
-		nickName = JOptionPane.showInputDialog("³ÊÀÇ ´ëÈ­¸íÀº?");
+		nickName = JOptionPane.showInputDialog("ë„ˆì˜ ëŒ€í™”ëª…ì€?");
 		initDisplay();
 		try {
-			//Åë½ÅÀº Áö¿¬µÉ ¼ö ÀÖ´Ù.-wait - try...catchÇØ¾ßÇÔ.
+			//í†µì‹ ì€ ì§€ì—°ë  ìˆ˜ ìˆë‹¤.-wait - try...catchí•´ì•¼í•¨.
 			mySocket = new Socket(ip,port);
 			oos = new ObjectOutputStream
 					(mySocket.getOutputStream());			
 			ois = new ObjectInputStream
 						(mySocket.getInputStream());
-			//100|³ªÃÊº¸
+			//100|ë‚˜ì´ˆë³´
 			oos.writeObject(Protocol.ROOM_IN
 					       +Protocol.seperator+nickName
                 		   +Protocol.seperator+fontColor);
 			TalkClientThread tct = new TalkClientThread(this);
-			tct.start();//TalkClientThreadÀÇ runÈ£ÃâµÊ.-Äİ¹éÇÔ¼ö
+			tct.start();//TalkClientThreadì˜ runí˜¸ì¶œë¨.-ì½œë°±í•¨ìˆ˜
 		} catch (Exception e) {
-			System.out.println(e.toString());//¿¡·¯ ÈùÆ®¹® Ãâ·Â.
+			System.out.println(e.toString());//ì—ëŸ¬ íŒíŠ¸ë¬¸ ì¶œë ¥.
 		}
 	}
-	//Á¾·áÀÇ °æ¿ì ¿©·¯ ÀÌº¥Æ® ¿¡¼­ Àç»ç¿ëÇÒ ¼ö ÀÖÀ¸¹Ç·Î Àç»ç¿ë °¡´ÉÇÏµµ·Ï ¸Ş¼Òµå·Î ±¸ÇöÇØ º¼°Í.
+	//ì¢…ë£Œì˜ ê²½ìš° ì—¬ëŸ¬ ì´ë²¤íŠ¸ ì—ì„œ ì¬ì‚¬ìš©í•  ìˆ˜ ìˆìœ¼ë¯€ë¡œ ì¬ì‚¬ìš© ê°€ëŠ¥í•˜ë„ë¡ ë©”ì†Œë“œë¡œ êµ¬í˜„í•´ ë³¼ê²ƒ.
 	public void exitChat() {
 		try {
 			oos.writeObject(500+"|"+this.nickName);
 		} catch (Exception e) {
-			//stack¸Ş¸ğ¸® ¿µ¿ª¿¡ ½×¿©ÀÖ´Â ¿¡·¯ ¸Ş½ÃÁöµéÀ» ¼øÂ÷ÀûÀ¸·Î Ãâ·ÂÇØÁÖ°í ¶óÀÎ¹øÈ£¿Í ¿¡·¯ ¸Ş½ÃÁö Ãâ·Â
-			e.printStackTrace();//²À ±â¾ïÇÏÀÚ.- ÈùÆ®¸¦ Ãâ·ÂÇÏ´Â ¸Ş¼ÒµåÀÎµ¥ ÀÌ·Â±îÁöµµ Ãâ·Â, ¶óÀÎ¹øÈ£µµ °°ÀÌ Ãâ·Â
+			//stackë©”ëª¨ë¦¬ ì˜ì—­ì— ìŒ“ì—¬ìˆëŠ” ì—ëŸ¬ ë©”ì‹œì§€ë“¤ì„ ìˆœì°¨ì ìœ¼ë¡œ ì¶œë ¥í•´ì£¼ê³  ë¼ì¸ë²ˆí˜¸ì™€ ì—ëŸ¬ ë©”ì‹œì§€ ì¶œë ¥
+			e.printStackTrace();//ê¼­ ê¸°ì–µí•˜ì.- íŒíŠ¸ë¥¼ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œì¸ë° ì´ë ¥ê¹Œì§€ë„ ì¶œë ¥, ë¼ì¸ë²ˆí˜¸ë„ ê°™ì´ ì¶œë ¥
 		}
 	}
 	public void initDisplay() {
-		//ÀÌ¸ğÆ¼ÄÜ 
+		//ì´ëª¨í‹°ì½˜ 
 		jbtn_emoticon.addActionListener(this);
-		//´ëÈ­¸í º¯°æ ¹öÆ° ÀÌº¥Æ® ¸ÅÇÎ - Äİ¹éÇÔ¼ö(actionPerformed)°¡ È£ÃâµÊ
+		//ëŒ€í™”ëª… ë³€ê²½ ë²„íŠ¼ ì´ë²¤íŠ¸ ë§¤í•‘ - ì½œë°±í•¨ìˆ˜(actionPerformed)ê°€ í˜¸ì¶œë¨
 		jbtn_change.addActionListener(this);
 		jbtn_send.setBorderPainted(false);
 		jbtn_send.setFocusPainted(false);
 		i = Toolkit.getDefaultToolkit().getImage(imgPath+"googlelogo.png");
-		//JTable Çì´õ º¯°æ
+		//JTable í—¤ë” ë³€ê²½
 		jth_nick.setBackground(Color.red);
 		jth_nick.setForeground(Color.WHITE);
 		jtb_nick.setGridColor(Color.red);
 		jtp_display.setEditable(false);
 		jtp_display.setFocusable(false);
-		//±ÛÀÚ»ö º¯°æ¹öÆ°
+		//ê¸€ììƒ‰ ë³€ê²½ë²„íŠ¼
 		jbtn_fontColor.addActionListener(this);
 		jbtn_exit.addActionListener(this);
 		jtf_msg.addActionListener(this);
 		jbtn_send.addActionListener(this);
-		//JFrameÀÇ ·¹ÀÌ¾Æ¿ôÀ» GridLayoutº¯°æ
+		//JFrameì˜ ë ˆì´ì•„ì›ƒì„ GridLayoutë³€ê²½
 		this.setLayout(new GridLayout(1,2));
-		//Ã¹¹øÂ° ¼½¼Ç¿¡ ±âÁ¸ ÄÄÆ÷³ÍÆ® ¹èÄ¡
+		//ì²«ë²ˆì§¸ ì„¹ì…˜ì— ê¸°ì¡´ ì»´í¬ë„ŒíŠ¸ ë°°ì¹˜
 		jp_first.setLayout(new BorderLayout());
 		jp_first_south.setLayout(new BorderLayout());
 		jp_first.add("Center",jsp_display);
 		jp_first_south.add("Center",jtf_msg);
 		jp_first_south.add("East",jbtn_send);
 		jp_first.add("South",jp_first_south);
-		//µÎ¹øÂ° ¼½¼Ç¿¡ Ãß°¡  ÄÄÆ÷³ÍÆ® ¹èÄ¡
+		//ë‘ë²ˆì§¸ ì„¹ì…˜ì— ì¶”ê°€  ì»´í¬ë„ŒíŠ¸ ë°°ì¹˜
 		jp_second.setLayout(new BorderLayout());
 		jp_second_south.setLayout(new GridLayout(3,2));
 		jp_second.add("Center", jsp_nick);
 		jp_second_south.add(jbtn_whisper);//1:1
-		jp_second_south.add(jbtn_change);//´ëÈ­¸íº¯°æ
-		jp_second_south.add(jbtn_fontColor);//±ÛÀÚ»ö
-		jp_second_south.add(jbtn_emoticon);//ÀÌ¸ğÆ¼ÄÜ
-		jp_second_south.add(jbtn_blank);//ºí·©Å©
-		jp_second_south.add(jbtn_exit);//Á¾·á
+		jp_second_south.add(jbtn_change);//ëŒ€í™”ëª…ë³€ê²½
+		jp_second_south.add(jbtn_fontColor);//ê¸€ììƒ‰
+		jp_second_south.add(jbtn_emoticon);//ì´ëª¨í‹°ì½˜
+		jp_second_south.add(jbtn_blank);//ë¸”ë­í¬
+		jp_second_south.add(jbtn_exit);//ì¢…ë£Œ
 		jp_second.add("South",jp_second_south);
-		this.add(jp_first);//Ã¹¹øÂ° ¼½¼Ç
-		this.add(jp_second);//µÎ¹øÂ° ¼½¼Ç
-		this.setTitle(nickName+"´ÔÀÇ ´ëÈ­Ã¢");
+		this.add(jp_first);//ì²«ë²ˆì§¸ ì„¹ì…˜
+		this.add(jp_second);//ë‘ë²ˆì§¸ ì„¹ì…˜
+		this.setTitle(nickName+"ë‹˜ì˜ ëŒ€í™”ì°½");
 		this.setSize(500, 400);
 		this.setVisible(true);
 	}
@@ -163,7 +163,7 @@ public class TalkClient extends JFrame implements ActionListener{
 	}
 	public void message_process(String msg) {
 		if(msg==null ||msg.length()==0){
-			msg = "ÀÌ¸ğÆ¼ÄÜ";
+			msg = "ì´ëª¨í‹°ì½˜";
 			try {
 				oos.writeObject(Protocol.MESSAGE
 						+Protocol.seperator+nickName
@@ -171,10 +171,10 @@ public class TalkClient extends JFrame implements ActionListener{
 						+Protocol.seperator+fontColor
 						+Protocol.seperator+pm.imgChoice);
 			} catch (Exception e2) {
-				System.out.println(e2.toString());//ÈùÆ®¹® Ãâ·ÂÇÏ±â
+				System.out.println(e2.toString());//íŒíŠ¸ë¬¸ ì¶œë ¥í•˜ê¸°
 			}
 		}
-		else {//¸Ş½ÃÁö°¡ ÀÖÀ» ¶§
+		else {//ë©”ì‹œì§€ê°€ ìˆì„ ë•Œ
 			try {
 				oos.writeObject(Protocol.MESSAGE
 						+Protocol.seperator+nickName
@@ -182,52 +182,52 @@ public class TalkClient extends JFrame implements ActionListener{
 						+Protocol.seperator+fontColor
 						+Protocol.seperator+"default");
 			} catch (Exception e2) {
-				System.out.println(e2.toString());//ÈùÆ®¹® Ãâ·ÂÇÏ±â
+				System.out.println(e2.toString());//íŒíŠ¸ë¬¸ ì¶œë ¥í•˜ê¸°
 			}
 		}
 		jtf_msg.setText("");		
 	}
 	/*******************************************************************
-	 * TalkClientÀÇ ÀÌº¥Æ® Ã³¸®¿¡¼­´Â ¸»ÇÏ±â¸¸À» Àü´ãÇÏ°Ô µË´Ï´Ù.
-	 * ¿©±â¼­ ¸»ÇÑ ³»¿ëÀº ¹İµå½Ã ¼­¹ö¸¦ °æÀ¯ÇÕ´Ï´Ù. - TalkServerThreadÀÇ run()¿¡¼­ µè°í ¸»ÇÏ±â Ã³¸®ÇÔ. 
+	 * TalkClientì˜ ì´ë²¤íŠ¸ ì²˜ë¦¬ì—ì„œëŠ” ë§í•˜ê¸°ë§Œì„ ì „ë‹´í•˜ê²Œ ë©ë‹ˆë‹¤.
+	 * ì—¬ê¸°ì„œ ë§í•œ ë‚´ìš©ì€ ë°˜ë“œì‹œ ì„œë²„ë¥¼ ê²½ìœ í•©ë‹ˆë‹¤. - TalkServerThreadì˜ run()ì—ì„œ ë“£ê³  ë§í•˜ê¸° ì²˜ë¦¬í•¨. 
 	 * @param e
 	 ******************************************************************/
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Object obj = e.getSource();//ÀÌº¥Æ®°¡ °¨ÁöµÈ ¹öÆ°ÀÌ³ª ¿£ÅÍÅ°¿¡´ëÇÑ ÄÄÆ÷³ÍÆ®ÀÇ ÁÖ¼Ò¹øÁö
+		Object obj = e.getSource();//ì´ë²¤íŠ¸ê°€ ê°ì§€ëœ ë²„íŠ¼ì´ë‚˜ ì—”í„°í‚¤ì—ëŒ€í•œ ì»´í¬ë„ŒíŠ¸ì˜ ì£¼ì†Œë²ˆì§€
 		String msg = jtf_msg.getText();
 		if(obj == jbtn_emoticon) {
 			pm.setVisible(true);
 		}
-		else if(obj == jbtn_change) {//³Ê ´ëÈ­¸í º¯°æÇÒ·Á±¸?
-			//´©±¸´ÔÀÇ ´ëÈ­Ã¢¿¡ ´ëÇÑ º¯°æÀº run¸Ş¼Òµå(4¹ø:this.setTitle(afterName+"´ÔÀÇ ´ëÈ­Ã¢"))¿¡¼­ Ã³¸®ÇÏÀÚ.
+		else if(obj == jbtn_change) {//ë„ˆ ëŒ€í™”ëª… ë³€ê²½í• ë ¤êµ¬?
+			//ëˆ„êµ¬ë‹˜ì˜ ëŒ€í™”ì°½ì— ëŒ€í•œ ë³€ê²½ì€ runë©”ì†Œë“œ(4ë²ˆ:this.setTitle(afterName+"ë‹˜ì˜ ëŒ€í™”ì°½"))ì—ì„œ ì²˜ë¦¬í•˜ì.
 			String afterName = 
-					JOptionPane.showInputDialog("º¯°æÇÒ ´ëÈ­¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
-			//¸¸ÀÏ »ç¿ëÀÚ°¡ ½ºÆäÀÌ½º¹Ù¸¸ ÀÔ·ÂÇÏ¿´´Ù. -´Ù½Ã ÀÔ·ÂÇÏµµ·Ï ¿ä±¸ÇÏ±â - return
+					JOptionPane.showInputDialog("ë³€ê²½í•  ëŒ€í™”ëª…ì„ ì…ë ¥í•˜ì„¸ìš”.");
+			//ë§Œì¼ ì‚¬ìš©ìê°€ ìŠ¤í˜ì´ìŠ¤ë°”ë§Œ ì…ë ¥í•˜ì˜€ë‹¤. -ë‹¤ì‹œ ì…ë ¥í•˜ë„ë¡ ìš”êµ¬í•˜ê¸° - return
 			if(afterName == null || afterName.trim().length()<3) {
 				JOptionPane.showMessageDialog
-				(this, "º¯°æÇÒ ´ëÈ­¸íÀ» ¶È¹Ù·Î ÀÔ·ÂÇÏ¼¼¿ä.", "INFO"
+				(this, "ë³€ê²½í•  ëŒ€í™”ëª…ì„ ë˜‘ë°”ë¡œ ì…ë ¥í•˜ì„¸ìš”.", "INFO"
 			   , JOptionPane.INFORMATION_MESSAGE);
-				return;//actionPerformed Å»Ãâ, break-¹İº¹¹®À» Å»Ãâ
+				return;//actionPerformed íƒˆì¶œ, break-ë°˜ë³µë¬¸ì„ íƒˆì¶œ
 			}
-			//¸Ş½ÃÁö Àü¼Û
-			//ÁÖÀÇ»çÇ×-StringTokenizerÀ¸·Î ²÷¾î¼­ Ã³¸®ÇÒ ¶§ °¹¼ö ¸ÂÃß±â
-			//¹ß»ı»óÈ²:¼­¹öÃø ·Î±×¿¡´Â Ãâ·ÂÀÌ µÇ¾ú´Âµ¥ Å¬¶óÀÌ¾ğÆ®Ãø¿¡´Â ¸Ş½ÃÁö°¡ Ãâ·ÂµÇÁö ¾ÊÀ½.
+			//ë©”ì‹œì§€ ì „ì†¡
+			//ì£¼ì˜ì‚¬í•­-StringTokenizerìœ¼ë¡œ ëŠì–´ì„œ ì²˜ë¦¬í•  ë•Œ ê°¯ìˆ˜ ë§ì¶”ê¸°
+			//ë°œìƒìƒí™©:ì„œë²„ì¸¡ ë¡œê·¸ì—ëŠ” ì¶œë ¥ì´ ë˜ì—ˆëŠ”ë° í´ë¼ì´ì–¸íŠ¸ì¸¡ì—ëŠ” ë©”ì‹œì§€ê°€ ì¶œë ¥ë˜ì§€ ì•ŠìŒ.
 			try {
 				oos.writeObject(Protocol.CHANGE+Protocol.seperator
 						       +nickName+Protocol.seperator
 						       +afterName+Protocol.seperator
-						       +nickName+"´ÔÀÇ ´ëÈ­¸íÀÌ "+afterName+"À¸·Î º¯°æ");
+						       +nickName+"ë‹˜ì˜ ëŒ€í™”ëª…ì´ "+afterName+"ìœ¼ë¡œ ë³€ê²½");
 			} catch (Exception e2) {
-			//¿¡·¯¸Ş½ÃÁöµµ JVMÀÌ °ü¸®ÇÑ´Ù.-stack°ü¸®(¹è³¶)
-			//stack¿¡ ½×ÀÎ ¿¡·¯¸Ş½ÃÁö¸¦ Ãâ·ÂÇÔ.- Line NumberÃâ·Â - ÈùÆ®	
-				e2.printStackTrace();//±â¾ïÇØ¿ä..........
+			//ì—ëŸ¬ë©”ì‹œì§€ë„ JVMì´ ê´€ë¦¬í•œë‹¤.-stackê´€ë¦¬(ë°°ë‚­)
+			//stackì— ìŒ“ì¸ ì—ëŸ¬ë©”ì‹œì§€ë¥¼ ì¶œë ¥í•¨.- Line Numberì¶œë ¥ - íŒíŠ¸	
+				e2.printStackTrace();//ê¸°ì–µí•´ìš”..........
 			}
-		}///////////////end of ´ëÈ­¸í º¯°æ
+		}///////////////end of ëŒ€í™”ëª… ë³€ê²½
 		else if(obj==msg || obj==jtf_msg) {
 			message_process(msg);
 /*			if(msg==null ||msg.length()==0){
-				msg = "ÀÌ¸ğÆ¼ÄÜ";
+				msg = "ì´ëª¨í‹°ì½˜";
 			}	
 			try {
 				oos.writeObject(Protocol.MESSAGE
@@ -236,22 +236,22 @@ public class TalkClient extends JFrame implements ActionListener{
 						       +Protocol.seperator+fontColor
 				               +Protocol.seperator+pm.imgChoice);
 			} catch (Exception e2) {
-				System.out.println(e2.toString());//ÈùÆ®¹® Ãâ·ÂÇÏ±â
+				System.out.println(e2.toString());//íŒíŠ¸ë¬¸ ì¶œë ¥í•˜ê¸°
 			}
 			jtf_msg.setText("");*/
 		}
 		else if(obj==jbtn_exit) {
 			exitChat();
-			//»ó¼ö 0À» ÁÖ¸é ÀÚ¹Ù°¡»ó¸Ó½Å°úÀÇ ¿¬°á°í¸®¸¦ ²÷°ÔµÊ.
-			//¾îÇÃ Á¾·á - ¸Ş¸ğ¸®°¡ ¸ğµÎ È¸¼öµÊ.
+			//ìƒìˆ˜ 0ì„ ì£¼ë©´ ìë°”ê°€ìƒë¨¸ì‹ ê³¼ì˜ ì—°ê²°ê³ ë¦¬ë¥¼ ëŠê²Œë¨.
+			//ì–´í”Œ ì¢…ë£Œ - ë©”ëª¨ë¦¬ê°€ ëª¨ë‘ íšŒìˆ˜ë¨.
 			System.exit(0);
 		}
 		else if(obj == jbtn_fontColor) {
 			jf_fontColor = new JFrame();
 			jf_fontColor.setSize(600, 500);
-			//»ö»óÁ¤º¸ ´ã±ä ÆÈ·¹Æ® ¿ªÇÒ - JTable
+			//ìƒ‰ìƒì •ë³´ ë‹´ê¸´ íŒ”ë ˆíŠ¸ ì—­í•  - JTable
 			JColorChooser jc_color = new JColorChooser();
-			//»ö»óÁ¤º¸°ªÀ» ObjectÈ­
+			//ìƒ‰ìƒì •ë³´ê°’ì„ Objectí™”
 			ColorSelectionModel model = jc_color.getSelectionModel();
 			ChangeListener listener = new ChangeListener() {
 				@Override
@@ -260,11 +260,11 @@ public class TalkClient extends JFrame implements ActionListener{
 					fontColor=String.valueOf(c_fontColor.getRGB());
 				}
 			};
-			//»ö»ó ÆÈ·¹Æ®¿¡¼­ ¼±ÅÃÇÑ »ö»óÀÌ º¯°æµÉ¶§ ¸¶´Ù ÀÌº¥Æ®¸¦ °¨ÁöÇØ¼­ »ö»óÁ¤º¸¸¦ º¯°æÇØÁÜ.
+			//ìƒ‰ìƒ íŒ”ë ˆíŠ¸ì—ì„œ ì„ íƒí•œ ìƒ‰ìƒì´ ë³€ê²½ë ë•Œ ë§ˆë‹¤ ì´ë²¤íŠ¸ë¥¼ ê°ì§€í•´ì„œ ìƒ‰ìƒì •ë³´ë¥¼ ë³€ê²½í•´ì¤Œ.
 			model.addChangeListener(listener);
 			jf_fontColor.add(jc_color);
 			jf_fontColor.setVisible(true);
-		}//////////////////end of ±ÛÀÚ»ö
+		}//////////////////end of ê¸€ììƒ‰
 	}
 
 }

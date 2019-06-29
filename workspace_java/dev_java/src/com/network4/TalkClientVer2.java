@@ -50,36 +50,36 @@ public class TalkClientVer2 extends JFrame {
 	}
 
 	public void connect_process() {
-		//nickName = JOptionPane.showInputDialog("³ÊÀÇ ´ëÈ­¸íÀº?");
-		this.setTitle(nickName+"´ÔÀÇ ´ëÈ­Ã¢");
+		//nickName = JOptionPane.showInputDialog("ë„ˆì˜ ëŒ€í™”ëª…ì€?");
+		this.setTitle(nickName+"ë‹˜ì˜ ëŒ€í™”ì°½");
 		try {
-			//Åë½ÅÀº Áö¿¬µÉ ¼ö ÀÖ´Ù.-wait - try...catchÇØ¾ßÇÔ.
+			//í†µì‹ ì€ ì§€ì—°ë  ìˆ˜ ìˆë‹¤.-wait - try...catchí•´ì•¼í•¨.
 			mySocket = new Socket(ip,port);
 			oos = new ObjectOutputStream
 					(mySocket.getOutputStream());			
 			ois = new ObjectInputStream
 						(mySocket.getInputStream());
-			//Åå¹æ Á¤º¸ ´ã±â
+			//í†¡ë°© ì •ë³´ ë‹´ê¸°
 			Room room = new Room();
-			room.setTitle("½º¸¶Æ®À¥¸ğ¹ÙÀÏ ÀÀ¿ëSW¿£Áö´Ï¾î");
+			room.setTitle("ìŠ¤ë§ˆíŠ¸ì›¹ëª¨ë°”ì¼ ì‘ìš©SWì—”ì§€ë‹ˆì–´");
 			room.current = 10;
-			room.state = "´ë±â";
-			//100|³ªÃÊº¸
+			room.state = "ëŒ€ê¸°";
+			//100|ë‚˜ì´ˆë³´
 //			oos.writeObject(Protocol.ROOM_IN+Protocol.seperator+nickName+Protocol.seperator+room.getTitle());
 			oos.writeObject(Protocol.WAIT
 					       +Protocol.seperator+nickName
 					       +Protocol.seperator+room.state);
 			TalkClientThread tct = new TalkClientThread(this);
-			tct.start();//TalkClientThreadÀÇ runÈ£ÃâµÊ.-Äİ¹éÇÔ¼ö
+			tct.start();//TalkClientThreadì˜ runí˜¸ì¶œë¨.-ì½œë°±í•¨ìˆ˜
 		} catch (Exception e) {
-			System.out.println(e.toString());//¿¡·¯ ÈùÆ®¹® Ãâ·Â.
+			System.out.println(e.toString());//ì—ëŸ¬ íŒíŠ¸ë¬¸ ì¶œë ¥.
 		}		
 	}	
 	private void jbInit() throws Exception {
 	  this.getContentPane().setLayout(null);
-	  tp.addTab("´ë±â½Ç",wr);
+	  tp.addTab("ëŒ€ê¸°ì‹¤",wr);
 	  this.getContentPane().setBackground(new Color(158, 217, 164));
-	  tp.addTab("´ëÈ­¹æ", mr);
+	  tp.addTab("ëŒ€í™”ë°©", mr);
 	  tp.setFont(new java.awt.Font("SansSerif", 0, 12));
 	  tp.setToolTipText("");
 	  tp.setBounds(new Rectangle(5, 4, 627, 530));

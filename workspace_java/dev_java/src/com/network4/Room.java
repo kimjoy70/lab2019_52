@@ -6,10 +6,10 @@ import java.util.Vector;
 public class Room {
 	  List<TalkServerThread>  userList  = new Vector<TalkServerThread>();
 	  List<String>  nameList  = new Vector<String>();
-	  String title = null;//´ÜÅå¹æ ÀÌ¸§
-	  String state = null;//´ë±â½Ç, Âü¿©Áß
-	  int max=0;//ÃÖ´ëÁ¤¿ø¼ö
-	  int current;//ÇöÀç Á¤¿ø¼ö	
+	  String title = null;//ë‹¨í†¡ë°© ì´ë¦„
+	  String state = null;//ëŒ€ê¸°ì‹¤, ì°¸ì—¬ì¤‘
+	  int max=0;//ìµœëŒ€ì •ì›ìˆ˜
+	  int current;//í˜„ì¬ ì •ì›ìˆ˜	
 	public Room() {}
 	public Room(String title,int current) {
 		this.title = title;

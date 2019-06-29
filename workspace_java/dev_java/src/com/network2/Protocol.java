@@ -1,13 +1,13 @@
 package com.network2;
 
 public class Protocol {
-	//ÇÁ·ÎÅäÄİÀÇ °æ¿ì ¾îÇÃ¿¡¼­ ÀÏ°ıÀûÀ¸·Î Àû¿ëÇÏ°í º¯°æµÉ ¼ö ÀÖµµ·Ï ¼³°èÇÏ´Â °ÍÀÌ ÁÁÀ» °ÍÀÌ´Ù.
+	//í”„ë¡œí† ì½œì˜ ê²½ìš° ì–´í”Œì—ì„œ ì¼ê´„ì ìœ¼ë¡œ ì ìš©í•˜ê³  ë³€ê²½ë  ìˆ˜ ìˆë„ë¡ ì„¤ê³„í•˜ëŠ” ê²ƒì´ ì¢‹ì„ ê²ƒì´ë‹¤.
 	public static final int ROOM_CREATE = 100; 
 	public static final int ROOM_IN 	= 110; 
 	public static final int MESSAGE 	= 200; 
 	public static final int WHISHER 	= 210; 
 	public static final int CHANGE   	= 300; 
 	public static final int ROOM_OUT 	= 500; 
-	//¸Ş½ÃÁö¿­¿¡¼­ °ª¿¡ ´ëÇÑ ±¸ºĞ°ªÀ» ÅäÅ«À¸·Î ½ä¾î¼­ »ç¿ëÇÏ¹Ç·Î ÀÌ°Íµµ º¯¼ö·Î Ã³¸®ÇÏÀÚ.
+	//ë©”ì‹œì§€ì—´ì—ì„œ ê°’ì— ëŒ€í•œ êµ¬ë¶„ê°’ì„ í† í°ìœ¼ë¡œ ì°ì–´ì„œ ì‚¬ìš©í•˜ë¯€ë¡œ ì´ê²ƒë„ ë³€ìˆ˜ë¡œ ì²˜ë¦¬í•˜ì.
 	public static final String seperator= "|"; 
 }

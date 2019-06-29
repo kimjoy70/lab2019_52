@@ -9,7 +9,7 @@ public class TalkServerThread extends Thread {
 	TalkServer ts = null;
 	ObjectInputStream ois  = null;
 	ObjectOutputStream oos = null;
-	String nickName = null;//Åå¹æ¿¡ ÀÔÀåÇÑ »ç¶÷ÀÇ ´ëÈ­¸í ´ã±â
+	String nickName = null;//í†¡ë°©ì— ì…ì¥í•œ ì‚¬ëŒì˜ ëŒ€í™”ëª… ë‹´ê¸°
 	public TalkServerThread(TalkServer ts) {
 		this.ts = ts;
 		try {
@@ -25,11 +25,11 @@ public class TalkServerThread extends Thread {
 				 st = new StringTokenizer(msg,"|");
 			}
 			st.nextToken();//100
-			nickName = st.nextToken();//´Ğ³×ÀÓ
+			nickName = st.nextToken();//ë‹‰ë„¤ì„
 			String fontColor = st.nextToken();
 			for(TalkServerThread tst:ts.chatList) {
 				String currentName = tst.nickName;
-			//this¸¦ »ç¿ëÇÒ ¶§¿Í tst¸¦ »ç¿ëÇÒ ¶§ Â÷ÀÌÁ¡¿¡ ´ëÇØ¼­ »ı°¢ÇØ º¸¼¼¿ä.	
+			//thisë¥¼ ì‚¬ìš©í•  ë•Œì™€ tstë¥¼ ì‚¬ìš©í•  ë•Œ ì°¨ì´ì ì— ëŒ€í•´ì„œ ìƒê°í•´ ë³´ì„¸ìš”.	
 				this.send(Protocol.ROOM_IN
 						 +Protocol.seperator+currentName
 				         +Protocol.seperator+fontColor);
@@ -56,21 +56,21 @@ public class TalkServerThread extends Thread {
 	public void run() {
 		boolean isStop = false;
 		try {
-			run_start://while¹® °°Àº ¹İº¹¹® ÀüÃ¼¸¦ ºüÁ® ³ª°¡µµ·Ï Ã³¸®ÇÒ¶§
+			run_start://whileë¬¸ ê°™ì€ ë°˜ë³µë¬¸ ì „ì²´ë¥¼ ë¹ ì ¸ ë‚˜ê°€ë„ë¡ ì²˜ë¦¬í• ë•Œ
 			while(!isStop) {
 				String msg = (String)ois.readObject();
 				ts.jta_log.append(msg+"\n");
 				ts.jta_log.setCaretPosition(ts.jta_log.getDocument().getLength());
 				int protocol = 0;
-				//ÅäÅ«(|)À» ±âÁØÀ¸·Î ¹®ÀÚ¿­ Àß¶ó¼­ Ä«¿îÆ® ÇÑ´Ù.
-				//°¹¼ö¸¦ ¼¿¶§ protocolÀº ¸ÕÀú ½ä¾î³»¹Ç·Î ¾Æ·¡¼­ Ã³¸®ÇÒ ¶§ 1À» »©°í °è»êÇÔ.
-				//switch¹®¿¡ Á¶°Ç°ªÀ¸·Î È°¿ëÇÏ±â À§ÇØ ¸ÕÀú Àß¶ó³½´Ù.
+				//í† í°(|)ì„ ê¸°ì¤€ìœ¼ë¡œ ë¬¸ìì—´ ì˜ë¼ì„œ ì¹´ìš´íŠ¸ í•œë‹¤.
+				//ê°¯ìˆ˜ë¥¼ ì…€ë•Œ protocolì€ ë¨¼ì € ì°ì–´ë‚´ë¯€ë¡œ ì•„ë˜ì„œ ì²˜ë¦¬í•  ë•Œ 1ì„ ë¹¼ê³  ê³„ì‚°í•¨.
+				//switchë¬¸ì— ì¡°ê±´ê°’ìœ¼ë¡œ í™œìš©í•˜ê¸° ìœ„í•´ ë¨¼ì € ì˜ë¼ë‚¸ë‹¤.
 				StringTokenizer st = null;
 				if(msg!=null) {
 					st = new StringTokenizer(msg,Protocol.seperator);
 					protocol = Integer.parseInt(st.nextToken());
 				}
-				//msg==> 200|´©°¡|¹¹¶ó°í?
+				//msg==> 200|ëˆ„ê°€|ë­ë¼ê³ ?
 				switch(protocol) {
 				case Protocol.MESSAGE:{//200
 					String nickName = st.nextToken();
@@ -87,30 +87,30 @@ public class TalkServerThread extends Thread {
 							         +Protocol.seperator+imgChoice);
 				}break;
 				//300|nickName|afterName|msg
-				case Protocol.CHANGE:{//case¹®¾È¿¡ {}³ÖÀº ÀÌÀ¯´Â º¯¼öÁßº¹¼±¾ğÀ» ÇÇÇÏ±â À§ÇØ¼­.
+				case Protocol.CHANGE:{//caseë¬¸ì•ˆì— {}ë„£ì€ ì´ìœ ëŠ” ë³€ìˆ˜ì¤‘ë³µì„ ì–¸ì„ í”¼í•˜ê¸° ìœ„í•´ì„œ.
 					String nickName = st.nextToken();
 					String afterName = st.nextToken();
 					String message = st.nextToken();
-					//Å¬¶óÀÌ¾ğÆ®Ãø¿¡¼­ ´ëÈ­¸íÀ» º¯°æ ½ÅÃ»ÇÏ¿´´Ù.
-					//¼­ÃøÃø¿¡¼­ ±â¾ïÇÏ°í ÀÖ´Â ÀÌ¸§Á¤º¸¸¦ º¯°æÇØ¾ßÇÒ±î? ¾ÈÇØµµ µÇ³ª?
-					//¼­¹öÃø¿¡¼­ ±â¾ïÇÏ°í ÀÖ´Â ÀÌ¸§Àº nickNameÀÏ±î? ¾Æ´Ô afterNameÀÏ±î?
+					//í´ë¼ì´ì–¸íŠ¸ì¸¡ì—ì„œ ëŒ€í™”ëª…ì„ ë³€ê²½ ì‹ ì²­í•˜ì˜€ë‹¤.
+					//ì„œì¸¡ì¸¡ì—ì„œ ê¸°ì–µí•˜ê³  ìˆëŠ” ì´ë¦„ì •ë³´ë¥¼ ë³€ê²½í•´ì•¼í• ê¹Œ? ì•ˆí•´ë„ ë˜ë‚˜?
+					//ì„œë²„ì¸¡ì—ì„œ ê¸°ì–µí•˜ê³  ìˆëŠ” ì´ë¦„ì€ nickNameì¼ê¹Œ? ì•„ë‹˜ afterNameì¼ê¹Œ?
 					//insert here
-					this.nickName = afterName;//´ëÈ­¸íÀ» afterNameÀ¸·Î º¯°æÇØ¼­ ÀúÀåÇÔ.
-					//¹æ¼Û³»º¸³»±â(run() - 2¹øÀÛ¾÷¿Ï·á, 3¹ø ÀÛ¾÷¿Ï·á:broadCasting
+					this.nickName = afterName;//ëŒ€í™”ëª…ì„ afterNameìœ¼ë¡œ ë³€ê²½í•´ì„œ ì €ì¥í•¨.
+					//ë°©ì†¡ë‚´ë³´ë‚´ê¸°(run() - 2ë²ˆì‘ì—…ì™„ë£Œ, 3ë²ˆ ì‘ì—…ì™„ë£Œ:broadCasting
 					broadCasting(Protocol.CHANGE+Protocol.seperator
 							    +nickName+Protocol.seperator
 							    +afterName+Protocol.seperator
 							    +message);
 				}break;
-				//Á¾·áÇÏ±â¿¡ ´ëÇÑ Ã³¸®±¸Çö
+				//ì¢…ë£Œí•˜ê¸°ì— ëŒ€í•œ ì²˜ë¦¬êµ¬í˜„
 				case Protocol.ROOM_OUT:{//500
 					String nickName = st.nextToken();
-					//500 ¸Ş½ÃÁö¸¦ Àü¼ÛÇÑ ½º·¹µå¸¦ chatList¿¡¼­ Á¦°Å ÇÑ´Ù.
+					//500 ë©”ì‹œì§€ë¥¼ ì „ì†¡í•œ ìŠ¤ë ˆë“œë¥¼ chatListì—ì„œ ì œê±° í•œë‹¤.
 					ts.chatList.remove(this);//tst
 					String message = Protocol.ROOM_OUT
 							        +Protocol.seperator+nickName;
 					this.broadCasting(message);
-				}break run_start;//breakµÚ¿¡ ¶óº§¹®À» »ç¿ëÇÏ¸é while¹® ºí·°ÀüÃ¼¸¦ ºüÁ® ³ª¿È.
+				}break run_start;//breakë’¤ì— ë¼ë²¨ë¬¸ì„ ì‚¬ìš©í•˜ë©´ whileë¬¸ ë¸”ëŸ­ì „ì²´ë¥¼ ë¹ ì ¸ ë‚˜ì˜´.
 				}
 			}/////////end of while
 		} catch (Exception e) {

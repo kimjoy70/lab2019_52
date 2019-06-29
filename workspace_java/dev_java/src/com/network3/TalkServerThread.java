@@ -13,9 +13,9 @@ public class TalkServerThread extends Thread {
 	TalkServer ts = null;
 	ObjectInputStream ois  = null;
 	ObjectOutputStream oos = null;
-	String nickName = null;//Åå¹æ¿¡ ÀÔÀåÇÑ »ç¶÷ÀÇ ´ëÈ­¸í ´ã±â
+	String nickName = null;//í†¡ë°©ì— ì…ì¥í•œ ì‚¬ëŒì˜ ëŒ€í™”ëª… ë‹´ê¸°
 	String g_title = null;
-	int g_current = 0;//ÇöÀçÀÎ¿ø¼ö ´ã±â
+	int g_current = 0;//í˜„ì¬ì¸ì›ìˆ˜ ë‹´ê¸°
 	//Room room = new Room();
 	public TalkServerThread(TalkServer ts) {
 		this.ts = ts;
@@ -33,20 +33,20 @@ public class TalkServerThread extends Thread {
 			}
 			if(st.hasMoreTokens()) {
 				st.nextToken();//100
-				nickName = st.nextToken();//´Ğ³×ÀÓ
+				nickName = st.nextToken();//ë‹‰ë„¤ì„
 				g_title =st.nextToken();
-				ts.jta_log.append("À§Ä¡:"+g_title+"\n");
+				ts.jta_log.append("ìœ„ì¹˜:"+g_title+"\n");
 			}
 			for(TalkServerThread tst:ts.globalList) {
 				String currentName = tst.nickName;
 				String currentState = tst.g_title;
-			//this¸¦ »ç¿ëÇÒ ¶§¿Í tst¸¦ »ç¿ëÇÒ ¶§ Â÷ÀÌÁ¡¿¡ ´ëÇØ¼­ »ı°¢ÇØ º¸¼¼¿ä.	
+			//thisë¥¼ ì‚¬ìš©í•  ë•Œì™€ tstë¥¼ ì‚¬ìš©í•  ë•Œ ì°¨ì´ì ì— ëŒ€í•´ì„œ ìƒê°í•´ ë³´ì„¸ìš”.	
 				this.send(Protocol.WAIT
 						 +Protocol.seperator+currentName
 				         +Protocol.seperator+currentState);
-			}///////////end of ´ëÈ­¸ñ·Ï°ü¸®
+			}///////////end of ëŒ€í™”ëª©ë¡ê´€ë¦¬
 			//for(TalkServerThread tst:ts.globalList) {
-			for(int i=0;i<ts.roomList.size();i++) {//¹æ°¹¼ö
+			for(int i=0;i<ts.roomList.size();i++) {//ë°©ê°¯ìˆ˜
 				Room room = ts.roomList.get(i);
 				String title = room.title;
 				g_title = title;
@@ -58,8 +58,8 @@ public class TalkServerThread extends Thread {
 				this.send(Protocol.ROOM_LIST
 						 +Protocol.seperator+g_title
 				         +Protocol.seperator+g_current);
-			}///////////end of ´ëÈ­¹æ°ü¸®
-			//}///////////end of »ç¿ëÀÚ ¼ö¸¸Å­ ¹İº¹ÇØÁÜ.
+			}///////////end of ëŒ€í™”ë°©ê´€ë¦¬
+			//}///////////end of ì‚¬ìš©ì ìˆ˜ë§Œí¼ ë°˜ë³µí•´ì¤Œ.
 			ts.globalList.add(this);
 			this.broadCasting(msg);
 		} catch (Exception e) {
@@ -67,13 +67,13 @@ public class TalkServerThread extends Thread {
 		}
 	}
 	public void broadCasting(String msg) {
-		//JOptionPane.showMessageDialog(ts, "¼­¹ö:»ç¶÷¼ö:"+ts.globalList.size());
+		//JOptionPane.showMessageDialog(ts, "ì„œë²„:ì‚¬ëŒìˆ˜:"+ts.globalList.size());
 		synchronized(this) {
 			for(TalkServerThread tst:ts.globalList) {
 				tst.send(msg);
 			}
 		}
-	}//////////////end of broadCasting ÀüÃ¼¿¡ ¹æ¼Û
+	}//////////////end of broadCasting ì „ì²´ì— ë°©ì†¡
 	public void roomCasting(String msg) {
         synchronized(this) {
             for(int i = 0; i < ts.roomList.size(); i++ ) {
@@ -91,7 +91,7 @@ public class TalkServerThread extends Thread {
                 }
              }//for i ended
             }
-	}//////////////end of broadCasting ÀüÃ¼¿¡ ¹æ¼Û
+	}//////////////end of broadCasting ì „ì²´ì— ë°©ì†¡
     protected void broadcast(String msg) {
         synchronized(this) {
          for(int i = 0; i < ts.roomList.size(); i++ ) {
@@ -121,7 +121,7 @@ public class TalkServerThread extends Thread {
 	public void run() {
 		boolean isStop = false;
 		try {
-			run_start://while¹® °°Àº ¹İº¹¹® ÀüÃ¼¸¦ ºüÁ® ³ª°¡µµ·Ï Ã³¸®ÇÒ¶§
+			run_start://whileë¬¸ ê°™ì€ ë°˜ë³µë¬¸ ì „ì²´ë¥¼ ë¹ ì ¸ ë‚˜ê°€ë„ë¡ ì²˜ë¦¬í• ë•Œ
 			while(!isStop) {
 				String msg = (String)ois.readObject();
 				ts.jta_log.append(msg+"\n");
@@ -132,7 +132,7 @@ public class TalkServerThread extends Thread {
 					st = new StringTokenizer(msg,"|");
 					protocol = Integer.parseInt(st.nextToken());
 				}
-				//msg==> 200|´©°¡|¹¹¶ó°í?
+				//msg==> 200|ëˆ„ê°€|ë­ë¼ê³ ?
 				switch(protocol) {
 				case Protocol.ROOM_CREATE:{
 					String roomTitle = st.nextToken();
@@ -160,16 +160,16 @@ public class TalkServerThread extends Thread {
 							room.userList.add(this);
 							room.nameList.add(nickName);
 							//JOptionPane.showMessageDialog
-							//(ts, "S-ROOM_IN ³»°¡ Ãß°¡µÈ ½º·¹µå¼ö:"+room.userList.size()+",ÀÌ¸§¼ö:"+room.nameList.size());
+							//(ts, "S-ROOM_IN ë‚´ê°€ ì¶”ê°€ëœ ìŠ¤ë ˆë“œìˆ˜:"+room.userList.size()+",ì´ë¦„ìˆ˜:"+room.nameList.size());
 							for(int j=0;j<room.nameList.size();j++) {
 								names.append(room.nameList.get(j)+"#");
-								JOptionPane.showMessageDialog(ts, "S-ROOM_IN ³»°¡ Ãß°¡µÈ ÀÌ¸§µé1:"+names.toString());
+								JOptionPane.showMessageDialog(ts, "S-ROOM_IN ë‚´ê°€ ì¶”ê°€ëœ ì´ë¦„ë“¤1:"+names.toString());
 								if(j==room.nameList.size()-1) {
 									temp = names.toString();
 									temp= temp.substring(0, temp.length()-1);
 								}
 							}
-							//JOptionPane.showMessageDialog(ts, "S-ROOM_IN ³»°¡ Ãß°¡µÈ ÀÌ¸§µé2:"+temp);
+							//JOptionPane.showMessageDialog(ts, "S-ROOM_IN ë‚´ê°€ ì¶”ê°€ëœ ì´ë¦„ë“¤2:"+temp);
 /*							broadCasting(Protocol.ROOM_IN
 									    +Protocol.seperator+g_title
 									    +Protocol.seperator+g_current
@@ -179,16 +179,16 @@ public class TalkServerThread extends Thread {
 							for(TalkServerThread tst:ts.globalList) {
 								String currentName = tst.nickName;
 								String currentState = tst.g_title;
-							//this¸¦ »ç¿ëÇÒ ¶§¿Í tst¸¦ »ç¿ëÇÒ ¶§ Â÷ÀÌÁ¡¿¡ ´ëÇØ¼­ »ı°¢ÇØ º¸¼¼¿ä.	
+							//thisë¥¼ ì‚¬ìš©í•  ë•Œì™€ tstë¥¼ ì‚¬ìš©í•  ë•Œ ì°¨ì´ì ì— ëŒ€í•´ì„œ ìƒê°í•´ ë³´ì„¸ìš”.	
 								this.send(Protocol.WAIT
 										 +Protocol.seperator+currentName
 								         +Protocol.seperator+currentState);
-							}///////////end of ´ëÈ­¸ñ·Ï°ü¸®
+							}///////////end of ëŒ€í™”ëª©ë¡ê´€ë¦¬
 							ts.globalList.add(this);
 							this.broadCasting(msg);	*/						
 						}////////////end of if
 					}////////////////end of for
-					for(int i=0;i<ts.roomList.size();i++) {//¹æ°¹¼ö
+					for(int i=0;i<ts.roomList.size();i++) {//ë°©ê°¯ìˆ˜
 						Room room = ts.roomList.get(i);
 						String title = room.title;
 						g_title = title;
@@ -196,7 +196,7 @@ public class TalkServerThread extends Thread {
 						if(room.userList!=null && room.userList.size()!=0) {
 							current = room.userList.size();
 						}
-						JOptionPane.showMessageDialog(ts, "S-ROOM_IN ÀÌÀü¿¡ ÀÖ´ø Ä£±¸µéÇÑÅ×:"+nickName+", this.nickName:"+this.nickName);
+						JOptionPane.showMessageDialog(ts, "S-ROOM_IN ì´ì „ì— ìˆë˜ ì¹œêµ¬ë“¤í•œí…Œ:"+nickName+", this.nickName:"+this.nickName);
 						for(int j=0;j<room.nameList.size();j++) {
 							if(!nickName.equals(room.nameList.get(j))) {
 								TalkServerThread tst = room.userList.get(j);
@@ -206,7 +206,7 @@ public class TalkServerThread extends Thread {
 										+Protocol.seperator+nickName);
 							}
 						}
-					}///////////end of ´ëÈ­¹æ°ü¸®
+					}///////////end of ëŒ€í™”ë°©ê´€ë¦¬
 					broadcast(Protocol.ROOM_IN
 				    +Protocol.seperator+g_title
 				    +Protocol.seperator+g_current
@@ -220,15 +220,15 @@ public class TalkServerThread extends Thread {
 							         +Protocol.seperator+nickName
 							         +Protocol.seperator+message);
 				}break;
-				//Á¾·áÇÏ±â¿¡ ´ëÇÑ Ã³¸®±¸Çö
+				//ì¢…ë£Œí•˜ê¸°ì— ëŒ€í•œ ì²˜ë¦¬êµ¬í˜„
 				case Protocol.ROOM_OUT:{
 					String nickName = st.nextToken();
-					//500 ¸Ş½ÃÁö¸¦ Àü¼ÛÇÑ ½º·¹µå¸¦ globalList¿¡¼­ Á¦°Å ÇÑ´Ù.
+					//500 ë©”ì‹œì§€ë¥¼ ì „ì†¡í•œ ìŠ¤ë ˆë“œë¥¼ globalListì—ì„œ ì œê±° í•œë‹¤.
 					ts.globalList.remove(this);//tst
 					String message = Protocol.ROOM_OUT
 							        +Protocol.seperator+nickName;
 					this.broadCasting(message);
-				}break run_start;//breakµÚ¿¡ ¶óº§¹®À» »ç¿ëÇÏ¸é while¹® ºí·°ÀüÃ¼¸¦ ºüÁ® ³ª¿È.
+				}break run_start;//breakë’¤ì— ë¼ë²¨ë¬¸ì„ ì‚¬ìš©í•˜ë©´ whileë¬¸ ë¸”ëŸ­ì „ì²´ë¥¼ ë¹ ì ¸ ë‚˜ì˜´.
 				}
 			}/////////end of while
 		} catch (Exception e) {

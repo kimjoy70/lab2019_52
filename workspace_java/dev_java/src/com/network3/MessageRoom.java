@@ -20,21 +20,21 @@ public class MessageRoom extends JPanel implements ActionListener{
 	JScrollPane jsp_display 
 				= new JScrollPane(jta_display,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 						        , JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-	JPanel jp_first 		= new JPanel();//±âÁ¸ ¹èÄ¡ÇÑ ÄÄÆ÷³ÍÆ® ´ã±â
+	JPanel jp_first 		= new JPanel();//ê¸°ì¡´ ë°°ì¹˜í•œ ì»´í¬ë„ŒíŠ¸ ë‹´ê¸°
 	JPanel jp_first_south   = new JPanel();//BorderLayout
 	JTextField jtf_msg 		= new JTextField();//Center
-	JButton jbtn_send 		= new JButton("Àü¼Û");//East
-	JPanel jp_second 		= new JPanel();//»õ·Î Ãß°¡ÇÏ´Â ÄÄÆ÷³ÍÆ® ´ã±â-JTable - Center:JTable, South:¹öÆ° 6°³
-	JPanel jp_second_south 	= new JPanel();//»õ·Î Ãß°¡ÇÏ´Â ÄÄÆ÷³ÍÆ® ´ã±â-JButton 6°³ - GridLayout(3,2)
+	JButton jbtn_send 		= new JButton("ì „ì†¡");//East
+	JPanel jp_second 		= new JPanel();//ìƒˆë¡œ ì¶”ê°€í•˜ëŠ” ì»´í¬ë„ŒíŠ¸ ë‹´ê¸°-JTable - Center:JTable, South:ë²„íŠ¼ 6ê°œ
+	JPanel jp_second_south 	= new JPanel();//ìƒˆë¡œ ì¶”ê°€í•˜ëŠ” ì»´í¬ë„ŒíŠ¸ ë‹´ê¸°-JButton 6ê°œ - GridLayout(3,2)
 	JButton jbtn_whisper	= new JButton("1:1");//East
-	JButton jbtn_change		= new JButton("´ëÈ­¸íº¯°æ");//East
-	JButton jbtn_fontColor	= new JButton("±ÛÀÚ»ö");//East
-	JButton jbtn_emoticon	= new JButton("ÀÌ¸ğÆ¼ÄÜ");//East
+	JButton jbtn_change		= new JButton("ëŒ€í™”ëª…ë³€ê²½");//East
+	JButton jbtn_fontColor	= new JButton("ê¸€ììƒ‰");//East
+	JButton jbtn_emoticon	= new JButton("ì´ëª¨í‹°ì½˜");//East
 	JButton jbtn_blank 		= new JButton("");//East
-	JButton jbtn_exit 		= new JButton("Á¾·á");//East
-	String cols[] = {"´ëÈ­¸í"};
+	JButton jbtn_exit 		= new JButton("ì¢…ë£Œ");//East
+	String cols[] = {"ëŒ€í™”ëª…"};
 	String data[][] = new String[0][1];
-	//DataSetÀÇ ¿ªÇÒÀ» ¼öÇàÇÏ´Â DefaultTableModelÀ» ¸ÕÀú ¼±¾ğÇÏ°í ÃÊ±âÈ­ ÇÏ±â
+	//DataSetì˜ ì—­í• ì„ ìˆ˜í–‰í•˜ëŠ” DefaultTableModelì„ ë¨¼ì € ì„ ì–¸í•˜ê³  ì´ˆê¸°í™” í•˜ê¸°
 	DefaultTableModel dtm_nick = new DefaultTableModel(data,cols); 
 	JTable 			  jtb_nick = new JTable(dtm_nick);
 	JScrollPane 	  jsp_nick = new JScrollPane(jtb_nick
@@ -51,28 +51,28 @@ public class MessageRoom extends JPanel implements ActionListener{
 		jbtn_exit.addActionListener(this);
 		jtf_msg.addActionListener(this);
 		jbtn_send.addActionListener(this);
-		//JFrameÀÇ ·¹ÀÌ¾Æ¿ôÀ» GridLayoutº¯°æ
+		//JFrameì˜ ë ˆì´ì•„ì›ƒì„ GridLayoutë³€ê²½
 		this.setLayout(new GridLayout(1,2));
-		//Ã¹¹øÂ° ¼½¼Ç¿¡ ±âÁ¸ ÄÄÆ÷³ÍÆ® ¹èÄ¡
+		//ì²«ë²ˆì§¸ ì„¹ì…˜ì— ê¸°ì¡´ ì»´í¬ë„ŒíŠ¸ ë°°ì¹˜
 		jp_first.setLayout(new BorderLayout());
 		jp_first_south.setLayout(new BorderLayout());
 		jp_first.add("Center",jsp_display);
 		jp_first_south.add("Center",jtf_msg);
 		jp_first_south.add("East",jbtn_send);
 		jp_first.add("South",jp_first_south);
-		//µÎ¹øÂ° ¼½¼Ç¿¡ Ãß°¡  ÄÄÆ÷³ÍÆ® ¹èÄ¡
+		//ë‘ë²ˆì§¸ ì„¹ì…˜ì— ì¶”ê°€  ì»´í¬ë„ŒíŠ¸ ë°°ì¹˜
 		jp_second.setLayout(new BorderLayout());
 		jp_second_south.setLayout(new GridLayout(3,2));
 		jp_second.add("Center", jsp_nick);
 		jp_second_south.add(jbtn_whisper);//1:1
-		jp_second_south.add(jbtn_change);//´ëÈ­¸íº¯°æ
-		jp_second_south.add(jbtn_fontColor);//±ÛÀÚ»ö
-		jp_second_south.add(jbtn_emoticon);//ÀÌ¸ğÆ¼ÄÜ
-		jp_second_south.add(jbtn_blank);//ºí·©Å©
-		jp_second_south.add(jbtn_exit);//Á¾·á
+		jp_second_south.add(jbtn_change);//ëŒ€í™”ëª…ë³€ê²½
+		jp_second_south.add(jbtn_fontColor);//ê¸€ììƒ‰
+		jp_second_south.add(jbtn_emoticon);//ì´ëª¨í‹°ì½˜
+		jp_second_south.add(jbtn_blank);//ë¸”ë­í¬
+		jp_second_south.add(jbtn_exit);//ì¢…ë£Œ
 		jp_second.add("South",jp_second_south);
-		this.add(jp_first);//Ã¹¹øÂ° ¼½¼Ç
-		this.add(jp_second);//µÎ¹øÂ° ¼½¼Ç
+		this.add(jp_first);//ì²«ë²ˆì§¸ ì„¹ì…˜
+		this.add(jp_second);//ë‘ë²ˆì§¸ ì„¹ì…˜
 		this.setSize(500, 400);
 		this.setVisible(true);
 	}

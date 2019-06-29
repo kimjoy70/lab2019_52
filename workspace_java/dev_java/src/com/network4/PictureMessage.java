@@ -61,7 +61,7 @@ public class PictureMessage extends JDialog implements ActionListener {
     pic4.setFont(new java.awt.Font("SansSerif", 0, 12));
     pic4.setBorder(null);
     this.getContentPane().setBackground(new Color(125, 144, 177));
-    this.setTitle("¸Ş¼¼Áö ÀÌ¹ÌÁö");
+    this.setTitle("ë©”ì„¸ì§€ ì´ë¯¸ì§€");
     this.getContentPane().add(jPanel1, null);
     jPanel1.add(pic0, null);
     jPanel1.add(pic1, null);
@@ -81,7 +81,7 @@ public class PictureMessage extends JDialog implements ActionListener {
 
     setSize(510,205);
     setResizable(false);
-    //setVisible(true);
+    setVisible(true);
     addWindowListener(new WindowAdapter() {
       public void windowClosing(WindowEvent e) {
            setVisible(false);
@@ -94,36 +94,36 @@ public class PictureMessage extends JDialog implements ActionListener {
 	    Image resizedImage = img.getScaledInstance(resizedWidth, resizedHeight, java.awt.Image.SCALE_SMOOTH); 
 	    return new ImageIcon(resizedImage); 
 	} */
-/*  "°íÃß.gif", "ÆíÁö.gif", "Æë±Ï.gif", "¼±¹°.gif",
-  "Ä¿ÇÇ.gif", "ÄÉÀÍ.gif", "Àå¹Ì.gif", "Á¹¸².gif",
-  "¿ôÀ½.gif", "À®Å©.gif", "¹Ì¼Ò.gif", "³î¶÷.gif"*/
+/*  "ê³ ì¶”.gif", "í¸ì§€.gif", "í­ê·„.gif", "ì„ ë¬¼.gif",
+  "ì»¤í”¼.gif", "ì¼€ìµ.gif", "ì¥ë¯¸.gif", "ì¡¸ë¦¼.gif",
+  "ì›ƒìŒ.gif", "ìœ™í¬.gif", "ë¯¸ì†Œ.gif", "ë†€ëŒ.gif"*/
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object obj = e.getSource();
-		if(obj == pic0){//°íÃß
+		if(obj == pic0){//ê³ ì¶”
 			imgChoice = "lion11.png";
-			mr.message_process(null);
-			this.setVisible(false);
+			mr.message_process(null,imgChoice);
+			//this.setVisible(false);
 		}
-		else if(obj == pic1){//ÆíÁö
+		else if(obj == pic1){//í¸ì§€
 			imgChoice = "lion22.png";
-			mr.message_process(null);
-			this.setVisible(false);
+			mr.message_process(null,imgChoice);
+			//this.setVisible(false);
 		}
-		else if(obj == pic2){//Æò±Ï
+		else if(obj == pic2){//í‰ê·„
 			imgChoice = "lion33.png";
-			mr.message_process(null);
-			this.setVisible(false);
+			mr.message_process(null,imgChoice);
+			//this.setVisible(false);
 		}
-		else if(obj == pic3){//¼±¹°
+		else if(obj == pic3){//ì„ ë¬¼
 			imgChoice = "lion44.png";
-			mr.message_process(null);
-			this.setVisible(false);
+			mr.message_process(null,imgChoice);
+			//this.setVisible(false);
 		}
-		else if(obj == pic4){//Ä¿ÇÇ
+		else if(obj == pic4){//ì»¤í”¼
 			imgChoice = "lion55.png";
-			mr.message_process(null);
-			this.setVisible(false);
+			mr.message_process(null,imgChoice);
+			//this.setVisible(false);
 		}
 	}
 }

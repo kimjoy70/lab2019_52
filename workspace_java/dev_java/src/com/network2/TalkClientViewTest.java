@@ -21,7 +21,7 @@ public class TalkClientViewTest extends JFrame {
 	public TalkClientViewTest() {
 		setContentPane(new MyPanal2());
 		this.setLayout(null);
-		this.setTitle("ÀÚ¹ÙÃ¤ÆÃ ver.1");
+		this.setTitle("ìë°”ì±„íŒ… ver.1");
 		this.setSize(350, 600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);

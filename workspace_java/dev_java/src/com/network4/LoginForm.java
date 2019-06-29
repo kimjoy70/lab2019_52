@@ -26,22 +26,21 @@ import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
-import com.jdbc.DBConnectionMgr2;
 
 
 public class LoginForm extends JFrame implements ActionListener {
 	/////////////////////////////////////////////////////
-	/* ¼±¾ğºÎ */
+	/* ì„ ì–¸ë¶€ */
 	/////////////////////////////////////////////////////
 	TalkClientVer2 tcv = null;
 	String nickName="";
 	ChatDao chatDao = new ChatDao();
 	String imgPath="C:\\Java\\dev_javaB\\dev_java\\src\\image\\";
 	ChatMemberVO cmvo = null;
-	JLabel jlb_id = new JLabel("¾ÆÀÌµğ");
-	JLabel jlb_pw = new JLabel("ÆĞ½º¿öµå");
+	JLabel jlb_id = new JLabel("ì•„ì´ë””");
+	JLabel jlb_pw = new JLabel("íŒ¨ìŠ¤ì›Œë“œ");
 
-	Font jl_font = new Font("ÈŞ¸Õ¸ÅÁ÷Ã¼", Font.BOLD, 17);
+	Font jl_font = new Font("íœ´ë¨¼ë§¤ì§ì²´", Font.BOLD, 17);
 	JTextField jtf_id = new JTextField("test");
 	JPasswordField jpf_pw = new JPasswordField("123");
 
@@ -52,22 +51,22 @@ public class LoginForm extends JFrame implements ActionListener {
 			new ImageIcon(imgPath+"confirm.png"));
 			//new ImageIcon("C:\\Users\\minkh\\Desktop\\practice\\dev_java\\src\\com\\Final\\image\\co   nfirm.png"));
 
-	// JPanel¿¡ ¾²ÀÏ ÀÌ¹ÌÁö¾ÆÀÌÄÜ
+	// JPanelì— ì“°ì¼ ì´ë¯¸ì§€ì•„ì´ì½˜
 	//ImageIcon ig = new ImageIcon("C:\\Users\\minkh\\Desktop\\practice\\dev_java\\src\\com\\Final\\image\\main.png");
 	ImageIcon ig = new ImageIcon(imgPath+"main.PNG");
 
 	/////////////////////////////////////////////////////
-	/* »ı¼ºÀÚ */
+	/* ìƒì„±ì */
 	/////////////////////////////////////////////////////
 	public LoginForm(){
 		initDisplay();
 	}
 
 	/////////////////////////////////////////////////////
-	/* jpanal ¿À¹ö¶óÀÌµå */
+	/* jpanal ì˜¤ë²„ë¼ì´ë“œ */
 	/////////////////////////////////////////////////////
 
-	/* ¹è°æÀÌ¹ÌÁö */
+	/* ë°°ê²½ì´ë¯¸ì§€ */
 	class mypanal extends JPanel {
 		public void paintComponent(Graphics g) {
 			g.drawImage(ig.getImage(), 0, 0, null);
@@ -77,16 +76,16 @@ public class LoginForm extends JFrame implements ActionListener {
 	}
 
 	/////////////////////////////////////////////////////
-	/* È­¸éÃ³¸® */
+	/* í™”ë©´ì²˜ë¦¬ */
 	/////////////////////////////////////////////////////
 	public void initDisplay() {
 		setContentPane(new mypanal());
 		
-		/* ¹öÆ°°ú ÅØ½ºÆ®ÇÊµå ±¸¼º */
+		/* ë²„íŠ¼ê³¼ í…ìŠ¤íŠ¸í•„ë“œ êµ¬ì„± */
 		jbtn_join.addActionListener(this);
 		jbtn_login.addActionListener(this);
 		this.setLayout(null);
-		this.setTitle("ÀÚ¹ÙÃ¤ÆÃ ver.1");
+		this.setTitle("ìë°”ì±„íŒ… ver.1");
 		this.setSize(350, 600);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
@@ -96,25 +95,25 @@ public class LoginForm extends JFrame implements ActionListener {
 				System.exit(0);
 			}
 		});
-		// id ¶óÀÎ
+		// id ë¼ì¸
 		jlb_id.setBounds(45, 200, 80, 40);
 		jlb_id.setFont(jl_font);
 		jtf_id.setBounds(110, 200, 185, 40);
 		this.add(jlb_id);
 		this.add(jtf_id);
 
-		// pw ¶óÀÎ
+		// pw ë¼ì¸
 		jlb_pw.setBounds(45, 240, 80, 40);
 		jlb_pw.setFont(jl_font);
 		jpf_pw.setBounds(110, 240, 185, 40);
 		this.add(jlb_pw);
 		this.add(jpf_pw);
 
-		// ·Î±×ÀÎ ¹öÆ° ¶óÀÎ
+		// ë¡œê·¸ì¸ ë²„íŠ¼ ë¼ì¸
 		jbtn_login.setBounds(175, 285, 120, 40);
 		this.add(jbtn_login);
 
-		// È¸¿ø°¡ÀÔ ¹öÆ° ¶óÀÎ
+		// íšŒì›ê°€ì… ë²„íŠ¼ ë¼ì¸
 		jbtn_join.setBounds(45, 285, 120, 40);
 		this.add(jbtn_join);		
 	}
@@ -130,7 +129,7 @@ public class LoginForm extends JFrame implements ActionListener {
 		} 
 		else if (obj == jbtn_login) {
 			if ( "".equals(jtf_id.getText()) || "".equals(jpf_pw.getText()) ){
-				JOptionPane.showMessageDialog(this, "¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇÏ¼¼¿ä.", "°æ°í", 2);
+				JOptionPane.showMessageDialog(this, "ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•˜ì„¸ìš”.", "ê²½ê³ ", 2);
 				return;
 			}
 			try {
@@ -138,10 +137,10 @@ public class LoginForm extends JFrame implements ActionListener {
 				String mem_pwd = jpf_pw.getText();
 				nickName = chatDao.login(mem_id, mem_pwd);
 				if (nickName.length()==0) {
-					JOptionPane.showMessageDialog(this, "¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇÏ¼¼¿ä.", "°æ°í", 2);
+					JOptionPane.showMessageDialog(this, "ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•˜ì„¸ìš”.", "ê²½ê³ ", 2);
 					return;
 				} else {
-					JOptionPane.showMessageDialog(this, nickName + "´ÔÀÇ Á¢¼ÓÀ» È¯¿µÇÕ´Ï´Ù.");
+					JOptionPane.showMessageDialog(this, nickName + "ë‹˜ì˜ ì ‘ì†ì„ í™˜ì˜í•©ë‹ˆë‹¤.");
 					this.setVisible(false);
 					jtf_id.setText("");
 					jpf_pw.setText("");

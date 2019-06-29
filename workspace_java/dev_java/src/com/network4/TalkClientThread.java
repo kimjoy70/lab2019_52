@@ -23,17 +23,18 @@ public class TalkClientThread extends Thread {
 	public void run() {
 		String msg = null;
 		boolean isStop = false;
-		while(!isStop) {//¹«ÇÑ·çÇÁ ¹æÁöÄÚµå¸¦ ²À Ãß°¡ÇÏÀÚ - º¯¼öÃ³¸®ÇÏÀÚ, Á¶°Ç½ÄÀ» È°¿ëÇÏÀÚ
+		while(!isStop) {//ë¬´í•œë£¨í”„ ë°©ì§€ì½”ë“œë¥¼ ê¼­ ì¶”ê°€í•˜ì - ë³€ìˆ˜ì²˜ë¦¬í•˜ì, ì¡°ê±´ì‹ì„ í™œìš©í•˜ì
 			try {
-				//100|³ªÃÊº¸
+				//100|ë‚˜ì´ˆë³´
 				msg = (String)tcv.ois.readObject();
+				JOptionPane.showMessageDialog(tcv, msg+"\n");
 				StringTokenizer st  = null;
 				int protocol = 0;
 				if(msg!=null) {
-					st = new StringTokenizer(msg,"|");
+					st = new StringTokenizer(msg,Protocol.seperator);
 					protocol = Integer.parseInt(st.nextToken());
 				}
-				//JOptionPane.showMessageDialog(tcv, "ÇÁ·ÎÅäÄİ:"+protocol);
+				//JOptionPane.showMessageDialog(tcv, "í”„ë¡œí† ì½œ:"+protocol);
 				switch(protocol) {
 					case Protocol.WAIT:{
 						String nickName = st.nextToken();
@@ -80,13 +81,13 @@ public class TalkClientThread extends Thread {
 						});						
 					}break;
 					case Protocol.ROOM_IN:{
-						JOptionPane.showMessageDialog(tcv, "Å¬¶óÀÌ¾ğÆ® ROOM INÃ³¸®:"+msg);
+						JOptionPane.showMessageDialog(tcv, "í´ë¼ì´ì–¸íŠ¸ ROOM INì²˜ë¦¬:"+msg);
 						String roomTitle = st.nextToken();
 		            	//g_roomTitle = roomTitle;
 						String current = st.nextToken();
 						String nickName = st.nextToken();
-						String temp = st.nextToken();//´ëÈ­¸í¸®½ºÆ®
-						JOptionPane.showMessageDialog(tcv, "Å¬¶óÀÌ¾ğÆ® ROOM IN temp:"+temp);
+						String temp = st.nextToken();//ëŒ€í™”ëª…ë¦¬ìŠ¤íŠ¸
+						JOptionPane.showMessageDialog(tcv, "í´ë¼ì´ì–¸íŠ¸ ROOM IN temp:"+temp);
 						String names[] = new String[Integer.parseInt(current)];
 						StringTokenizer st_names = null;
 						if(temp!=null) {
@@ -94,35 +95,35 @@ public class TalkClientThread extends Thread {
 							//names = new String[st_names.countTokens()];
 							for(int i=0;st_names.hasMoreTokens();i++) {
 								names[i] = st_names.nextToken();
-								JOptionPane.showMessageDialog(tcv, nickName+"Å¬¶óÀÌ¾ğÆ® ROOM IN names["+i+"]="+names[i]);
+								JOptionPane.showMessageDialog(tcv, nickName+"í´ë¼ì´ì–¸íŠ¸ ROOM IN names["+i+"]="+names[i]);
 							}
 						}
-						//JOptionPane.showMessageDialog(tcv, "Å¬¶óÀÌ¾ğÆ® ROOM IN names.length:"+names.length);
+						//JOptionPane.showMessageDialog(tcv, "í´ë¼ì´ì–¸íŠ¸ ROOM IN names.length:"+names.length);
 						tcv.wr.jsp_room.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {
 							public void adjustmentValueChanged(AdjustmentEvent e) {
 								JScrollBar jsb = (JScrollBar)e.getSource();
 								jsb.setValue(jsb.getMaximum());
 							}
 						});
-			            //¹æÁ¤º¸ ÀÎ¿ø°»½Å
+			            //ë°©ì •ë³´ ì¸ì›ê°±ì‹ 
 						//JOptionPane.showMessageDialog(tcv, "tcv.wr.jtb_room.getRowCount():"+tcv.wr.jtb_room.getRowCount());
 			            for(int i=0; i<tcv.wr.jtb_room.getRowCount(); i++){
-		            	JOptionPane.showMessageDialog(tcv, "¹æÁ¦¸ñ:"+(String)tcv.wr.dtm_room.getValueAt(i,0)+",ÀÎ¿ø:"+current);
+		            	JOptionPane.showMessageDialog(tcv, "ë°©ì œëª©:"+(String)tcv.wr.dtm_room.getValueAt(i,0)+",ì¸ì›:"+current);
 			             if(roomTitle.equals((String)tcv.wr.dtm_room.getValueAt(i,0))){
 			                  tcv.wr.dtm_room.setValueAt(current, i, 1);
 			                  break;
 			             }
 			            }
 			            //JOptionPane.showMessageDialog(tcv, "tcv.wr.jtb_wait.getRowCount():"+tcv.wr.jtb_wait.getRowCount());
-			           //´ë±â½Ç À§Ä¡ °»½Å
+			           //ëŒ€ê¸°ì‹¤ ìœ„ì¹˜ ê°±ì‹ 
 			            for(int i=0; i<tcv.wr.jtb_wait.getRowCount(); i++) {
 			              if(nickName.equals((String)tcv.wr.dtm_wait.getValueAt(i,0))){
 			                  tcv.wr.dtm_wait.setValueAt(roomTitle,i,1);
 			              }
 			            }//for i end	
-			            //JOptionPane.showMessageDialog(tcv, nickName+"Å¬¶óÀÌ¾ğÆ® ROOM IN temp="+temp);
-			            //´ëÈ­¹æÀ¸·Î ÀÌµ¿ÇÏ±â
-			            //¹æÀÔÀåÇÏ±â ´©¸¥ »ç¶÷¸¸ È­¸é ÀÌµ¿Ã³¸®
+			            //JOptionPane.showMessageDialog(tcv, nickName+"í´ë¼ì´ì–¸íŠ¸ ROOM IN temp="+temp);
+			            //ëŒ€í™”ë°©ìœ¼ë¡œ ì´ë™í•˜ê¸°
+			            //ë°©ì…ì¥í•˜ê¸° ëˆ„ë¥¸ ì‚¬ëŒë§Œ í™”ë©´ ì´ë™ì²˜ë¦¬
 			            if(tcv.nickName.equals(nickName)) {
 			            	tcv.tp.setSelectedIndex(1);
 			            	//String names[] = {tcv.nickName};
@@ -153,7 +154,7 @@ public class TalkClientThread extends Thread {
 					case Protocol.MESSAGE:{//200
 						String nickName = st.nextToken();
 						String message = st.nextToken();
-						//¸Ş½ÃÁö µÚ¿¡ Vector¿Í °°Àº Object¸¦ ³Ñ±æ ¼ö ÀÖ³ª?
+						//ë©”ì‹œì§€ ë’¤ì— Vectorì™€ ê°™ì€ Objectë¥¼ ë„˜ê¸¸ ìˆ˜ ìˆë‚˜?
 						String fontColor = st.nextToken();
 						String imgChoice = st.nextToken();
 					    MutableAttributeSet  attr1 = new SimpleAttributeSet();
@@ -162,7 +163,7 @@ public class TalkClientThread extends Thread {
 						    int i=0;
 						    for(i=0;i<tcv.mr.pm.imgfile.length;i++){
 						    	if(tcv.mr.pm.imgfile[i].equals(imgChoice)){
-						    		JOptionPane.showMessageDialog(tcv, "ÀÌ¹ÌÁöÀÌ¸§:"+tcv.mr.pm.imgfile[i]);
+						    		//JOptionPane.showMessageDialog(tcv, "ì´ë¯¸ì§€ì´ë¦„:"+tcv.mr.pm.imgfile[i]);
 						    		StyleConstants.setIcon(attr2,
 						    				new ImageIcon(path + tcv.mr.pm.imgfile[i]));
 						    		try{
@@ -172,7 +173,7 @@ public class TalkClientThread extends Thread {
 						    }
 					    }//////////////////////end of emoticon
 						//JOptionPane.showMessageDialog(tc, "style:"+style.length);
-						//if(!message.equals("ÀÌ¸ğÆ¼ÄÜ")){
+						//if(!message.equals("ì´ëª¨í‹°ì½˜")){
 						else if(imgChoice.equals("default")){	
 							//SimpleAttributeSet sas = makeAttribute(style);
 							//tc.jta_display.setLineWrap(true);
@@ -186,7 +187,7 @@ public class TalkClientThread extends Thread {
 							tcv.mr.jtp_display.setCaretPosition(tcv.mr.sd_display.getLength());					
 							//tc.jta_display.append("["+nickName+"] "+msg+"\n");
 							//tc.jta_display.setCaretPosition(tc.jta_display.getDocument().getLength());
-						}//////////////////////end of ÀÌ¸ğÆ¼ÄÜ						
+						}//////////////////////end of ì´ëª¨í‹°ì½˜						
 						//tc.jtp_display.append("["+nickName+"]"+message+"\n");
 						tcv.mr.jtp_display.setCaretPosition(tcv.mr.sd_display.getLength());
 					}break;	

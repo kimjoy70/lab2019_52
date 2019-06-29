@@ -21,33 +21,30 @@ import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
-import address.mvc.result.AddressCtrl;
-import address.mvc.result.AddressVO;
-
 public class WaitRoom extends JPanel implements ActionListener {
 	TalkClientVer2 tc2 = null;
 	JPanel jp_first = new JPanel();
 	JPanel jp_second = new JPanel();
 	JPanel jp_second_south = new JPanel();
-	String cols[] = {"´ëÈ­¸í","À§Ä¡"};
+	String cols[] = {"ëŒ€í™”ëª…","ìœ„ì¹˜"};
 	String data[][] = new String[0][2];
-	//DataSetÀÇ ¿ªÇÒÀ» ¼öÇàÇÏ´Â DefaultTableModelÀ» ¸ÕÀú ¼±¾ğÇÏ°í ÃÊ±âÈ­ ÇÏ±â
+	//DataSetì˜ ì—­í• ì„ ìˆ˜í–‰í•˜ëŠ” DefaultTableModelì„ ë¨¼ì € ì„ ì–¸í•˜ê³  ì´ˆê¸°í™” í•˜ê¸°
 	DefaultTableModel dtm_wait = new DefaultTableModel(data,cols); 
 	JTable 			  jtb_wait = new JTable(dtm_wait);
 	JScrollPane 	  jsp_wait = new JScrollPane(jtb_wait
 			                                    ,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 			                                    ,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);	
-	String cols2[] = {"´ÜÅåÀÌ¸§","ÇöÀç¿ø"};
+	String cols2[] = {"ë‹¨í†¡ì´ë¦„","í˜„ì¬ì›"};
 	String data2[][] = new String[0][2];
 	DefaultTableModel dtm_room = new DefaultTableModel(data2,cols2); 
 	JTable 			  jtb_room = new JTable(dtm_room);
 	JScrollPane 	  jsp_room = new JScrollPane(jtb_room
 			,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 			,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);	
-	JButton jbtn_create = new JButton("´ÜÅå»ı¼º");
-	JButton jbtn_in = new JButton("ÀÔÀå");
-	JButton jbtn_out = new JButton("³ª°¡±â");
-	JButton jbtn_exit = new JButton("Á¾·á");
+	JButton jbtn_create = new JButton("ë‹¨í†¡ìƒì„±");
+	JButton jbtn_in = new JButton("ì…ì¥");
+	JButton jbtn_out = new JButton("ë‚˜ê°€ê¸°");
+	JButton jbtn_exit = new JButton("ì¢…ë£Œ");
 	JTableHeader jth_wait = jtb_wait.getTableHeader();
 	JTableHeader jth_room = jtb_room.getTableHeader();
 	String nickName = null;
@@ -105,20 +102,20 @@ public class WaitRoom extends JPanel implements ActionListener {
 		WaitRoom wr = new WaitRoom();
 		wr.initDisplay();
 	}
-	//Á¾·áÀÇ °æ¿ì ¿©·¯ ÀÌº¥Æ® ¿¡¼­ Àç»ç¿ëÇÒ ¼ö ÀÖÀ¸¹Ç·Î Àç»ç¿ë °¡´ÉÇÏµµ·Ï ¸Ş¼Òµå·Î ±¸ÇöÇØ º¼°Í.
+	//ì¢…ë£Œì˜ ê²½ìš° ì—¬ëŸ¬ ì´ë²¤íŠ¸ ì—ì„œ ì¬ì‚¬ìš©í•  ìˆ˜ ìˆìœ¼ë¯€ë¡œ ì¬ì‚¬ìš© ê°€ëŠ¥í•˜ë„ë¡ ë©”ì†Œë“œë¡œ êµ¬í˜„í•´ ë³¼ê²ƒ.
 	public void exitChat() {
 		try {
 			tc2.oos.writeObject(Protocol.ROOM_OUT+"|"+this.nickName);
 		} catch (Exception e) {
-			//stack¸Ş¸ğ¸® ¿µ¿ª¿¡ ½×¿©ÀÖ´Â ¿¡·¯ ¸Ş½ÃÁöµéÀ» ¼øÂ÷ÀûÀ¸·Î Ãâ·ÂÇØÁÖ°í ¶óÀÎ¹øÈ£¿Í ¿¡·¯ ¸Ş½ÃÁö Ãâ·Â
-			e.printStackTrace();//²À ±â¾ïÇÏÀÚ.- ÈùÆ®¸¦ Ãâ·ÂÇÏ´Â ¸Ş¼ÒµåÀÎµ¥ ÀÌ·Â±îÁöµµ Ãâ·Â, ¶óÀÎ¹øÈ£µµ °°ÀÌ Ãâ·Â
+			//stackë©”ëª¨ë¦¬ ì˜ì—­ì— ìŒ“ì—¬ìˆëŠ” ì—ëŸ¬ ë©”ì‹œì§€ë“¤ì„ ìˆœì°¨ì ìœ¼ë¡œ ì¶œë ¥í•´ì£¼ê³  ë¼ì¸ë²ˆí˜¸ì™€ ì—ëŸ¬ ë©”ì‹œì§€ ì¶œë ¥
+			e.printStackTrace();//ê¼­ ê¸°ì–µí•˜ì.- íŒíŠ¸ë¥¼ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œì¸ë° ì´ë ¥ê¹Œì§€ë„ ì¶œë ¥, ë¼ì¸ë²ˆí˜¸ë„ ê°™ì´ ì¶œë ¥
 		}
 	}
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		Object obj = ae.getSource();
 		if(obj == jbtn_create) {
-			roomTitle = JOptionPane.showInputDialog("´ÜÅå ÀÌ¸§À» Áö¾îÁÖ¼¼¿ä.");
+			roomTitle = JOptionPane.showInputDialog("ë‹¨í†¡ ì´ë¦„ì„ ì§€ì–´ì£¼ì„¸ìš”.");
 			if(roomTitle!=null) {
 				try {
 					tc2.oos.writeObject(Protocol.ROOM_CREATE
@@ -128,11 +125,11 @@ public class WaitRoom extends JPanel implements ActionListener {
 					// TODO: handle exception
 				}
 			}
-		}///////////////end of ¹æ¸¸µé±â
+		}///////////////end of ë°©ë§Œë“¤ê¸°
 		else if(obj == jbtn_in) {
 			int index[]= jtb_room.getSelectedRows();
 			if (index.length == 0) {
-				JOptionPane.showMessageDialog(this, "´ÜÅå¹æÀ» ¼±ÅÃÇÏ¼¼¿ä..."
+				JOptionPane.showMessageDialog(this, "ë‹¨í†¡ë°©ì„ ì„ íƒí•˜ì„¸ìš”..."
 						, "Error", JOptionPane.ERROR_MESSAGE);
 				return;
 			} else {
@@ -147,15 +144,15 @@ public class WaitRoom extends JPanel implements ActionListener {
 					}
 
 				} catch (Exception e) {
-					JOptionPane.showMessageDialog(this, "»èÁ¦Áß ¿¡·¯°¡ ¹ß»ıÇß½À´Ï´Ù.\n" + e,
+					JOptionPane.showMessageDialog(this, "ì‚­ì œì¤‘ ì—ëŸ¬ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.\n" + e,
 						"Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}	
 			jtb_room.clearSelection();
-		}///////////////end of ¹æÀÔÀå
+		}///////////////end of ë°©ì…ì¥
 		else if(obj == jbtn_exit) {
 			System.exit(0);
-		}///////////////end of ¹æÀÔÀå
+		}///////////////end of ë°©ì…ì¥
 		
 	}
 }

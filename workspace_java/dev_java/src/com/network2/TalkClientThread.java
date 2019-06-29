@@ -19,7 +19,7 @@ public class TalkClientThread extends Thread {
 	public TalkClientThread(TalkClient tc) {
 		this.tc = tc;
 	}
-	//±ÛÀÚ»ö»óÀÌ³ª ±Û²Ã, ÆùÆ® »çÀÌÁî µîÀ» Àû¿ëÇÏ°í ½ÍÀ» ¶§
+	//ê¸€ììƒ‰ìƒì´ë‚˜ ê¸€ê¼´, í°íŠ¸ ì‚¬ì´ì¦ˆ ë“±ì„ ì ìš©í•˜ê³  ì‹¶ì„ ë•Œ
 	public SimpleAttributeSet makeAttribute(String fontColor) {
 		SimpleAttributeSet sas = new SimpleAttributeSet();
 		sas.addAttribute(StyleConstants.ColorConstants.Foreground
@@ -29,9 +29,9 @@ public class TalkClientThread extends Thread {
 	public void run() {
 		String msg = null;
 		boolean isStop = false;
-		while(!isStop) {//¹«ÇÑ·çÇÁ ¹æÁöÄÚµå¸¦ ²À Ãß°¡ÇÏÀÚ - º¯¼öÃ³¸®ÇÏÀÚ, Á¶°Ç½ÄÀ» È°¿ëÇÏÀÚ
+		while(!isStop) {//ë¬´í•œë£¨í”„ ë°©ì§€ì½”ë“œë¥¼ ê¼­ ì¶”ê°€í•˜ì - ë³€ìˆ˜ì²˜ë¦¬í•˜ì, ì¡°ê±´ì‹ì„ í™œìš©í•˜ì
 			try {
-				//100|³ªÃÊº¸
+				//100|ë‚˜ì´ˆë³´
 				msg = (String)tc.ois.readObject();
 				StringTokenizer st  = null;
 				int protocol = 0;
@@ -42,7 +42,7 @@ public class TalkClientThread extends Thread {
 				switch(protocol) {
 					case Protocol.ROOM_IN:{
 						String nickName = st.nextToken();
-						//ÀÔÀåÇÏ¿´½À´Ï´Ù ±ÛÀÚ»öÀ» ÃÊ·Ï»öÀ¸·Î Àû¿ëÇÏ±â
+						//ì…ì¥í•˜ì˜€ìŠµë‹ˆë‹¤ ê¸€ììƒ‰ì„ ì´ˆë¡ìƒ‰ìœ¼ë¡œ ì ìš©í•˜ê¸°
 						String fontColor = st.nextToken();
 						SimpleAttributeSet sas = makeAttribute(fontColor);
 						Vector<String> v_nick = new Vector<String>();
@@ -54,13 +54,13 @@ public class TalkClientThread extends Thread {
 								jsb.setValue(jsb.getMaximum());
 							}
 						});
-						//tc.jtp_display.append(nickName+"´ÔÀÌ ÀÔÀåÇÏ¿´½À´Ï´Ù.\n");
-						//¿¹¿ÜÃ³¸®´ë»ó - JDBC API, Network API, Thread, IO
+						//tc.jtp_display.append(nickName+"ë‹˜ì´ ì…ì¥í•˜ì˜€ìŠµë‹ˆë‹¤.\n");
+						//ì˜ˆì™¸ì²˜ë¦¬ëŒ€ìƒ - JDBC API, Network API, Thread, IO
 						try {
-							//offset-À§Ä¡, str-¸Ş½ÃÁö, a-attribute¼Ó¼ººÎ¿©
+							//offset-ìœ„ì¹˜, str-ë©”ì‹œì§€, a-attributeì†ì„±ë¶€ì—¬
 							//tc.sd_display.insertString(offset, str, a);
 							tc.sd_display.insertString(tc.sd_display.getLength()
-									                 , nickName+"´ÔÀÌ ÀÔÀåÇÏ¿´½À´Ï´Ù.\n"
+									                 , nickName+"ë‹˜ì´ ì…ì¥í•˜ì˜€ìŠµë‹ˆë‹¤.\n"
 									                 , sas);
 						} catch (Exception e) {
 							// TODO: handle exception
@@ -69,7 +69,7 @@ public class TalkClientThread extends Thread {
 					case Protocol.MESSAGE:{//200
 						String nickName = st.nextToken();
 						String message = st.nextToken();
-						//¸Ş½ÃÁö µÚ¿¡ Vector¿Í °°Àº Object¸¦ ³Ñ±æ ¼ö ÀÖ³ª?
+						//ë©”ì‹œì§€ ë’¤ì— Vectorì™€ ê°™ì€ Objectë¥¼ ë„˜ê¸¸ ìˆ˜ ìˆë‚˜?
 						String fontColor = st.nextToken();
 						String imgChoice = st.nextToken();
 					    MutableAttributeSet  attr1 = new SimpleAttributeSet();
@@ -78,7 +78,7 @@ public class TalkClientThread extends Thread {
 						    int i=0;
 						    for(i=0;i<tc.pm.imgfile.length;i++){
 						    	if(tc.pm.imgfile[i].equals(imgChoice)){
-						    		JOptionPane.showMessageDialog(tc, "ÀÌ¹ÌÁöÀÌ¸§:"+tc.pm.imgfile[i]);
+						    		JOptionPane.showMessageDialog(tc, "ì´ë¯¸ì§€ì´ë¦„:"+tc.pm.imgfile[i]);
 						    		StyleConstants.setIcon(attr2,
 						    				new ImageIcon(path + tc.pm.imgfile[i]));
 						    		try{
@@ -88,7 +88,7 @@ public class TalkClientThread extends Thread {
 						    }
 					    }//////////////////////end of emoticon
 						//JOptionPane.showMessageDialog(tc, "style:"+style.length);
-						//if(!message.equals("ÀÌ¸ğÆ¼ÄÜ")){
+						//if(!message.equals("ì´ëª¨í‹°ì½˜")){
 						else if(imgChoice.equals("default")){	
 							//SimpleAttributeSet sas = makeAttribute(style);
 							//tc.jta_display.setLineWrap(true);
@@ -102,44 +102,44 @@ public class TalkClientThread extends Thread {
 							tc.jtp_display.setCaretPosition(tc.sd_display.getLength());					
 							//tc.jta_display.append("["+nickName+"] "+msg+"\n");
 							//tc.jta_display.setCaretPosition(tc.jta_display.getDocument().getLength());
-						}//////////////////////end of ÀÌ¸ğÆ¼ÄÜ						
+						}//////////////////////end of ì´ëª¨í‹°ì½˜						
 						//tc.jtp_display.append("["+nickName+"]"+message+"\n");
 						tc.jtp_display.setCaretPosition(tc.sd_display.getLength());
 					}break;	
-					//´ëÈ­¸í º¯°æÃ³¸® - Å¬¶óÀÌ¾ğÆ®Ãø Ã³¸® - º¯°æµÈ ´ëÈ­¸íÀ» dtm_nickº¯°æÃ³¸®- dtm_nick.setValueAt(what,row,cols);
+					//ëŒ€í™”ëª… ë³€ê²½ì²˜ë¦¬ - í´ë¼ì´ì–¸íŠ¸ì¸¡ ì²˜ë¦¬ - ë³€ê²½ëœ ëŒ€í™”ëª…ì„ dtm_nickë³€ê²½ì²˜ë¦¬- dtm_nick.setValueAt(what,row,cols);
 					case Protocol.CHANGE:{
 						String nickName = st.nextToken();
 						String afterName = st.nextToken();
 						String message = st.nextToken();
-						//Å×ÀÌºí¿¡ ´ëÈ­¸í º¯°æÇÏ±â - ¿©±â¼­ setValueAt()È°¿ëÇÒ°Í.
+						//í…Œì´ë¸”ì— ëŒ€í™”ëª… ë³€ê²½í•˜ê¸° - ì—¬ê¸°ì„œ setValueAt()í™œìš©í• ê²ƒ.
 						for(int i=0;i<tc.dtm_nick.getRowCount();i++) {
-							//´ëÈ­¸íÀ» º¯°æÀü¿¡ ÇöÀç dtm_nick¿¡¼­ °¡Á®¿Â ´ëÈ­¸íÀ» ´ã´Â´Ù.
-							//¿Ö³ÄÇÏ¸é ÀÌ¸§À» ºñ±³ÇØ¼­ ±× °ªÀ» afterNameÀ¸·Î ¹Ù²ãÁà¾ß ÇÏ´Ï±ñ.....
+							//ëŒ€í™”ëª…ì„ ë³€ê²½ì „ì— í˜„ì¬ dtm_nickì—ì„œ ê°€ì ¸ì˜¨ ëŒ€í™”ëª…ì„ ë‹´ëŠ”ë‹¤.
+							//ì™œëƒí•˜ë©´ ì´ë¦„ì„ ë¹„êµí•´ì„œ ê·¸ ê°’ì„ afterNameìœ¼ë¡œ ë°”ê¿”ì¤˜ì•¼ í•˜ë‹ˆê¹.....
 							String currentName = (String)tc.dtm_nick.getValueAt(i, 0);
-							if(nickName.equals(currentName)) {//¼­¹ö¿¡¼­ ¹Ş¾Æ¿Â nickName°ú dtm_nick¿¡ ÀÖ´Â nickNameÀÌ °°Àº°Ô ÀÖ´Ï?
+							if(nickName.equals(currentName)) {//ì„œë²„ì—ì„œ ë°›ì•„ì˜¨ nickNameê³¼ dtm_nickì— ìˆëŠ” nickNameì´ ê°™ì€ê²Œ ìˆë‹ˆ?
 								tc.dtm_nick.setValueAt(afterName, i, 0);
 								break;
 							}
-							//º¯°æµÈ ´ëÈ­¸í ¸Ş½ÃÁö¸¦ Ãâ·ÂÇÏ±â
+							//ë³€ê²½ëœ ëŒ€í™”ëª… ë©”ì‹œì§€ë¥¼ ì¶œë ¥í•˜ê¸°
 							try {
 								tc.sd_display.insertString
 										(tc.sd_display.getLength(), message, null);
 							} catch (Exception e) {
 								// TODO: handle exception
 							}
-							//¸Ş½ÃÁö°¡ Ãß°¡µÉ¶§ ½ºÅ©·Ñ¹Ù ÀÚµ¿ À§Ä¡ º¯°æ
+							//ë©”ì‹œì§€ê°€ ì¶”ê°€ë ë•Œ ìŠ¤í¬ë¡¤ë°” ìë™ ìœ„ì¹˜ ë³€ê²½
 							tc.jtp_display.setCaretPosition(tc.sd_display.getLength());
-							//Ã¤ÆÃÃ¢ÀÇ Å¸ÀÌÆ²µµ º¯°æÇÏÀÚ.
+							//ì±„íŒ…ì°½ì˜ íƒ€ì´í‹€ë„ ë³€ê²½í•˜ì.
 							if(nickName.equals(tc.nickName)) {
-								tc.setTitle(afterName+"´ÔÀÇ ´ëÈ­Ã¢");
+								tc.setTitle(afterName+"ë‹˜ì˜ ëŒ€í™”ì°½");
 								tc.nickName = afterName;
 							}
 						}
 					}break;
 					case Protocol.ROOM_OUT:{//500
 						String nickName = st.nextToken();
-						//tc.jtp_display.append(nickName+"´ÔÀÌ ÅğÀå ÇÏ¿´½À´Ï´Ù.\n");
-						//DefaultTableModel¿¡¼­ »ç¿ëÀÚ Á¤º¸ »èÁ¦ÇÏ±â
+						//tc.jtp_display.append(nickName+"ë‹˜ì´ í‡´ì¥ í•˜ì˜€ìŠµë‹ˆë‹¤.\n");
+						//DefaultTableModelì—ì„œ ì‚¬ìš©ì ì •ë³´ ì‚­ì œí•˜ê¸°
 						for(int i=0;i<tc.dtm_nick.getRowCount();i++) {
 							String n1 = (String)tc.dtm_nick.getValueAt(i,0);
 							if(n1.equals(nickName)) {

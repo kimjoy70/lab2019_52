@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 
 import com.jdbc.DBConnectionMgr2;
-import com.vo.DeptVO;
 
 import oracle.jdbc.OracleCallableStatement;
 import oracle.jdbc.internal.OracleTypes;
@@ -20,12 +19,12 @@ public class ChatDao {
 		// TODO Auto-generated constructor stub
 	}
 	public String login(String mem_id, String mem_pwd) {
-		String mem_nick = "";
+		String mem_nick = null;
 		try {
 			con = dbMgr.getConnection();
 			cstmt = con.prepareCall("{call proc_login(?,?,?)}");
-			//¿À¶óÅ¬ ¼­¹ö¿Í ¿¬°á Åë·Î°¡ È®º¸ µÇ¾ú°í µÎ °³ÀÇ ?ÀÚ¸® Áß Ã¹¹øÂ°°¡ read¼Ó¼ºÀÌ¹Ç·Î
-			//p_empno¸¦ Ã¹¹øÂ° ?ÀÚ¸®¿¡ ¼³Á¤ÇØ¾ß ÇÔ.
+			//ì˜¤ë¼í´ ì„œë²„ì™€ ì—°ê²° í†µë¡œê°€ í™•ë³´ ë˜ì—ˆê³  ë‘ ê°œì˜ ?ìë¦¬ ì¤‘ ì²«ë²ˆì§¸ê°€ readì†ì„±ì´ë¯€ë¡œ
+			//p_empnoë¥¼ ì²«ë²ˆì§¸ ?ìë¦¬ì— ì„¤ì •í•´ì•¼ í•¨.
 			cstmt.setString(1, mem_id);
 			cstmt.setString(2, mem_pwd);
 			cstmt.registerOutParameter(3,OracleTypes.CURSOR);
@@ -36,7 +35,7 @@ public class ChatDao {
 		    	mem_nick = cursor.getString("mem_nick");
 		    }
 		} catch (Exception e) {
-			System.out.println(e.getMessage()+", "+e.toString());//ÈùÆ®¸¦ ¾òÀ» ¼ö ÀÖ´Ù.
+			System.out.println(e.getMessage()+", "+e.toString());//íŒíŠ¸ë¥¼ ì–»ì„ ìˆ˜ ìˆë‹¤.
 		}		
 		return mem_nick;
 	}

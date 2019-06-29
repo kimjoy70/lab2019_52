@@ -15,11 +15,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 /*
- * ¼­¹ö´Â 24½Ã°£ °¡µ¿µÇ¾î¾ß ÇÏ°í ¿©·¯ »ç¿ëÀÚ°¡ µ¿½Ã¿¡ Á¢¼ÓÇÒ ¼ö  ÀÖ´Ù.
- * ÀÌ ¶§ °æÇÕÀÌ ¹ú¾îÁö¹Ç·Î ½º·¹µå°¡ Ã·°¡µÇ¸é ¾ÈÁ¤ÀûÀ¸·Î »ç¿ëÀÚ¸¦ ¹ŞÀ» ¼ö ÀÖÀ» °ÍÀÌ´Ù.
+ * ì„œë²„ëŠ” 24ì‹œê°„ ê°€ë™ë˜ì–´ì•¼ í•˜ê³  ì—¬ëŸ¬ ì‚¬ìš©ìê°€ ë™ì‹œì— ì ‘ì†í•  ìˆ˜  ìˆë‹¤.
+ * ì´ ë•Œ ê²½í•©ì´ ë²Œì–´ì§€ë¯€ë¡œ ìŠ¤ë ˆë“œê°€ ì²¨ê°€ë˜ë©´ ì•ˆì •ì ìœ¼ë¡œ ì‚¬ìš©ìë¥¼ ë°›ì„ ìˆ˜ ìˆì„ ê²ƒì´ë‹¤.
  * 
- * ÀÚ¹Ù´Â ´ÜÀÏ »ó¼Ó¸¸ Áö¿øÇÑ´Ù.
- * ¸¸ÀÏ ´Ù¸¥ Å¬·¡½º¸¦ Àç»ç¿ëÇÏ°í ½ÍÀ» ¶© ÀÎÅÍÆäÀÌ½º·Î º¸¿ÏÇÏµµ·Ï Áö¿ø
+ * ìë°”ëŠ” ë‹¨ì¼ ìƒì†ë§Œ ì§€ì›í•œë‹¤.
+ * ë§Œì¼ ë‹¤ë¥¸ í´ë˜ìŠ¤ë¥¼ ì¬ì‚¬ìš©í•˜ê³  ì‹¶ì„ ë• ì¸í„°í˜ì´ìŠ¤ë¡œ ë³´ì™„í•˜ë„ë¡ ì§€ì›
  * 
  */
 public class TalkServer extends JFrame implements Runnable {
@@ -28,12 +28,12 @@ public class TalkServer extends JFrame implements Runnable {
 	JTextArea 	jta_log = new JTextArea();
 	JScrollPane jsp_log = new JScrollPane(jta_log
 			                             ,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
-			                             ,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);//ÀÏÁ¾ÀÇ ¼ÓÁöÀÓ
+			                             ,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);//ì¼ì¢…ì˜ ì†ì§€ì„
 	TalkServerThread tst = null;
 	List<TalkServerThread> globalList = null;
 	List<Room> roomList = null;
 	public TalkServer() {
-		//List´Â ÀÎÅÍÆäÀÌ½º, Vector´Â List¸¦ ±¸ÇöÇÏ´Â ±¸ÇöÃ¼ Å¬·¡½ºÀÓ.
+		//ListëŠ” ì¸í„°í˜ì´ìŠ¤, VectorëŠ” Listë¥¼ êµ¬í˜„í•˜ëŠ” êµ¬í˜„ì²´ í´ë˜ìŠ¤ì„.
 		roomList = new Vector<Room>();
 		globalList = new Vector<TalkServerThread>();		
 	}
@@ -50,15 +50,15 @@ public class TalkServer extends JFrame implements Runnable {
 			}
 		});
 		this.add("Center",jsp_log);
-		this.setTitle("¼­¹ö ·Î±× Ãâ·Â....");
+		this.setTitle("ì„œë²„ ë¡œê·¸ ì¶œë ¥....");
 		this.setSize(500, 400);
 		this.setVisible(true);
 	}//////////////////end of initDisplay
-	//main°¡ °¡Àå ¸ÕÀú ½ÇÇàµÈ´Ù.- main¸Ş¼Òµåµµ ¸ŞÀÎ½º·¹µåÀÓ.
+	//mainê°€ ê°€ì¥ ë¨¼ì € ì‹¤í–‰ëœë‹¤.- mainë©”ì†Œë“œë„ ë©”ì¸ìŠ¤ë ˆë“œì„.
 	public static void main(String args[]) {
 		TalkServer ts = new TalkServer();
 		ts.initDisplay();
-		new Thread(ts).start();//³»[TalkServer]¾È¿¡ ÀÖ´Â run¸Ş¼Òµå È£ÃâµÊ.
+		new Thread(ts).start();//ë‚´[TalkServer]ì•ˆì— ìˆëŠ” runë©”ì†Œë“œ í˜¸ì¶œë¨.
 	}/////////////////end of main
 	@Override
 	public void run() {
@@ -67,13 +67,13 @@ public class TalkServer extends JFrame implements Runnable {
 		try {
 			server = new ServerSocket(3002);
 			while(!isStop) {
-				client = server.accept();//Àº¼ö¼ÒÄÏÀúÀå(Àº¼öÄÄ¿¡ Æ÷Æ®¹øÈ£ ÇÒ´ç)
-				jta_log.append(client.toString()+"\n");//Àº¼öÆ÷Æ®¹øÈ£ Ãâ·ÂÅ×½ºÆ®
-				//½º·¹µå »ı¼ºÇÏ±â
-				//ÆÄ¶ó¹ÌÅÍ·Î TalkServer¸¦ ³Ñ±â´Â °Ç ¼ÒÄÏÀº TalkServer¿¡ ¼±¾ğÇß´Âµ¥
-				//»ç¿ëÀº TalkServerThread¿¡¼­µµ »ç¿ë°¡´ÉÇØ¾ß ÇÏ´Ï±ñ......
+				client = server.accept();//ì€ìˆ˜ì†Œì¼“ì €ì¥(ì€ìˆ˜ì»´ì— í¬íŠ¸ë²ˆí˜¸ í• ë‹¹)
+				jta_log.append(client.toString()+"\n");//ì€ìˆ˜í¬íŠ¸ë²ˆí˜¸ ì¶œë ¥í…ŒìŠ¤íŠ¸
+				//ìŠ¤ë ˆë“œ ìƒì„±í•˜ê¸°
+				//íŒŒë¼ë¯¸í„°ë¡œ TalkServerë¥¼ ë„˜ê¸°ëŠ” ê±´ ì†Œì¼“ì€ TalkServerì— ì„ ì–¸í–ˆëŠ”ë°
+				//ì‚¬ìš©ì€ TalkServerThreadì—ì„œë„ ì‚¬ìš©ê°€ëŠ¥í•´ì•¼ í•˜ë‹ˆê¹......
 				tst = new TalkServerThread(this);
-				tst.start();//run¸Ş¼Òµå¸¦ ÀÚµ¿(JVM)À¸·Î È£ÃâÇÔ. - Äİ¹é¸Ş¼Òµå
+				tst.start();//runë©”ì†Œë“œë¥¼ ìë™(JVM)ìœ¼ë¡œ í˜¸ì¶œí•¨. - ì½œë°±ë©”ì†Œë“œ
 			}
 		} catch (Exception e) {
 			System.out.println(e.toString());
