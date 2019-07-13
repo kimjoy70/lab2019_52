@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import org.jboss.logging.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class DeptController {
+	Logger logger = Logger.getLogger(DeptController.class);
+	@RequestMapping("/getDeptList")
+	public String getDeptList() {
+		return "getDeptList";
+	}
+	@GetMapping("/{name}.jsp")
+	public String deptInsert(@PathVariable String name) {
+		return "deptInsert";
+	}
+
+}

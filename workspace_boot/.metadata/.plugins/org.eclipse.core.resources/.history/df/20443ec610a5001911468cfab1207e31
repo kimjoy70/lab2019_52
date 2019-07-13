@@ -1,0 +1,5 @@
+server.port=8000
+spring.thymeleaf.prefix=classpath:/templates/
+#spring.thymeleaf.prefix=classpath:/WEB-INF/jsp/
+#spring.mvc.view.prefix=/WEB-INF/jsp/
+#spring.mvc.view.suffix=.jsp
