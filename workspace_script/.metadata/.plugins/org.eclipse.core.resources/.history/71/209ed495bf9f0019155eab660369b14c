@@ -1,0 +1,24 @@
+package naver.login;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(urlPatterns="/naver/login/naverLogin.do")
+public class NaverLoginTest extends HttpServlet {
+	Logger logger = Logger.getLogger(NaverLoginTest.class);
+	public void doService(HttpServletRequest req, HttpServletResponse res) throws ServletException
+	{
+		
+	}
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException
+	{
+		doService(req,res);
+	}
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException
+	{
+		doService(req,res);
+	}
+}

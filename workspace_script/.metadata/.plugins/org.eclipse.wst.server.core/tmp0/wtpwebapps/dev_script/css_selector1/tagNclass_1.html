@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그 선택자와 클래스 선택자</title>
+</head>
+<body>
+    <style>
+        li.select { color: red;}
+        h1.select { color: green;}
+    </style>
+    <header>태그 선택자와 클래스 선택자</header>
+    <section>
+        <article>
+            <p>id속성은 중복되지 않으므로 상관없지만 class속성은 중복될 수 있다.<br>
+               만약 클래스 속성이 중복되면 태그 선택자와 클래스 선택자를 함께 사용 가능.
+            </p>
+        </article>
+    </section>
+    <h1 class="select">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <ul>
+        <li class="select">Lorem, ipsum</li>
+        <li>Lorem, ipsum</li>
+        <li>Lorem, ipsum</li>
+    </ul>
+</html>

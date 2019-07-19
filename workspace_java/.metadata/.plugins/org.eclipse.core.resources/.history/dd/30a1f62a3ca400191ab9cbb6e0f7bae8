@@ -1,0 +1,31 @@
+package UI.swing;
+
+import javax.swing.JFrame;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+public class SpinnerClick extends JFrame implements ChangeListener{
+	JSpinner spin = new JSpinner();
+	SpinnerNumberModel jsnm = new SpinnerNumberModel();
+	public SpinnerClick() {
+		spin.addChangeListener(this);
+		jsnm.setMaximum(100);
+		jsnm.setMinimum(1);
+		spin.setModel(jsnm);
+		this.add(spin);
+		this.setSize(400, 300);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+		new SpinnerClick();
+	}
+	@Override
+	public void stateChanged(ChangeEvent arg0) {
+		// TODO Auto-generated method stub
+		String pattern = (String)jsnm.getValue();
+		System.out.println(pattern);
+	}
+
+}

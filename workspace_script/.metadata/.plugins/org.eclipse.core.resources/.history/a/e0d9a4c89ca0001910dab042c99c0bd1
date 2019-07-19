@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*,com.google.gson.Gson, com.vo.RestaurantVO" %>    
+<%@ page import="com.util.DBConnectionMgr, java.sql.*" %>    
+<%@ page import="oracle.jdbc.OracleCallableStatement,oracle.jdbc.internal.OracleTypes" %>    
+<%
+	Connection con = null;
+	CallableStatement cstmt = null;
+	ResultSet rs = null;
+    List<RestaurantVO> recList = new ArrayList<>();
+	try{
+		con = DBConnectionMgr.getConnection();
+		cstmt = con.prepareCall("{call proc_restaurant(?)}");
+        cstmt.registerOutParameter(1,OracleTypes.CURSOR);
+        cstmt.execute();
+		OracleCallableStatement ocstmt = null;
+        ocstmt = (OracleCallableStatement)cstmt;
+        rs =  ocstmt.getCursor(1);
+        RestaurantVO resVO = null;
+        while(rs.next()){
+        	resVO = new RestaurantVO();
+        	resVO.setRes_num(rs.getInt("res_num"));
+        	resVO.setRes_name(rs.getString("res_name"));
+        	resVO.setRes_addr(rs.getString("res_addr"));
+        	resVO.setRes_tel(rs.getString("res_tel"));
+        	resVO.setRes_time(rs.getString("res_time"));
+        	resVO.setRes_info(rs.getString("res_info"));
+        	resVO.setLat(rs.getDouble("lat"));
+        	resVO.setLng(rs.getDouble("lng"));
+        	resVO.setRes_like(rs.getInt("res_like"));
+        	resVO.setRes_hate(rs.getInt("res_hate"));
+        	recList.add(resVO);
+        }
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	out.clear();
+	Gson g = new Gson();
+	String rec = g.toJson(recList);
+	out.print(rec);
+%>

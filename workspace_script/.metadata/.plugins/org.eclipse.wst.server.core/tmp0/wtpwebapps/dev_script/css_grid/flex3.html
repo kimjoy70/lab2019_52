@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexbox 와 Grid 정리</title>
+<style>
+    html, body, h1,h2,h3,h4,h5,h6,p,img {margin: 0; padding: 0; border: 0;}
+    div, span, article, section, header,footer,p,ul,label {box-sizing: border-box}
+    body { font-size: 1,5rem; }
+    .container {
+    	display: flex;/* 컬럼레이어 만들때 사용  */
+        flex-direction: column;/*배치 방향이 바뀐다.*/
+        /*flex-direction: row;/*r기본값이다..*/
+        /*flex-direction:row-reverse;/*배치 방향이 바뀐다.*/
+        /*flex-direction:column-reverse;/*배치 방향이 바뀐다.*/
+        /* flex-wrap: nowrap; */
+        /*flex-wrap: wrap;/* wrap-reverse */
+        /*justify-content:flex-start;/* flex-end|center|space-between|space-around */
+        /*align-items: flex-start;/* stretch|flex-end|center */
+        /*align-content: flex-start;/* flex-end|center|space-between|space-around */
+        height: 100vh;
+        background: lightgray;
+    }
+    .item {
+    	/* flex-grow: 1; */
+        /* flex-basis: 0; */
+        background: rgba(255, 0,0, 0.5);
+    }
+    .item:nth-child(1){
+        /* flex-grow: 1;
+        flex-shrink: 1; */
+        flex: 1;
+        /* align-self: flex-start */
+        order: 2;
+    }
+    .item:nth-child(2){
+        /* flex-grow: 2;
+        flex-shrink: 2; */
+        flex: 2;
+        /* align-self: center; */
+        order: 3;
+    }
+    .item:nth-child(3){
+        /* flex-grow: 1;
+        flex-shrink: 1; */
+        flex: 1;
+        /* align-self: flex-end; */
+        order: 1;
+    }
+    .item:nth-child(odd){
+        background: rgba(255, 255,0, 0.5);
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <img src="../images/lion.jpeg" width="150px" height="150px">
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+        </div>
+        <div class="item">
+            <img src="../images/lion.jpeg" width="150px" height="150px">
+            <p>FLEXFLEXFLEXFLEXFLEXFLEX</p>
+        </div>
+        <div class="item">
+            <img src="../images/lion.jpeg" width="150px" height="150px">
+            <p>GRIDGRIDGRIDGRIDGRIDGRID</p>
+        </div>
+    </div>
+</body>
+</html>

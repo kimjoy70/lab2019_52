@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexbox 와 Grid 정리</title>
+<style>
+    html, body, h1,h2,h3,h4,h5,h6,p,img {margin: 0; padding: 0; border: 0;}
+    div, span, article, section, header,footer,p,ul,label {box-sizing: border-box}
+    body { font-size: 1,5rem; }
+    .container {
+        display: grid;
+        /* grid-template-columns: 40% 60%; */
+        /* grid-template-columns: 4fr 6fr; */
+         grid-template-columns: 1fr 1fr 1fr;
+        /* grid-auto-rows: 300px; */
+        /* grid-auto-rows: minmax(200px, auto); */
+        grid-auto-rows: minmax(10em, auto);/*em은 폰트의 10배 높이를 설정할때*/
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* grid-template-columns: 200px 1fr; */
+        grid-gap: 1rem;
+        /* justify-items: start; */
+        /*align-items: start;/*center|end*/
+        background: lightgray;
+    }
+    .item {
+        background: rgba(255, 0,0, 0.5);
+    }
+    .item:nth-child(1){
+        grid-column: 1/4;/*1부터 4까지 차지해주세요*/
+    }   
+    .item:nth-child(4){
+        grid-column: 3;
+        grid-row: 2/4;/*1부터 4까지 차지해주세요*/
+    }   
+    .item:nth-child(5){
+        /* justify-self: start;
+        align-self: center; */
+    }   
+    .item:nth-child(9){
+        grid-column: 3;
+        grid-row: 3/5;/*1부터 4까지 차지해주세요*/
+    }   
+    .item:nth-child(odd){
+        background: rgba(255, 255,0, 0.5);
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            1<img src="../images/lion.jpeg" width="150px" height="150px">
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+        </div>
+        <div class="item">
+            2<img src="../images/lion.jpeg" width="150px" height="150px">
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+        </div>
+        <div class="item">
+            3<img src="../images/lion.jpeg" width="150px" height="150px">
+        </div>
+        <div class="item">
+            4<img src="../images/lion.jpeg" width="150px" height="150px">
+        </div>
+        <div class="item">
+            5<img src="../images/lion.jpeg" width="150px" height="150px">
+            <p>AAAAAAAAAAAAAAAAAAAAA</p>
+        </div>
+        <div class="item">
+            6<img src="../images/lion.jpeg" width="150px" height="150px">
+        </div>
+        <div class="item">
+            7<img src="../images/lion.jpeg" width="150px" height="150px">
+        </div>
+        <div class="item">
+            8<img src="../images/lion.jpeg" width="150px" height="150px">
+        </div>
+        <div class="item">
+            9<img src="../images/lion.jpeg" width="150px" height="150px">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="content"></div>
+	<script type="text/babel"> 
+class ShoppingList extends React.Component {
+	  render() {
+	    return (
+	      <div className="shopping-list">
+	        <h1>Shopping List for {this.props.name}</h1>
+	        <ul>
+	          <li>Instagram</li>
+	          <li>WhatsApp</li>
+	          <li>Oculus</li>
+	        </ul>
+	      </div>
+	    );
+	  }//////////////end of render
+}////////////////end of ShoppingList
+
+	//사용 예제: <ShoppingList name="Mark" />
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		/* *는 모든 선택자를 의미함 */
+		* {
+		/* 모든 태그 선택자에 border-box를 주어 모든 element가 보더에 크기를 width 와 height값으로 사용하게 해줌 */
+			box-sizing: border-box;
+		}
+		div {
+			margin: 10px;
+			width: 150px;/* content의 크기가 150픽셀이다 border와padding은 제외된 크*/
+			/* large의 content의 크기가 줄어들고 전체 크기가 small과 같아진다 */
+			box-sizing:border-box;
+		}
+		#small {
+			border: 10px solid black;
+		}
+		#large {
+			border: 30px solid black;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="small">Hello</div>
+	<div id="large">Hello</div>
+</body>
+</html>

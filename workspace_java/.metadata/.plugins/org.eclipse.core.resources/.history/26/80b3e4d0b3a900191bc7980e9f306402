@@ -1,0 +1,21 @@
+package UI.swing;
+
+import javax.swing.JFrame;
+
+import com.network2.TalkClientViewTest.MyPanal2;
+
+public class JTableBlank extends JFrame {
+	public JTableBlank() {
+		setContentPane(new JTableBlank());
+		this.setLayout(null);
+		this.setTitle("자바채팅 ver.1");
+		this.setSize(350, 600);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+		
+	}
+	public static void main(String[] args) {
+		new JTableBlank();
+	}
+
+}

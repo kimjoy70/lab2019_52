@@ -1,0 +1,5 @@
+package react.board;
+
+public class BoardController {
+
+}

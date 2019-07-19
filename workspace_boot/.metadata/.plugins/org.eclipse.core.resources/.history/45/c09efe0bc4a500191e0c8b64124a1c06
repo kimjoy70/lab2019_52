@@ -1,0 +1,15 @@
+package react.board;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Controller;
+
+import com.example.demo.DeptController;
+
+@Controller
+public class BoardController {
+	private static final Logger logger = LogManager.getLogger(DeptController.class);
+	public String getBoardList() {
+		return "board/getBoardList";
+	}
+}

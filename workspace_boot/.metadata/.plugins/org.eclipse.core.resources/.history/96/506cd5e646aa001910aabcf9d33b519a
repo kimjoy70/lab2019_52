@@ -1,0 +1,34 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { DataGrid, GridColumn } from 'rc-easyui';
+class BoardListVer2 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+	 conf: {
+	        options: {
+	          columns: [
+	            { field: 'company', title: 'Company Name' },
+	            { field: 'contact', title: 'Contact Name' },
+	            { field: 'country', title: 'Country' }
+	          ],
+	          data: [
+	            { company: 'Speed Info', contact: 'Minna John', country: 'Sweden' }
+	          ]
+	        }
+	   }
+    }
+  }	
+	render() {
+		return (
+	      <div>
+	        <DataGrid data={this.state.data} style={{height:250}}>
+	          <GridColumn field="itemid" title="Item ID"></GridColumn>
+	          <GridColumn field="name" title="Name"></GridColumn>
+	          <GridColumn field="listprice" title="List Price" align="right"></GridColumn>
+	        </DataGrid>
+	      </div>
+	    );  		
+	}
+}
+ReactDOM.render(<BoardListVer2/>, document.getElementById('root'));

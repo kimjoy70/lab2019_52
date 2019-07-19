@@ -1,0 +1,10 @@
+import '../webapp/css/custom.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class BoardList extends React.Component {
+	render() {
+		return <div className="boardlist">게시판 목록 페이지</div>;
+	}
+}
+ReactDOM.render(<BoardList/>, document.getElementById('root'));

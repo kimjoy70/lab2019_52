@@ -1,0 +1,92 @@
+package google;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.math.BigInteger;
+import java.security.SecureRandom;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
+
+import com.google.gson.Gson;
+import com.util.DBConnectionMgr;
+import com.vo.RestaurantVO;
+
+import oracle.jdbc.OracleCallableStatement;
+import oracle.jdbc.OracleTypes;
+
+@WebServlet(urlPatterns="/google/googleMap.do")
+public class GoogleServlet extends HttpServlet {
+	Logger logger = Logger.getLogger(GoogleServlet.class);
+	public void doService(HttpServletRequest req, HttpServletResponse res) throws ServletException,IOException
+	{
+		logger.info("doService 호출 성공");
+		Connection con = null;
+		CallableStatement cstmt = null;
+		ResultSet rs = null;
+	    List<RestaurantVO> recList = new ArrayList<>();
+	    res.setContentType("text/html charset=UTF-8");
+	    PrintWriter out = res.getWriter();
+		try{
+			con = DBConnectionMgr.getConnection();
+			cstmt = con.prepareCall("{call proc_restaurant(?)}");
+	        cstmt.registerOutParameter(1,OracleTypes.CURSOR);
+	        cstmt.execute();
+			OracleCallableStatement ocstmt = null;
+	        ocstmt = (OracleCallableStatement)cstmt;
+	        rs =  ocstmt.getCursor(1);
+	        RestaurantVO resVO = null;
+	        StringBuilder sb = new StringBuilder();
+	        sb.append("[");
+	        while(rs.next()){
+	        	resVO = new RestaurantVO();
+	        	resVO.setRes_num(rs.getInt("res_num"));
+	        	resVO.setRes_name(rs.getString("res_name"));
+	        	resVO.setRes_addr(rs.getString("res_addr"));
+	        	resVO.setRes_tel(rs.getString("res_tel"));
+	        	resVO.setRes_time(rs.getString("res_time"));
+	        	resVO.setRes_info(rs.getString("res_info"));
+	        	resVO.setLat(rs.getDouble("lat"));
+	        	resVO.setLng(rs.getDouble("lng"));
+	        	resVO.setRes_like(rs.getInt("res_like"));
+	        	resVO.setRes_hate(rs.getInt("res_hate"));
+	        	recList.add(resVO);
+	        	sb.append("["+"'"+resVO.getRes_name()+"'"+","+resVO.getLat()+","+resVO.getLng()+"],");
+	        }
+	        Gson g = new Gson();
+	        String str = g.toJson(recList);
+	        out.print(str);
+	        //HttpSession session = req.getSession();
+	        //session.setAttribute("str", str);
+	        //res.sendRedirect("./AjaxMultiMarkerMapTest.jsp");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	public String generateState()
+	{
+	    SecureRandom random = new SecureRandom();
+	    return new BigInteger(130, random).toString(32);
+	}
+
+
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException,IOException
+	{
+		doService(req,res);
+	}
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException,IOException
+	{
+		doService(req,res);
+	}
+}
