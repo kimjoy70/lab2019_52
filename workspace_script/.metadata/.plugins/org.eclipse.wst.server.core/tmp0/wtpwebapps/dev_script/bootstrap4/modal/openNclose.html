@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    function loginAction(){
+      var u_id = $("#mem_id").val();
+      var u_pw = $("#mem_pw").val();
+      var db_id = "test";
+      var db_pw = "123";
+      if(u_id==db_id){
+        if(u_pw==db_pw){
+          alert("로그인 성공하였습니다.");
+          $("#myModal").modal("hide");
+        }else{
+          	alert("비밀번호가 틀림니다.");        	  
+          //다시 모달창을 보여주고 싶었는데 modal()과modal("show") 모두 실패함.
+          //$("#myModal").modal("show");
+          $("#myModal").on('hidden.bs.modal', function(){
+          });
+          //$("#mem_pw").focus();
+        }
+      }else{
+        alert("아이디가 존재하지 않습니다.");
+        return;
+      }
+    }
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Activate Modal with JavaScript</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" id="openModal">Open Modal</button>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">로그인</h4>
+        </div>
+		    <div class="modal-body">
+        	  <form role="form">
+                  <div class="form-group">
+                    <label for="usrname"><span class="glyphicon glyphicon-user"></span> 아이디</label>
+                    <input type="text" class="form-control" id="mem_id" placeholder="아이디">
+                  </div>
+                  <div class="form-group">
+                    <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> 비밀번호</label>
+                    <input type="text" class="form-control" id="mem_pw" placeholder="비밀번호">
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="" checked>Remember me</label>
+                  </div>
+                  <button onclick="loginAction()" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-info btn-lg" id="closeModal">Close Modal</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#openModal").click(function(){
+    $("#myModal").modal();
+  });
+  $("#closeModal").click(function(){
+    $("#myModal").modal("hide");
+  });
+});
+</script>
+
+</body>
+</html>

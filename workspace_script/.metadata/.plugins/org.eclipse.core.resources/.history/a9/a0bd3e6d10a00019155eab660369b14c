@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="com.util.DBConnectionMgr, java.sql.*" %>    
+<%@ page import="oracle.jdbc.OracleCallableStatement;" %>    
+<%
+	Connection con = null;
+	CallableStatement cstmt = null;
+	ResultSet rs = null;
+	try{
+		con = DBConnectionMgr.getConnection();
+		cstmt = con.prepareCall("{call proc_restaurant(?)}");
+		OracleCallableStatement ocstmt = null;
+		rs = null;
+	}catch(Exception e){
+		
+	}
+%>

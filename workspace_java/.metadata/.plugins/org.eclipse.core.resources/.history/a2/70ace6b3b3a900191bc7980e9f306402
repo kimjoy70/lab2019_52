@@ -1,0 +1,12 @@
+package UI.swing;
+
+import javax.swing.JFrame;
+
+public class JTableBlank extends JFrame {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

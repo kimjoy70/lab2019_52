@@ -1,0 +1,17 @@
+server.port=8000
+spring.output.ansi.enabled=always
+#spring.thymeleaf.prefix=classpath:/templates/
+#spring.thymeleaf.prefix=classpath:/WEB-INF/jsp/
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+server.tomcat.uri-encoding=UTF-8
+spring.http.encoding.charset=UTF-8
+#spring.thymeleaf.check-template-location=false
+#spring.thymeleaf.suffix=.html
+#spring.thymeleaf.mode=HTML5
+#spring.thymeleaf.cache=false
+#spring.thymeleaf.order=0
+spring.datasource.java52.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.java52.jdbc-url=jdbc:mysql://{url}:{port}/{db}
+spring.datasource.java52.username={id}
+spring.datasource.java52.password={password}

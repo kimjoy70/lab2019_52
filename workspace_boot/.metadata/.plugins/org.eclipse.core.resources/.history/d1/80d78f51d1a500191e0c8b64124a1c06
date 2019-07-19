@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+@Repository
+public class BoardDao {
+	
+	protected static final String NAMESPACE = "com.example.demo.";
+
+	@Autowired
+	private SqlSession sqlSession;
+
+	public String selectName(){
+		return sqlSession.selectOne(NAMESPACE + "selectName");
+	}
+
+	public List<Map<String, Object>> getBoardList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

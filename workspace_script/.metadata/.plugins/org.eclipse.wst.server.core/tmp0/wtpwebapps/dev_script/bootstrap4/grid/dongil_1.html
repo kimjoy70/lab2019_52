@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- 
+    점보트론을 구성하는 예시가 들어 있다.
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3개의 동일한 열</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<style>
+    .jumbotron {
+        background-image: url('../../images/code6.jpeg');
+        background-size: cover;
+        text-shadow: black 0.2em 0.2em 0.2em;
+        color: white;
+    }
+    .sam1 {
+        border: 1px solid blue;
+        background: orange;
+    }
+    /* div태그 아래 class속성 col아래 첫번째 nth-child(1) */ 
+    div.col:nth-child(1) { background: green}
+    div.col:nth-child(2) { background: greenyellow}
+    div.col:nth-child(3) { background: goldenrod}
+    
+    div.col-sm-3:nth-child(1) { background: powderblue;}
+    div.col-sm-3:nth-child(2) { background: ghostwhite;}
+    div.col-sm-3:nth-child(3) { background: gainsboro;}
+    div.col-sm-3:nth-child(4) { background: goldenrod;}
+</style>
+<body>
+    <div class="jumbotron text-center">
+        <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p> 
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Column 1</h3>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Column 2</h3>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Colun 3</h3> 
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+      </div>
+      <h3>3개 동일한 열</h3>
+      <div class="row sam1">
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+      </div>
+      <h3>반응형 컬럼-4개 동일</h3>
+      <div class="row">
+        <div class="col-sm-3">.col-sm-3</div>
+        <div class="col-sm-3">.col-sm-3</div>
+        <div class="col-sm-3">.col-sm-3</div>
+        <div class="col-sm-3">.col-sm-3</div>
+      </div>
+</body>
+</html>

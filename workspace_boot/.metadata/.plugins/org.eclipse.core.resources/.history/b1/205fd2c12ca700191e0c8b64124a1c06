@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TextArea 실시간 업데이트</title>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="markdown-example"></div>
+	<script type="text/babel">
+import Remarkable from 'remarkable';
+import RemarkableReactRenderer from 'remarkable-react';
+class MarkdownEditor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = { value: 'Hello, **world**!' };
+  }
+
+  handleChange(e) {
+    this.setState({ value: e.target.value });
+  }
+
+  getRawMarkup() {
+    const md = new Remarkable();
+    return { __html: md.render(this.state.value) };
+  }
+
+  render() {
+    return (
+      <div className="MarkdownEditor">
+        <h3>Input</h3>
+        <label htmlFor="markdown-content">
+          Enter some markdown
+        </label>
+        <textarea
+          id="markdown-content"
+          onChange={this.handleChange}
+          defaultValue={this.state.value}
+        />
+        <h3>Output</h3>
+        <div
+          className="content"
+          dangerouslySetInnerHTML={this.getRawMarkup()}
+        />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <MarkdownEditor />,
+  document.getElementById('markdown-example')
+);
+	</script>
+</body>
+</html>

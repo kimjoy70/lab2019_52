@@ -1,0 +1,40 @@
+package UI.swing;
+
+import java.awt.GridLayout;
+
+import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+
+public class ClickJList extends JFrame{
+	JList jList = new JList();
+	JList jList2 = new JList();
+	JScrollPane jsp = new JScrollPane();
+	ImageIcon imo1 = new ImageIcon(getClass().getResource("../../image/놀람.gif"));
+	ImageIcon imo2 = new ImageIcon(getClass().getResource("../../image/미소.gif"));
+	ImageIcon imo3 = new ImageIcon(getClass().getResource("../../image/웃음.gif"));
+	ImageIcon imo4 = new ImageIcon(getClass().getResource("../../image/장미.gif"));
+	DefaultListModel dlm = new DefaultListModel();
+	DefaultListModel dlm2 = new DefaultListModel();
+	ClickJList(){
+		this.setLayout(new GridLayout(1,2));
+		dlm.addElement("이순신");
+		dlm.addElement("이성계");
+		dlm.addElement("김유신");
+		dlm2.addElement(imo1);
+		dlm2.addElement(imo2);
+		dlm2.addElement(imo3);
+		dlm2.addElement(imo4);
+		jList.setModel(dlm);
+		jList2.setModel(dlm2);
+		this.add(jList);
+		this.add(jList2);
+	}
+	public static void main(String[] args) {
+		new ClickJList();
+
+	}
+
+}

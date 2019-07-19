@@ -1,8 +1,7 @@
-INDEX VERSION 1.4+/Users/nashin/workspace_script/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-2978982905.index
-508555156.index
-2782800117.index
-376131003.index
-2734329292.index
-1700780704.index
-1865726894.index
+INDEX VERSION 1.4+C:\workspace_script\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3124296707.index
+3308960062.index
+3241866480.index
+359099349.index
+2468652921.index
+2452790568.index

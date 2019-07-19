@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script type="text/javascript" src="/js/jquery.min.js"></script>                                                    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-FKKja8sdfgMggjEvEa5agaP6D9wBd6s"></script>
+    
+  </head>
+<body>
+  <div id="map" style="width: 800px; height: 600px;"></div>
+  <script type="text/javascript">
+  	$(document).ready(function (){
+  		$.ajax({
+  			method:"get"
+  		   ,url:"getFoodList.jsp"
+  		   ,success:function(data){
+  			   //alert(data);
+  			   var jsonDoc = JSON.parse(data);
+  			   if(jsonDoc.length>0){
+  				   alert(jsonDoc.length);
+  			   }
+  		   }
+  		});
+  	});    
+  </script>
+</body>
+</html>

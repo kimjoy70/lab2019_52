@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo">
+	<select id="proc_param2" parameterType="com.vo.DeptVO" statementType="CALLABLE">
+		{call proc_param2(#{empno, mode=IN, jdbcType=NUMERIC, javaType=int},#{report, mode=OUT, jdbcType=VARCHAR, javaType=String})}
+	</select>
+	<delete id="boardMDelete" parameterType="map">
+		DELETE FROM board_master
+		 WHERE b_no = #{b_no}	
+	</delete>
+	<delete id="boardSDelete" parameterType="map">
+		DELETE FROM board_sub
+		 WHERE b_no = #{b_no}	
+	</delete>
+	<update id="boardMUpdate" parameterType="map">
+		UPDATE board_master
+		   SET b_title = #{b_title}
+		      ,b_date = TO_CHAR(sysdate,'YYYY-MM-DD')
+		      ,b_content = #{b_content}
+		      ,b_pw = #{b_pw}
+		 WHERE b_no = #{b_no}	
+	</update>
+	<update id="boardSUpdate" parameterType="map">
+		UPDATE board_sub
+		   SET b_file = #{b_file}
+		 WHERE b_no = #{b_no} 	
+	</update>
+	<select id="getTotal" resultType="map" parameterType="string">
+		SELECT count(b_no) total, 1 temp FROM board_master
+	</select>
+	<select id="getBoardList" parameterType="map" resultType="map">
+		SELECT
+		      rownum rnum
+		     ,fbms.b_no, fbms.b_title, fbms.b_name, fbms.b_date, fbms.b_hit 
+		     ,fbms.b_file, fbms.b_content, fbms.b_group, fbms.b_pos, fbms.b_step 
+		     ,fbms.b_pw
+		  FROM (
+		        SELECT rownum rnum
+		              ,bms.b_no, bms.b_title, bms.b_name, bms.b_date, bms.b_hit 
+		              ,bms.b_file, bms.b_content, bms.b_group, bms.b_pos, bms.b_step   
+		              ,bms.b_pw    
+		          FROM (
+		                SELECT bm.b_no, bm.b_title, bm.b_name, bm.b_date, bm.b_hit 
+		                      ,bs.b_file, bm.b_content, bm.b_group, bm.b_pos, bm.b_step
+		                      ,bm.b_pw
+		                  FROM board_master bm, board_sub bs
+		                 WHERE bm.b_no = bs.b_no(+) 
+		                ORDER BY bm.b_group desc, bm.b_step asc   
+		               )bms  
+		       )fbms 
+		<where>
+        <if test="b_no > 0">
+             AND bm.b_no = #{b_no}      
+        </if> 	
+<!-- 페이지 구간 검색 시작 -->
+        <if test="start > 0">
+             <![CDATA[ AND fbms.rnum >= #{start} ]]>      
+        </if> 	
+        <if test="end > 0">
+             <![CDATA[ AND fbms.rnum <= #{end} ]]>     
+        </if> 	
+<!-- 페이지 구간 검색  끝  -->        	  		
+        <if test="b_title != null and b_title!='' and b_title!='undefined'">
+             AND bm.b_title LIKE '%'||#{b_title}||'%'      
+        </if> 		  		
+        <if test="b_name !=null and b_name!='' and b_name!='undefined'">
+             AND bm.b_name LIKE '%'||#{b_name}||'%'      
+        </if> 		  		
+        <if test="b_date !=null and b_date!='' and b_date!='undefined'">
+             AND bm.b_date = #{b_date}      
+        </if> 		  		
+        <if test="b_content !=null and b_content!='' and b_content!='undefined'">
+             AND bm.b_content LIKE '%'||#{b_content}||'%'      
+        </if> 		 
+        </where> 		
+	</select>
+    <!-- 	
+	현재 내가 열어본 글의 b_group=32 b_pos=0 b_step=0일때
+	 -->
+	<update id="bStepUpdate" parameterType="map">
+		UPDATE board_master
+		   SET b_step = b_step + 1
+		 WHERE b_group = #{b_group}<!-- 32 -->
+		   AND b_step > #{b_step}  <!--  0 -->
+	</update>
+	<select id="getBgroup" parameterType="string" resultType="int">
+		SELECT NVL((SELECT /*+index_desc(board_master i_group) */ b_group
+		            FROM board_master
+		           WHERE rownum = 1 
+		             AND b_group > 0)
+		          ,0)+1 b_group
+		  FROM dual  	
+	</select>
+	<insert id="boardMInsert" parameterType="map">
+		INSERT INTO board_master(b_no, b_title, b_name, b_content
+		                        ,b_pw, b_date,b_group, b_pos, b_step)
+		      VALUES(seq_boardMaster_no.nextval,#{b_title},#{b_name},#{b_content}
+		            ,#{b_pw},TO_CHAR(sysdate,'YYYY-MM-DD')
+		            ,#{b_group},#{b_pos},#{b_step})
+	</insert>
+	<insert id="boardSInsert" parameterType="map">
+		<selectKey keyProperty="b_no" resultType="int" order="BEFORE">
+			SELECT /*+index_desc(board_master BOARDM_NO_PK)*/ b_no 
+              FROM board_master
+             WHERE rownum =1
+		</selectKey>
+		INSERT INTO board_sub(b_no, b_seq, b_file, b_size)
+		      VALUES(#{b_no},1
+		            ,#{b_file},#{b_size})		
+	</insert>
+	<insert id="boardSInsert2" parameterType="map">
+		INSERT INTO board_sub(b_no, b_seq, b_file, b_size)
+		      VALUES(#{b_no},1
+		            ,#{b_file},#{b_size})		
+	</insert>
+	<update id="bHitUpdate" parameterType="int">
+		UPDATE board_master
+		   SET b_hit = b_hit + 1
+		 WHERE b_no = #{value} 
+	</update>
+</mapper>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

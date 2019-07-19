@@ -1,0 +1,11 @@
+import '../webapp/css/custom.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { DataGrid, GridColumn } from 'rc-easyui';
+
+class Board extends React.Component {
+	render() {
+		return <div className="Board">게시판</div>;
+	}
+}
+ReactDOM.render(<Board/>, document.getElementById('root'));

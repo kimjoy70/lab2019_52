@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var resArray = new Array();
+	resArray[0] = ["둘둘치킨",2018];
+	document.write(resArray[0][1]);
+</script>
+</body>
+</html>

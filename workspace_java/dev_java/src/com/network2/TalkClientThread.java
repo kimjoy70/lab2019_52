@@ -16,8 +16,12 @@ import javax.swing.text.StyleConstants;
 public class TalkClientThread extends Thread {
 	TalkClient tc = null;
 	String path = "C:\\Java\\dev_javaB\\dev_java\\src\\image\\";
+	ChatRight cr;//말하는 사람이 나일 때 오른쪽 말풍선
+	ChatLeft cl; //말하는 사람이 상대방일 때 왼쪽 말풍선
+	String tch_nickName = null;
 	public TalkClientThread(TalkClient tc) {
 		this.tc = tc;
+		this.tch_nickName = tc.nickName;
 	}
 	//글자색상이나 글꼴, 폰트 사이즈 등을 적용하고 싶을 때
 	public SimpleAttributeSet makeAttribute(String fontColor) {
@@ -94,7 +98,25 @@ public class TalkClientThread extends Thread {
 							//tc.jta_display.setLineWrap(true);
 							try {
 								//JOptionPane.showMessageDialog(tc, "insertString:"+nickName);
-								tc.sd_display.insertString(tc.sd_display.getLength(),"["+nickName+"]"+message+"\n", null);
+								for(int i=0;i<tc.dtm_nick.getRowCount();i++) {
+									
+									if(tc.dtm_nick.getValueAt(i, 0).equals(nickName)) {//말하는 사람이 나일 때
+										cr = new ChatRight(tc.nickName);
+										cr.jlb_rightimg.setText(message);
+										cr.jlb_time.setText("12:25");
+										tc.sd_display.insertString(tc.sd_display.getLength(),"\n", null);
+										tc.jtp_display.insertComponent(cr);
+										tc.sd_display.insertString(tc.sd_display.getLength(),"\n", null);
+									}else {//말하는 사람이 상대일 때
+										cl = new ChatLeft(nickName, null);
+										cl.jlb_rightimg.setText(message);
+										cl.jlb_time.setText("14:55");
+										tc.sd_display.insertString(tc.sd_display.getLength(),"\n", null);
+										tc.jtp_display.insertComponent(cl);
+										tc.sd_display.insertString(tc.sd_display.getLength(),"\n", null);
+									}
+								}
+								//tc.sd_display.insertString(tc.sd_display.getLength(),"["+nickName+"]"+message+"\n", null);
 								//tc.textPane.insertEmoText(nickName+ " : "+msg+"\n", sas);					
 							} catch (Exception e) {
 								JOptionPane.showMessageDialog(tc, "Excepton:"+e.toString());

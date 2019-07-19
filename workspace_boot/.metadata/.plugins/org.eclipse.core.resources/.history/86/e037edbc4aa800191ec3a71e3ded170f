@@ -1,0 +1,4 @@
+@charset "UTF-8";
+@import 'easyui/themes/default/easyui.css';
+@import 'easyui/themes/icon.css';
+@import 'easyui/themes/react.css';

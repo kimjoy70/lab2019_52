@@ -1,0 +1,7 @@
+package google;
+
+import javax.servlet.http.HttpServlet;
+
+public class GoogleServlet extends HttpServlet {
+
+}

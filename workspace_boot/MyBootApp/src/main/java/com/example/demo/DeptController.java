@@ -21,10 +21,4 @@ public class DeptController {
 		logger.info("getDeptDetail 호출 성공");
 		return "dept/getDeptDetail";
 	}
-	@GetMapping("/{name}")
-	public String deptInsert(@PathVariable String name) {
-		logger.info("deptInsert 호출 성공");
-		return "deptInsert";
-	}
-
 }

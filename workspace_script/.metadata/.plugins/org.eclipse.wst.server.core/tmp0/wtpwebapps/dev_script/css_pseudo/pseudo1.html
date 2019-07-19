@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상(수도)클래스 선택자</title>
+	<style type="text/css">
+		a:link {
+			color: black;
+		}
+		/* 보안 문제로 일부 속성만 사용할 수 있다. */
+		a:visited {
+			color: red;
+		}
+		/* 마우스 오버하면 active와hover 중 맨 마지막에 작성한 것이 우선함,  */
+		a:hover {
+			color: yellow;
+		}
+		a:active{
+			color: green;
+		}
+		/* focus는 보통 맨 뒤에 둔다.  */
+		a:focus {
+			color: white;
+		}
+		input:focus {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<a href="https://opentutorials.org">방문</a>
+	<a href="https://a.a">방문안함</a>
+	<input type="text">
+</body>
+</html>

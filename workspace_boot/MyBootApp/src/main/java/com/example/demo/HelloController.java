@@ -20,9 +20,5 @@ public class HelloController {
 		}
 		return "total: "+res;
 	}
-    @GetMapping("/{name}.html")
-    public String page(@PathVariable String name, Model model) {
-        model.addAttribute("pageName", name);
-        return "page";
-    }	
+	
 }

@@ -1,0 +1,20 @@
+import '../webapp/css/custom.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class BoardList extends React.Component {
+	render() {
+		return 
+	      <div>
+	        <DataGrid data={this.state.data} style={{height:250}}>
+	          <GridColumn field="itemid" title="Item ID"></GridColumn>
+	          <GridColumn field="name" title="Name"></GridColumn>
+	          <GridColumn field="listprice" title="List Price" align="right"></GridColumn>
+	          <GridColumn field="unitcost" title="Unit Cost" align="right"></GridColumn>
+	          <GridColumn field="attr" title="Attribute" width="30%"></GridColumn>
+	          <GridColumn field="status" title="Status" align="center"></GridColumn>
+	        </DataGrid>
+	      </div>;		
+	}
+}
+ReactDOM.render(<BoardList/>, document.getElementById('root'));
