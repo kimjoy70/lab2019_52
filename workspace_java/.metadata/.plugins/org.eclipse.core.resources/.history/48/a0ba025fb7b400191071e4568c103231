@@ -1,0 +1,59 @@
+package blockchain_Step1;
+
+import java.security.MessageDigest;
+
+public class BitOxff {
+	public static String applySha256(String input){		
+
+		try {
+
+			MessageDigest digest = MessageDigest.getInstance("SHA-256");	        
+
+			//Applies sha256 to our input, 
+
+			byte[] hash = digest.digest(input.getBytes("UTF-8"));	        
+			for(int x=0;x<hash.length;x++) {
+				//System.out.println("x : "+x);
+			}
+			StringBuffer hexString = new StringBuffer(); // This will contain hash as hexidecimal
+
+			for (int i = 0; i < hash.length; i++) {
+
+				String hex = Integer.toHexString(0xff & hash[i]);
+				System.out.println("hex:"+hex);
+				if(hex.length() == 1) hexString.append('0');
+
+				hexString.append(hex);
+
+			}
+
+			return hexString.toString();
+
+		}
+		catch(Exception e) {
+
+			throw new RuntimeException(e);
+
+		}
+	}	
+	public static void main(String[] args) {
+		/*
+		 * byte자료형 범위가 음수,양수 모두 표현하려다 보니 127을 넘어서는 숫자부터 음수로 인식함.
+		 * 150이라는 int형 숫자(=10010110)에서 보듯 맨앞의 비트가 1이므로 음수로 인식해
+		 * -106이라는 숫자가 리턴된다.
+		 */
+		int n = 150;
+		System.out.println(Integer.toBinaryString(n));
+		byte b = (byte)n;
+		System.out.println(b);
+		//byte를 150으로 보이게 하는 방법이 아래 이다.
+		//0xff는 표현식을 16진수로 했을 뿐 십진수 255이다.
+		System.out.println(b & 0xff);
+		
+		String input = "1";
+		String result = BitOxff.applySha256(input);
+		System.out.println(result);
+		
+	}
+
+}

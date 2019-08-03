@@ -32,6 +32,7 @@ public class Step3Chain {
 		Block currentBlock; 
 		Block previousBlock;
 		String hashTarget = new String(new char[difficulty]).replace('\0', '0');
+		System.out.println("hashTarget:"+hashTarget);//00000
 		//loop through blockchain to check hashes:
 		for(int i=1; i < blockchain.size(); i++) {
 			currentBlock = blockchain.get(i);
