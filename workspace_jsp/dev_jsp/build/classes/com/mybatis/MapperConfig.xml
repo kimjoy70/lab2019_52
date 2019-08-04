@@ -28,6 +28,7 @@
 	</environments>
 	<mappers>
 		<mapper resource="com/mybatis/mapper/member.xml" />
+		<mapper resource="com/mybatis/mapper/sns.xml" />
 		<mapper resource="com/mybatis/mapper/onLineTest.xml" />
 		<mapper resource="com/mybatis/mapper/zipcode.xml" />
 		<mapper resource="com/mybatis/mapper/board.xml" />

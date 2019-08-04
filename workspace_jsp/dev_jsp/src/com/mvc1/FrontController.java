@@ -14,6 +14,7 @@ public class FrontController extends HttpServlet {
 	Logger logger = Logger.getLogger(FrontController.class);
 	MemberController memCtrl = new MemberController();
 	TestController tCtrl = new TestController();
+	SNSController sCtrl = new SNSController();
 	//GoodsController goodCtrl = new GoodsController();
 	//OrderController orderCtrl = new OrderController();
 	public void doService(HttpServletRequest req, HttpServletResponse res)
@@ -50,8 +51,9 @@ public class FrontController extends HttpServlet {
 			req.setAttribute("crud", command);//==> member/memberInsert
 			forward = tCtrl.execute(req, res);
 		}
-		else if("goods".equals(work)) {
-			
+		else if("mySNS".equals(work)) {
+			req.setAttribute("crud", command);
+			forward = sCtrl.execute(req, res);
 		}
 		else if("order".equals(work)) {
 			

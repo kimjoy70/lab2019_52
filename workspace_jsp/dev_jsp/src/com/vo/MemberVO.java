@@ -10,6 +10,8 @@ public class MemberVO implements Serializable{
 	public String mem_addr    =""; 
 	public String mem_zipcode ="";
 	public String r_status = "";
+	public String reg_date = "";//가입일
+	public String email = "";
 	public String getMem_id() {
 		return mem_id;
 	}
@@ -45,5 +47,17 @@ public class MemberVO implements Serializable{
 	}
 	public void setR_status(String r_status) {
 		this.r_status = r_status;
+	}
+	public String getReg_date() {
+		return reg_date;
+	}
+	public void setReg_date(String reg_date) {
+		this.reg_date = reg_date;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	} 
 }

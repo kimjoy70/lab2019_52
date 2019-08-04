@@ -28,7 +28,25 @@ public class MemberController extends HttpServlet implements Action {
 		boolean isRedirect = false;
 		String crud = (String)req.getAttribute("crud");// member/memberInsert
 		logger.info("execute호출 성공");
-		if("member/login".equals(crud)) {
+		if("member/snsLogin".equals(crud)) {
+			logger.info("SNS로그인 호출 성공");
+			String mem_name = null;
+			MemberVO mVO = new MemberVO();
+			mVO.setMem_id(req.getParameter("mem_id"));
+			mVO.setMem_pw(req.getParameter("mem_pw"));
+//			MemberVO rmVO = memLogic.login(mVO);
+			//프로시저 사용할 때
+			Map<String,Object> pMap = memLogic.proc_login(mVO);
+			logger.info("이름 : "+pMap.get("mem_name"));
+			logger.info("아이디(r_status) : "+pMap.get("r_status"));
+			HttpSession session=req.getSession();
+			session.setAttribute("pMap", pMap);
+			viewName = "/mySNS/sns_main.jsp";
+			isRedirect = true;
+			forward.setRedirect(isRedirect);
+			forward.setViewName(viewName);
+		}
+		else if("member/login".equals(crud)) {
 			logger.info("로그인 호출 성공");
 			String mem_name = null;
 			MemberVO mVO = new MemberVO();

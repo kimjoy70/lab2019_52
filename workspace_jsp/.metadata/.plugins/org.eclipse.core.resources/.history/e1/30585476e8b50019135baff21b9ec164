@@ -1,0 +1,10 @@
+package com.vo;
+
+import java.util.ArrayList;
+
+public class SNSMessageSet {
+	// 메시지
+	private SNSMessageVO msgVO;
+	// 해당 메시지에 대한 댓글 목록
+	private ArrayList<SNSReplyVO> rlist = new ArrayList<>();
+}

@@ -13,4 +13,9 @@
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="com.vo.SwDesignVO"/>
 <fullyQualifiedTypeName name="com.mvc1.MemberLogic"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.vo.SNSMessageSet"/>
+<fullyQualifiedTypeName name="com.vo.SNSReplyVO"/>
+<fullyQualifiedTypeName name="com.vo.SNSMessageVO"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

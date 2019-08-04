@@ -1,0 +1,8 @@
+package com.mvc1;
+
+import org.apache.log4j.Logger;
+
+public class SNSLogic {
+	Logger logger = Logger.getLogger(SNSLogic.class);
+	SNSDao tDao = new SNSDao();
+}

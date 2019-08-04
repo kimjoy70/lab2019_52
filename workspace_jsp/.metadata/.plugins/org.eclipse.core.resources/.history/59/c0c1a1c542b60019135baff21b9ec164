@@ -1,0 +1,15 @@
+package com.mvc1;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+
+public class SNSLogic {
+	Logger logger = Logger.getLogger(SNSLogic.class);
+	SNSDao tDao = new SNSDao();
+	public List<Map<String, Object>> getAll(String mem_id) {
+		logger.info("getAll 호출 성공");
+		return null;
+	}
+}

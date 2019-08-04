@@ -1,0 +1,46 @@
+package com.mvc1;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.log4j.Logger;
+
+import com.util.MyBatisCommonFactory;
+import com.vo.SNSMessageSet;
+
+public class SNSDao {
+	Logger logger = Logger.getLogger(TestDao.class);
+	SqlSessionFactory sqlSessionFactory = null;
+	MyBatisCommonFactory mcf = new MyBatisCommonFactory();
+	public SNSDao() {
+		sqlSessionFactory=mcf.getSqlSessionFactory();		
+	}
+	public ArrayList<SNSMessageSet> getAll(String mem_id) {
+		ArrayList<SNSMessageSet> datas = new ArrayList<SNSMessageSet>();
+		List<Map<String, Object>> msgList = new ArrayList<>();
+		try {
+			SqlSession sqlSession = 
+					sqlSessionFactory.openSession();
+			msgList = sqlSession.selectList("messageList",mem_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		return datas;
+	}
+	public ArrayList<SNSMessageSet> getReply(String mem_id) {
+		ArrayList<SNSMessageSet> datas = new ArrayList<SNSMessageSet>();
+		List<Map<String, Object>> msgList = new ArrayList<>();
+		try {
+			SqlSession sqlSession = 
+					sqlSessionFactory.openSession();
+			msgList = sqlSession.selectList("messageList",mem_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		return datas;
+	}
+	
+}
