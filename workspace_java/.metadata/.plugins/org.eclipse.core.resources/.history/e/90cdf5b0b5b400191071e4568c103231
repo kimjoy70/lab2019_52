@@ -1,0 +1,10 @@
+package blockchain_Step1;
+
+public class BitOxff {
+
+	public static void main(String[] args) {
+		int n = 150;
+		System.out.println(Integer.toBinaryString(n));
+	}
+
+}

@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Arrow Function</h1>
+<p>A demonstration of a simple arrow function.</p>
+<p id="demo"></p>
+<script type="text/javascript">
+/*
+	hello = new function(){
+		return "Hello World!";
+	}
+*/	
+	//위 코드를 화살표 기능으로 바꾸면...
+/* 	hello = () => {
+		return "Hello World!!!";
+	} */
+	//위 코드를 한  번 더 바꿀 수 있다.
+	hello = () => "Hello World - 3단계";
+	document.getElementById("demo").innerHTML = hello();
+</script>
+
+
+</body>
+</html>

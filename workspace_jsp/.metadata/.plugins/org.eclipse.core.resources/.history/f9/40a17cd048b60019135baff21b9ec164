@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.SNSMapper">
+	<resultMap id="smVO" type="com.vo.SNSMessageVO"/>
+	<resultMap id="srVO" type="com.vo.SNSReplyVO"/>
+	<select id="messageList" parameterType="map" resultType="map">
+		select mno, mem_id, msg, favcount, msg_date from sns_message
+		WHERE 1=1
+		<if test='mem_id!=null'>
+			AND mem_id = #{mem_id}
+		</if>
+		order by msg_date desc
+	</select>
+	<select id="replyList" parameterType="map" resultType="map">
+		select rno, mno, mem_id, msg, msg_date  from sns_reply
+		WHERE 1=1
+		<if test='mno > 0'>
+			AND mno LIKE '%'||#{mno}||'%'
+		</if>
+		 order by msg_date
+	</select>
+<!-- 	<select id="isId" parameterType="map" resultType="map">
+		SELECT NVL((SELECT '아이디가 존재합니다.' FROM member2019
+		             WHERE mem_id=#{mem_id}),'아이디가 존재하지 않습니다.') status
+		  FROM dual
+	</select>
+	<select id="login" parameterType="com.vo.MemberVO" resultType="com.vo.MemberVO">
+		SELECT NVL((SELECT mem_name FROM member2019 
+		             WHERE mem_id = #{mem_id}
+		               AND mem_pw = #{mem_pw}),'비밀번호가 틀립니다.') mem_name
+		  FROM dual
+	</select> -->
+</mapper>

@@ -1,0 +1,76 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <title>리액트 폼 실습-2</title>
+	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+	<script type="text/babel"> 
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      age: null,
+      description: 'The content of a textarea goes in the value attribute',
+      errormessage: ''
+    };
+  }
+  mySubmitHandler = (event) => {
+    event.preventDefault();
+    alert("You are submitting " + this.state.username);
+  }
+  myChangeHandler = (event) => {
+    //this.setState({username: event.target.value});
+    let nam = event.target.name;
+    let val = event.target.value;
+    let err = '';
+    if (nam === "age") {
+      if (val !="" && !Number(val)) {
+        err = <strong>Your age must be a number</strong>;
+      }
+    }
+    this.setState({errormessage: err});
+    this.setState({[nam]: val});
+  }
+  render() {
+    let header = '';
+    if (this.state.username) {
+      header = <h1>Hello {this.state.username} {this.state.age}</h1>;
+    } else {
+      header = '';
+    }
+    return (
+      <form action='a.jsp' onSubmit={this.mySubmitHandler}>
+        {header}
+        <p>Enter your name:</p>
+        <input
+          	type="text" name="username" onChange={this.myChangeHandler}
+        />
+      	<p>Enter your age:</p>
+      	<input
+        	type='text' name='age' onChange={this.myChangeHandler}
+      	/>
+      	<p>Enter your contents:</p>
+      	<textarea name='description' rows='7' cols='40' />
+		<br/>    
+		<br/>
+		<input type='submit' value='전송'/>
+      	{this.state.errormessage}
+      </form>
+    );
+  }
+}
+ReactDOM.render(<MyForm />, document.getElementById('root'));
+	</script>
+	123
+  </body>
+</html>

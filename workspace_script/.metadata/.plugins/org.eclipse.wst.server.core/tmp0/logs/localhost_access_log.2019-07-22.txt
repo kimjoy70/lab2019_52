@@ -1,0 +1,9 @@
+127.0.0.1 - - [22/Jul/2019:16:26:44 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [22/Jul/2019:16:28:06 +0900] "GET /bootstrap4/navbar/index.html HTTP/1.1" 200 9869
+0:0:0:0:0:0:0:1 - - [22/Jul/2019:16:28:23 +0900] "GET /bootstrap4/navbar/index.html HTTP/1.1" 200 9872
+0:0:0:0:0:0:0:1 - - [22/Jul/2019:16:29:24 +0900] "GET /bootstrap4/navbar/index.html HTTP/1.1" 200 9819
+0:0:0:0:0:0:0:1 - - [22/Jul/2019:16:29:50 +0900] "GET /bootstrap4/navbar/lecture.html?lectureName=oracle HTTP/1.1" 404 1153
+0:0:0:0:0:0:0:1 - - [22/Jul/2019:16:29:54 +0900] "GET /bootstrap4/navbar/instructor.html HTTP/1.1" 404 1156
+0:0:0:0:0:0:0:1 - - [22/Jul/2019:16:29:56 +0900] "GET /bootstrap4/navbar/lecture.html HTTP/1.1" 404 1153
+0:0:0:0:0:0:0:1 - - [22/Jul/2019:16:30:26 +0900] "GET /bootstrap4/navbar/loginAccount.jsp HTTP/1.1" 200 288
+0:0:0:0:0:0:0:1 - - [22/Jul/2019:16:30:28 +0900] "GET /bootstrap4/navbar/logout.jsp HTTP/1.1" 200 474

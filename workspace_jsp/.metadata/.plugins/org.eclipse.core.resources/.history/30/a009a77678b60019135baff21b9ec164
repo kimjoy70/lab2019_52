@@ -1,0 +1,19 @@
+package com.mvc1;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+
+import com.vo.SNSMessageVO;
+
+public class SNSLogic {
+	Logger logger = Logger.getLogger(SNSLogic.class);
+	SNSDao sDao = new SNSDao();
+	public List<SNSMessageVO> getAll(String mem_id) {
+		logger.info("getAll 호출 성공");
+		List<SNSMessageVO> msgAllList = null;
+		msgAllList = sDao.getAll(mem_id);
+		return msgAllList;
+	}
+}

@@ -13,7 +13,8 @@ module.exports = {
 	helloBootstrap: './HelloBootstrap4.jsx',	/* 부트스르랩 연습 페이지 */
 	routerTest: './RouterTestPage.jsx',	/* react router 연습 페이지 */
 	reactNJSP: './ReactNJSPTest.jsx',	/* 리액트와 jsp연동페이지 */
-	markdown: './MarkdownEditor.jsx'	
+	markdown: './MarkdownEditor.jsx',
+	tableDomPage: './cssTest/TableDom.jsx'
 },
 devtool: 'sourcemaps',
 cache: true,

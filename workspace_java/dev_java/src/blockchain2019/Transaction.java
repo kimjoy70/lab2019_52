@@ -27,10 +27,14 @@ import java.util.ArrayList;
 public class Transaction {
 	
 	public String transactionId; // this is also the hash of the transaction.
+	//송신자의 공개키
 	public PublicKey sender; // senders address/public key.
+	//수신자의 공객키
 	public PublicKey reciepient; // Recipients address/public key.
+	//송신자가 수신자에게 보낼 코인 값
 	public float value;
 	//이전에는 signatures는 byte형의 배열이었다.
+	//SIGNATURE = createSignature(Private Key, From[HASH]+To[HASH]+value)
 	public byte[] signature; // this is to prevent anybody else from spending funds in our wallet.
 	
 	/*
@@ -47,19 +51,20 @@ public class Transaction {
 	 */
 	public ArrayList<TransactionInput> inputs = new ArrayList<TransactionInput>();
 	public ArrayList<TransactionOutput> outputs = new ArrayList<TransactionOutput>();
-	
+	//얼마나 많은 트랜잭션이 생성되었는지 대략적인 수치
 	private static int sequence = 0; // a rough count of how many transactions have been generated. 
 	
 	// Constructor: 
 	public Transaction(PublicKey from, PublicKey to, float value,  ArrayList<TransactionInput> inputs) {
-		this.sender = from;
-		this.reciepient = to;
-		this.value = value;
-		this.inputs = inputs;
+		this.sender = from;//송신자의 공개키
+		this.reciepient = to;//수신자의 공개키
+		this.value = value;//전달할 값
+		this.inputs = inputs;//이전 트랜잭션의 참조값
 	}
 	
 	// This Calculates the transaction hash (which will be used as its Id)
 	private String calulateHash() {
+		//동일한 해쉬를 갖는 2 개의 동일한 트랜잭션을 피하기 위해 시퀀스를 증가시킨다.
 		sequence++; //increase the sequence to avoid 2 identical transactions having the same hash
 		return StringUtil.applySha256(
 				StringUtil.getStringFromKey(sender) +

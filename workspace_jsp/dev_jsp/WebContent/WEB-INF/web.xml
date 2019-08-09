@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+<!-- log4j관련 설정 추가 [MyBatis에도 적용가능] 
+     context-param태그안에 환경설정을 하면 서버 기동시 최초 한 번 읽어서 계속 유지가능함.
+-->  
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/log4.properties</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>POJO_MVC1</servlet-name>
+		<servlet-class>com.mvc1.FrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>POJO_MVC1</servlet-name>
+		<url-pattern>*.kos</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>testServlet</servlet-name>
+		<servlet-class>com.web.TestServlet</servlet-class>	
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testServlet</servlet-name>
+		<url-pattern>/test.do</url-pattern>
+	</servlet-mapping>
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+	<servlet-class>com.ch17.HelloServlet</servlet-class>  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/ch17/helloServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>loginAction</servlet-name>
+  	<servlet-class>com.ch17.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>loginAction</servlet-name>
+  	<url-pattern>/ch17/login.do</url-pattern>
+  </servlet-mapping>  
+  <servlet>
+  	<servlet-name>deptAction</servlet-name>
+  	<servlet-class>com.ch17.DeptServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deptAction</servlet-name>
+  	<url-pattern>/ch17/getDeptList.nhn</url-pattern>
+  </servlet-mapping>  
+  <servlet>
+  	<servlet-name>memberAction</servlet-name>
+  	<servlet-class>com.ch3.MemberController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>memberAction</servlet-name>
+  	<!-- url패턴 매핑하기 page의 위치에 따라 폴더명을 결정하기 -->
+  	<url-pattern>/ch3/memberMgr.do</url-pattern>
+  </servlet-mapping>  
+  <servlet>
+  	<servlet-name>deptCtrl</servlet-name>
+  	<servlet-class>com.ch3.DeptController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deptCtrl</servlet-name>
+  	<!-- url패턴 매핑하기 page의 위치에 따라 폴더명을 결정하기 -->
+  	<url-pattern>/ch3/deptMgr.do</url-pattern>
+  </servlet-mapping>  
+  <servlet>
+  	<servlet-name>MVCTest</servlet-name>
+  	<servlet-class>com.ch17.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MVCTest</servlet-name>
+  	<url-pattern>*.kosmo</url-pattern>
+  </servlet-mapping>  
+  <servlet>
+  	<servlet-name>pet</servlet-name>
+  	<servlet-class>com.ch3.PetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>pet</servlet-name>
+  	<url-pattern>/ch3/petAction.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>pojo</servlet-name>
+  	<servlet-class>com.mvc.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>pojo</servlet-name>
+  	<url-pattern>*.bap</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>pojo2</servlet-name>
+  	<servlet-class>com.mvc2.ActionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>pojo2</servlet-name>
+  	<url-pattern>*.mvc</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>pojo2019</servlet-name>
+  	<servlet-class>com.mvc2019.ActionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>pojo2019</servlet-name>
+  	<url-pattern>*.mo</url-pattern>
+  </servlet-mapping>
+<!--   <error-page>
+  	<error-code>404</error-code>
+  	<location>/error/error404.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/error/error500.jsp</location>
+  </error-page> 
+  <error-page>
+  	<exception-type>java.lang.NullPointerException</exception-type>
+  	<location>/error/errorNullPointerException.jsp</location>
+  </error-page>
+  <error-page>
+  	<exception-type>java.lang.ClassNotFoundException</exception-type>
+  	<location>/error/errorClassNotFoundException.jsp</location>
+  </error-page>
+  -->
+  <resource-ref>
+  	<description>Connection</description>
+  	<res-ref-name>jdbc/dbPool</res-ref-name>
+  	<res-type>javax.sql.DataSource</res-type>
+  	<res-auth>Container</res-auth>
+  </resource-ref>
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+

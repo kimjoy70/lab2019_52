@@ -1,0 +1,9 @@
+package com.vo;
+
+public class SNSMessageVO {
+	private int    mno      =0; 
+	private String mem_id   =null; 
+	private String msg      =null; 
+	private String favcount =null; 
+	private String msg_date =null; 
+}

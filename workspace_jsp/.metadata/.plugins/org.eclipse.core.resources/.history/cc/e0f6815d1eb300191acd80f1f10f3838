@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.OnLineTestMapper">
+	<resultMap id="swDVO" type="com.vo.SwDesignVO"/>	
+	<select id="swDesignExam" parameterType="java.util.Map" statementType="CALLABLE">
+    	{ call proc_swDesign(#{key,jdbcType=CURSOR, mode=OUT, javaType=java.sql.ResultSet,resultMap=swDVO}) }
+	</select>
+	<select id="proc_exampaper" parameterType="java.util.Map" statementType="CALLABLE">
+    	{ call proc_exampaper(#{exam_no,mode=IN, jdbcType=VARCHAR, javaType=java.lang.String}
+    	                     ,#{dap1,mode=IN, jdbcType=NUMBER, javaType=java.lang.Integer}
+    	                     ,#{dap2,mode=IN, jdbcType=NUMBER, javaType=java.lang.Integer}
+    	                     ,#{dap3,mode=IN, jdbcType=NUMBER, javaType=java.lang.Integer}
+    	                     ,#{dap4,mode=IN, jdbcType=NUMBER, javaType=java.lang.Integer}
+    	                     )}
+	</select>
+	<select id="isOk" parameterType="map" resultType="string">
+		SELECT NVL((SELECT '승인' FROM take_examination
+		             WHERE mem_id=#{mem_id}
+		               AND exam_no=#{exam_no}),'응시불가') isOk FROM dual  		
+	</select>
+	<select id="subjectList" parameterType="map" resultType="map">
+		SELECT sub_cd, sub_name FROM online_subject
+	</select>
+	<select id="getExamNo" parameterType="string" resultType="string">
+		SELECT            
+		       TO_CHAR(sysdate,'YY'||'MM'||'DD')||LPAD(seq_exam_no.nextval,4,0) exam_no   
+		  FROM dual  	
+	</select>
+	<insert id="examReceipt" parameterType="map">
+		INSERT INTO take_examination(exam_no,mem_id,sub_cd,exam_date,get_point
+		                           , is_pass,s_time,e_time,fee_date
+		                           ,is_payment,exam_chasi,reg_date) 
+		                      VALUES(#{exam_no},#{mem_id},#{sub_cd},#{exam_date},0
+		                            ,'0','00:00:00','00:00:00','9999-99-99'
+		                            ,0,0,to_char(sysdate,'YYYY-MM-DD'))
+	</insert>
+</mapper>
