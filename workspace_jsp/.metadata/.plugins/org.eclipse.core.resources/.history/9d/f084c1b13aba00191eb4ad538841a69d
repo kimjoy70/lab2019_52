@@ -1,0 +1,77 @@
+package com.mvc2;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+
+  
+public class ActionServlet extends HttpServlet {
+	Logger logger = Logger.getLogger(ActionServlet.class);
+	public void doService(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException{
+		String requestURI = req.getRequestURI();// /dev_jsp/book/getBookList.do
+		String contextPath = req.getContextPath();// dev_jsp
+		String command = requestURI.substring(contextPath.length()+1);//book/getBookList.do
+		String crud = req.getParameter("crud");
+		logger.info("command:"+command+", crud:"+crud);//redirect:ch9/member/login.mvc  or forward:ch9/member/login.mvc
+		Controller controller = null;
+		try {
+			controller = ControllerMapper.getController(command,crud);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if(controller !=null && !"json".equals(crud)) {
+			String pageMove[] = null;
+			try {
+				String ret = controller.execute(req, res);
+				pageMove = ret.split(":");
+				logger.info("pageMove.length:"+pageMove.length);
+				for(int i=0;i<pageMove.length;i++) {
+					logger.info("pageMove:"+pageMove[i]);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			if(pageMove!=null) { 
+				//logger.info("pageMove:"+pageMove);
+				String path = pageMove[1];
+				if("redirect".equals(pageMove[0])) 
+				{ 
+					res.sendRedirect(path); 
+				} 
+				else
+					if("forward".equals(pageMove[0])) { 
+						RequestDispatcher view =
+								req.getRequestDispatcher(path);
+						view.forward(req, res); 
+					}else {
+						res.sendRedirect("/error/pageMoveFail.jsp");
+					} 
+				}
+		}//end of json이 아닐때
+		else {//json일때
+			try {
+				String ret = controller.execute(req, res);
+				RequestDispatcher view = req.getRequestDispatcher("/json/toJsonPrint.jsp");
+				view.forward(req, res);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	public void doGet(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException{
+		doService(req,res);
+	}
+	public void doPost(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException{
+		doService(req,res);
+	}
+}

@@ -14,8 +14,18 @@
 	                  FROM board_master_t
 	                 WHERE rownum=1),0)+1 bm_no from dual
 	</select>
-	<select id="totalRecord" parameterType="java.lang.String" resultType="int">
-		SELECT count(bm_no) as total FROM board_master_t
+	<select id="totalRecord" parameterType="com.vo.BoardMasterVO" resultType="int">
+		SELECT count(bm.bm_no) as total FROM board_master_t bm, board_sub_t bs
+		WHERE bm.bm_no = bs.bm_no(+)
+			<if test='cb_search!=null and cb_search.equals("bm_title")'>
+				AND bm.bm_title LIKE '%'||#{tb_search}||'%'
+			</if>
+			<if test='cb_search!=null and cb_search.equals("bm_content")'>
+				AND bm.bm_content LIKE '%'||#{tb_search}||'%'
+			</if>
+			<if test='cb_search!=null and cb_search.equals("bm_writer")'>
+				AND bm.bm_writer LIKE '%'||#{tb_search}||'%'
+			</if>
 	</select>
 	<insert id="boardMINS" parameterType="map">
 		INSERT INTO board_master_t(bm_no, bm_title, bm_writer
@@ -45,7 +55,19 @@
 					   ,bs.bs_seq, NVL(bs.bs_file,' ') bs_file, bs.bs_size
 					   ,rownum rnum
 				   FROM board_master_t bm, board_sub_t bs
-			      WHERE bm.bm_no = bs.bm_no(+)	 		  
+			      WHERE bm.bm_no = bs.bm_no(+)	 		
+					<if test='cb_search!=null and cb_search.equals("bm_title")'>
+						AND bm.bm_title LIKE '%'||#{tb_search}||'%'
+					</if>
+					<if test='cb_search!=null and cb_search.equals("bm_content")'>
+						AND bm.bm_content LIKE '%'||#{tb_search}||'%'
+					</if>
+					<if test='cb_search!=null and cb_search.equals("bm_writer")'>
+						AND bm.bm_writer LIKE '%'||#{tb_search}||'%'
+					</if>
+					<if test='bm_date!=null and bm_date.length()>0'>
+						AND bm.bm_date = #{bm_date}
+					</if>			      
 		            )a	
 		 <where>           
 			<if test="bm_no>0">
@@ -57,18 +79,6 @@
 			<if test="end>0">
   				<![CDATA[  AND a.rnum <= #{end} ]]>
 			</if>				
-			<if test='cb_search!=null and cb_search.equals("bm_title")'>
-				AND a.bm_title LIKE '%'||#{tb_search}||'%'
-			</if>
-			<if test='cb_search!=null and cb_search.equals("bm_content")'>
-				AND a.bm_content LIKE '%'||#{tb_search}||'%'
-			</if>
-			<if test='cb_search!=null and cb_search.equals("bm_writer")'>
-				AND a.bm_writer LIKE '%'||#{tb_search}||'%'
-			</if>
-			<if test='bm_date!=null and bm_date.length()>0'>
-				AND a.bm_date = #{bm_date}
-			</if>
 		</where>	
 			ORDER BY bm_group desc, bm_step asc			
 	</select>

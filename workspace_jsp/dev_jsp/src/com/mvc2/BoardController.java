@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
@@ -24,23 +25,39 @@ public class BoardController implements Controller {
 	//@Autowired
 	//private BoardLogic boardLogic = null;
 	BoardLogic boardLogic = new BoardLogic();
+	int tot = 0;
 	public BoardController(String requestName
 			             , String crud) 
 	{
 		this.requestName = requestName;
 		this.crud = crud;
+		BoardMasterVO bmVO = new BoardMasterVO();
+		tot = boardLogic.getTot(bmVO);
 	}
 	@Override
 	public String execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		String path = "";
 		String crud = req.getParameter("crud");
 		logger.info("crud:"+crud);
-
-		if("sel".equals(crud)) {
-			BoardMasterVO bmVO = new BoardMasterVO();
+		HttpSession session = req.getSession();
+		session.setAttribute("tot", tot);
+		BoardMasterVO bmVO = new BoardMasterVO();
+		if("boardView".equals(crud)) {
+			path = "redirect:boardList.jsp";
+		}
+		else if("total".equals(crud)) {
+			bmVO.setCb_search(req.getParameter("cb_search"));
+			bmVO.setTb_search(req.getParameter("tb_search"));
+			bmVO.setBm_date(req.getParameter("bm_date"));
+			tot = boardLogic.getTot(bmVO);
+			req.setAttribute("rtot", tot);
+			path = "forward:totalRecord.jsp";
+		}
+		else if("sel".equals(crud)) {
 			//페이지 처리에 관련된 정보 담기
 			int page=0;
 			int pageSize=0;
+			logger.info("pageSize:"+req.getParameter("pageSize"));
 			if(req.getParameter("page")!=null) {
 				page = Integer.parseInt(req.getParameter("page"));
 			}
@@ -53,19 +70,20 @@ public class BoardController implements Controller {
 			bmVO.setTb_search(req.getParameter("tb_search"));
 			bmVO.setBm_date(req.getParameter("bm_date"));
 			List<Map<String,Object>> boardList = null;
-			boardList = boardLogic.boardList(bmVO,req);
+			boardList = boardLogic.boardList(bmVO);
 			req.setAttribute("boardList", boardList);
 			path = "forward:/board/jsonBoardList.jsp";
 		}
 		else if("detail".equals(crud)) {
-			BoardMasterVO bmVO = new BoardMasterVO();
+			bmVO = null;
+			bmVO = new BoardMasterVO();
 			int bm_no = 0;
 			if(req.getParameter("bm_no")!=null) {
 				bm_no = Integer.parseInt(req.getParameter("bm_no"));
 				bmVO.setBm_no(bm_no);
 			}
 			List<Map<String,Object>> boardList = null;
-			boardList = boardLogic.boardList(bmVO,req);
+			boardList = boardLogic.boardList(bmVO);
 			req.setAttribute("boardList", boardList);
 			path = "forward:/board/read.jsp";
 		}

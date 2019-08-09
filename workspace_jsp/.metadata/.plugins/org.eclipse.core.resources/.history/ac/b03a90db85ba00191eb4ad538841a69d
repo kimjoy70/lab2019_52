@@ -1,0 +1,13 @@
+package com.mvc2;
+
+public class ModelAndView {
+	public ModelAndView() {
+		
+	}
+	public void setViewName(String viewName) {
+		
+	}
+	public void addObject(String name,Object obj) {
+		
+	}
+}

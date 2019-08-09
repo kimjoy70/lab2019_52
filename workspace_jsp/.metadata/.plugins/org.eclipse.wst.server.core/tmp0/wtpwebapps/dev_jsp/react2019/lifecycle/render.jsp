@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>render메소드 - 호출되고 업데이트는 새로운 변화를 반영하여 DOM에 다시 렌더링</title>
+	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<!-- 
+render()방법은 구성 요소가됩니다 때 호출 물론이고 업데이트 는 새로운 변화와 DOM에 다시 렌더링 HTML에있다.
+아래의 예는 파란색으로 좋아하는 색상을 변경하는 버튼이 있습니다 :
+ -->
+    <div id="root"></div>
+	<script type="text/babel"> 
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
+  }
+  render() {
+    return (
+      <div>
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+      <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Header />, document.getElementById('root'));
+	</script>
+</body>
+</html>

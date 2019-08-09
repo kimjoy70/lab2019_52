@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.BoardMapper">
+	<select id="getBmGroup" parameterType="map" resultType="int">
+	SELECT 
+      NVL((SELECT /*+index_desc(board_master_t ibm_group)*/ bm_group
+            FROM board_master_t
+           WHERE rownum = 1
+             AND bm_group > 0),0)+1 bm_group
+      FROM dual
+	</select>
+	<select id="getBmNo" parameterType="int" resultType="int">
+		SELECT NVL((SELECT /*+index_desc(board_master_t BMASTER_NO_PK)*/ bm_no
+	                  FROM board_master_t
+	                 WHERE rownum=1),0)+1 bm_no from dual
+	</select>
+	<select id="totalRecord" parameterType="java.lang.String" resultType="int">
+		SELECT count(bm_no) as total FROM board_master_t bm, board_sub_t bs
+		WHERE bm.bm_no = bs.bm_no(+)
+		
+	</select>
+	<insert id="boardMINS" parameterType="map">
+		INSERT INTO board_master_t(bm_no, bm_title, bm_writer
+		                        ,bm_content, bm_date, bm_pw
+		                        ,bm_email,bm_group,bm_pos,bm_step)
+		          values(#{bm_no},#{bm_title}
+		                ,#{bm_writer},#{bm_content}
+		                ,TO_CHAR(sysdate,'YYYY-MM-DD')
+		                ,#{bm_pw},#{bm_email}
+		                ,#{bm_group},#{bm_pos},#{bm_step}
+		                )	
+	</insert>
+	<insert id="boardSINS" parameterType="map">
+		INSERT INTO board_sub_t(bm_no, bs_seq, bs_file, bs_size)
+		          values(#{bm_no},#{bs_seq}
+		                ,#{bs_file},#{bs_size})	
+	</insert>	
+	<select id="boardList" parameterType="com.vo.BoardMasterVO" resultType="map">
+		SELECT
+		      	a.bm_no, a.bm_title, a.bm_writer, a.bm_date, a.bm_content, a.bm_group, a.bm_pos, a.bm_step
+		      , a.bm_hit, a.bm_pw, a.bs_seq, a.bs_file, a.bs_size, a.rnum, a.bm_email
+		  FROM (
+				 SELECT
+				        bm.bm_no, bm.bm_title, bm.bm_writer, bm.bm_date
+    				   ,bm.bm_content, bm.bm_group, bm.bm_pos, bm.bm_step
+					   ,bm.bm_hit,bm.bm_pw,bm.bm_email
+					   ,bs.bs_seq, NVL(bs.bs_file,' ') bs_file, bs.bs_size
+					   ,rownum rnum
+				   FROM board_master_t bm, board_sub_t bs
+			      WHERE bm.bm_no = bs.bm_no(+)	 		  
+		            )a	
+		 <where>           
+			<if test="bm_no>0">
+				AND a.bm_no=#{bm_no}
+			</if>
+  			<if test="start>0">
+	  			<![CDATA[  AND a.rnum >= #{start}  ]]>
+			</if>	
+			<if test="end>0">
+  				<![CDATA[  AND a.rnum <= #{end} ]]>
+			</if>				
+			<if test='cb_search!=null and cb_search.equals("bm_title")'>
+				AND a.bm_title LIKE '%'||#{tb_search}||'%'
+			</if>
+			<if test='cb_search!=null and cb_search.equals("bm_content")'>
+				AND a.bm_content LIKE '%'||#{tb_search}||'%'
+			</if>
+			<if test='cb_search!=null and cb_search.equals("bm_writer")'>
+				AND a.bm_writer LIKE '%'||#{tb_search}||'%'
+			</if>
+			<if test='bm_date!=null and bm_date.length()>0'>
+				AND a.bm_date = #{bm_date}
+			</if>
+		</where>	
+			ORDER BY bm_group desc, bm_step asc			
+	</select>
+</mapper>

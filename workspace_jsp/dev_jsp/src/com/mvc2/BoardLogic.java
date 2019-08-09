@@ -16,14 +16,14 @@ public class BoardLogic {
 	Logger logger = Logger.getLogger(BoardLogic.class);
 	BoardMasterDao bmDao = new BoardMasterDao();
 	BoardSubDao bsDao = new BoardSubDao();
-	public List<Map<String, Object>> boardList(BoardMasterVO pbmVO, HttpServletRequest req) {
+	int total = 0;
+	public List<Map<String, Object>> boardList(BoardMasterVO pbmVO) {
 		logger.info("boardList 호출 성공");
 		logger.info("화면 page:"+pbmVO.getPage());
 		logger.info("화면 pageSize:"+pbmVO.getPageSize());
 		List<Map<String, Object>> boardList = null;
-		int total = bmDao.totalRecord();//20
-		HttpSession session = req.getSession();
-		session.setAttribute("tot", total);
+		total = getTot(pbmVO);
+		logger.info("화면 total:"+total);		
 		int page = 0;
 		int pageSize = 0;
 		int start = 0;
@@ -37,6 +37,7 @@ public class BoardLogic {
 		if(page > 0){
 			start = ((page-1)*pageSize)+1;
 			end = page*pageSize;
+			logger.info("end : "+end);
 			pbmVO.setStart(start);
 			if(end >total){
 				pbmVO.setEnd(total);
@@ -45,8 +46,8 @@ public class BoardLogic {
 			}
 		}	
 		try {
-			logger.info("계산된 후 page:"+pbmVO.getPage());
-			logger.info("계산된 후 pageSize:"+pbmVO.getPageSize());
+			logger.info("start:"+start);
+			logger.info("end:"+end);
 			boardList = bmDao.boardList(pbmVO);
 		} catch (SQLException se) {
 			se.getMessage();
@@ -126,6 +127,10 @@ public class BoardLogic {
 		} catch (Exception e) {
 			logger.info("Exception : "+e.toString());
 		}		
+	}
+	public int getTot(BoardMasterVO pbmVO) {
+		total = bmDao.totalRecord(pbmVO);//20
+		return total;
 	}
 }
 

@@ -100,7 +100,7 @@
   </servlet-mapping>
   <servlet>
   	<servlet-name>pojo2019</servlet-name>
-  	<servlet-class>com.mvc2019.ActionServlet</servlet-class>
+  	<servlet-class>com.mvc2019.ActionServlet2019</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>pojo2019</servlet-name>

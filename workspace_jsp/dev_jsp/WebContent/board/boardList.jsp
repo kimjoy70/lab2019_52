@@ -7,6 +7,7 @@
 	if(session.getAttribute("tot") !=null){
 		tot = (Integer)session.getAttribute("tot");		
 	}
+	out.print(tot);
 %>    
 <!DOCTYPE html>
 <html>
@@ -15,9 +16,8 @@
 <title>MVC기반의 계층형 게시판 구현하기</title>
 <%@ include file="../common/easyui_common.jsp" %>
 <script type="text/javascript">
-
-
 	var g_no=0;//그리드에서 선택이 바뀔때 마다 변경된 값이 저장됨.
+	var tb_value;
 	function dlgIns_save(){
 		//폼 전송 처리함.
 		//$("#f_boardIns").attr("method","post");
@@ -34,14 +34,30 @@
 	}
 	function getBoardList(){
 		//alert("getBoardList호출");
+		cb_value=user_combo;
+		tb_value = $("#tb_search").val();
+		alert(cb_value+" , "+tb_value);
+		var x ="crud=sel&cb_search="+cb_value+"&tb_search="+tb_value+"&page=1&pageSize=2";
+		//alert("url:"+x);
+		var vtot=0;
     	$("#dg_board").datagrid({
-    		url:"boardList.mvc?crud=sel&page=1&pageSize=5"
+    		url:"boardList.mvc?crud=sel&cb_search="+cb_value+"&tb_search="+tb_value+"&page=1&pageSize=2"
            ,onLoadSuccess:function(data){
         	   //data.total은 전체 datagrid의 레코드수를 출력함.
-        	   $('#pn_board').pagination({
-        		   //그 정보를 pagination 전체레코드수로 표시하기
-       		   		total:data.total
-       		   });
+       	   		$.ajax({
+       	   			url:"boardList.mvc?crud=total&cb_search="+cb_value+"&tb_search="+tb_value+"&timestamp="+new Date().getTime()
+       	   		  , success:function(data){
+       	   			  //alert("data : "+data);
+       	   			  vtot = data;
+       	   			  //alert("vtot:"+vtot);
+               	   		$('#pn_board').pagination({
+            		   //그 정보를 pagination 전체레코드수로 표시하기
+           		   			total:vtot
+           		   		});       	   			  
+       	   			  //total:data;
+       	   		  }
+       	   		});        	   
+
 /* 	            	J.messager.show({
                        title:'Info',
                        msg:'Load '+data.total+' records successfully'
@@ -58,7 +74,7 @@
 	}  	
 </script>
 </head>
-<body>
+<body onLoad="getBoardList()">
 <script type="text/javascript">
 	var user_combo="bm_title";//제목|내용|작성자
 	var v_date;//사용자가 선택한 날짜 정보 담기
@@ -81,7 +97,8 @@
 	$(document).ready(function(){//DOM구성이 완료된 시점-자바스크립트로 태그접근,설정변경,이미지
 		$("#dg_board").datagrid({
 			//url:'./mvcBoard.bd?gubun=getBoardList&page=1&pageSize=5',
-		    url:'./boardList.mvc?crud=sel&page=1&pageSize=5',
+		    //url:'./boardList.mvc?crud=sel&page=1&pageSize=2',
+		    pagination:true,		
 		    singleSelect:true,
 		    onSelect: function(index,row){
 				var row = $("#dg_board").datagrid("getSelected");
@@ -101,9 +118,9 @@
 			//alert("g_no:"+g_no);
 		});
 		$('#pn_board').pagination({
-		    total:<%=tot%>
-		   ,pageSize:5
-		   ,pageList: [5,10,15,20]
+<%-- 		    total:<%=tot%> --%>
+		    pageSize:2
+		   ,pageList: [2,3,5,10]
 		   ,onSelectPage:function(pageNumber, pageSize){//pageNumber:현재 내가 바라보는 페이지, pageSize:한페이지에 뿌릴 로우수
 			   //alert("pageNumber:"+pageNumber+"\n pageSize:"+ pageSize);
 			   pageMove(pageNumber, pageSize);
@@ -144,7 +161,7 @@
 				}
 			}]
 		});
-		$('#tb_search').textbox('textbox').bind('keydown', function(e){
+/* 		$('#tb_search').textbox('textbox').bind('keydown', function(e){
 			if (e.keyCode == 13){	// when press ENTER key, accept the inputed value.
 				//alert("엔터쳤을 때");
 				$("#dg_board").datagrid({
@@ -153,7 +170,7 @@
 						            +"&tb_search="+$("#tb_search").val()
 				});
 			}
-		});		
+		});	 */	
 	    $('#linkBtnSearch').bind('click', function(){
 	        //alert('easyui');
 	        getBoardList();
@@ -204,7 +221,8 @@
             <option value="bm_content">내용</option>
             <option value="bm_writer">작성자</option>
         </select>
-        <input id="tb_search" class="easyui-textbox" style="width:300px">
+        <input id="tb_search" name="tb_search" class="easyui-textbox" style="width:320px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 작성일: <input id="db_date" class="easyui-datebox" name="bm_date" style="width:110px">
 <!-- 태그내에서 속성(width, align, href)이나  -->   
         <a id="linkBtnSearch" class="easyui-linkbutton" iconCls="icon-search">Search</a>
@@ -222,6 +240,7 @@
 <!-- 페이지 네이션 추가 시작 -->
 	<div id="pn_board" class="easyui-pagination" style="background:#efefef;border:1px solid #ccc;">
 	</div>
+<!-- 
 <script type="text/javascript">
 	$('#pn_board').pagination({
 		pageList: [5,10,15,20]
@@ -231,8 +250,9 @@
 			//alert('pageNumber:'+pageNumber+',pageSize:'+pageSize);
 		   pageMove(pageNumber, pageSize);
 		}
-	});///////////////end of pagination
+	});///////////////end of pagination	
 </script>	
+ -->
 <!-- 페이지 네이션 추가   끝  -->
 <%
 	String gubun = request.getParameter("gubun");

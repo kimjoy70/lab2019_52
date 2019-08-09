@@ -26,7 +26,19 @@ public class ActionServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		if(controller !=null) {
+		if(controller instanceof RestController) {
+			logger.info("RestController일땐");
+			try {
+				String ret = controller.execute(req, res);
+				logger.info("ret:"+ret);
+				req.setAttribute("jsonStr", ret);
+				RequestDispatcher view = req.getRequestDispatcher("/json/toJsonPrint.jsp");
+				view.forward(req, res);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		if(controller !=null && !(controller instanceof RestController)) {
 			String pageMove[] = null;
 			try {
 				String ret = controller.execute(req, res);
@@ -55,7 +67,19 @@ public class ActionServlet extends HttpServlet {
 						res.sendRedirect("/error/pageMoveFail.jsp");
 					} 
 				}
+		}//end of json이 아닐때
+		/*
+		else {//json일때
+			logger.info("JSON일때");
+			try {
+				String ret = controller.execute(req, res);
+				RequestDispatcher view = req.getRequestDispatcher("/json/toJsonPrint.jsp");
+				view.forward(req, res);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
+		*/
 	}
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException{
