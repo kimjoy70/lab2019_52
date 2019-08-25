@@ -1,0 +1,9 @@
+package com.di;
+
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+public class ListController extends MultiActionController {
+	public void getInsaList() {
+		
+	}
+}

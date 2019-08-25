@@ -1,0 +1,167 @@
+package com.hy;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.StringTokenizer;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.util.HangulConversion;
+import com.vo.DeptVO;
+
+@Controller 
+public class DeptController {
+	Logger logger = 
+			Logger.getLogger(DeptController.class);
+	@Autowired
+	public DeptLogic deptLogic = null;
+	@RequestMapping(value="/dept/test.hy")
+	//public String test()
+	public ModelAndView test()
+	{
+		logger.info("test 호출 성공");
+		DeptVO rdVO = deptLogic.test();
+		// WEB-INF/jsp/dept/test.jsp
+		//WEB-INF아래에 있는 페이지는 url를 통해서는
+		//직접 접근이 불가능 하다.
+		//그러나 컨테이너 내부에서는 호출이 가능하다.
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("dept/test");
+		mav.addObject("rdVO", rdVO);
+		return mav;
+//		return "forward:test.jsp";
+	}
+	@RequestMapping(value="/dept/getDeptList.hy", method=RequestMethod.GET)
+	public String getDeptList(HttpServletRequest req)
+	{
+		logger.info("getDeptList 호출 성공");
+		//command:i_sel|i_upd|i_del|i_ins
+		String command = req.getParameter("command");
+		List<HashMap> deptList = null;
+		DeptVO pdVO = new DeptVO();
+		//조회 버튼을 눌렀을 때
+		if("i_sel".equals(command)){
+			deptList = 
+					deptLogic.getDeptList(pdVO);
+		}
+		//조회 버튼을 누르지 않았을 때
+		else{
+			deptList = null;
+		}
+		req.setAttribute("deptList", deptList);
+		//return "forward:getDeptList.jsp";
+		//return "redirect:getDeptList.jsp";
+		//WEB-INF/jsp/dept/getDeptList.jsp
+		//접두어 ; /WEB-INF/jsp/
+		//접미어 : 페이지이름.jsp
+		return "dept/getDeptList";
+//		return ""; 
+	}
+	@RequestMapping(value="/easyui/easyUIDeptList.hy", method=RequestMethod.GET)
+	public String easyUIDeptList(HttpServletRequest req)
+	{
+		logger.info("easyUIDeptList 호출 성공");
+		List<HashMap> deptList = null;
+		DeptVO pdVO = new DeptVO();
+		deptList = deptLogic.getDeptList(pdVO);
+		req.setAttribute("deptList", deptList);
+		return "forward:jsonDeptList.jsp";
+	}
+	@RequestMapping(value="/dept/getDeptDetail.hy", method=RequestMethod.GET)
+	public String getDeptDetail(HttpServletRequest req)
+	{
+		logger.info("getDeptDetail 호출 성공");
+		//command:i_sel|i_upd|i_del|i_ins
+		String p_deptno = req.getParameter("deptno");
+		int i_deptno = 0;
+		if(req.getParameter("deptno")!=null){
+			i_deptno = Integer.parseInt(p_deptno);
+		}
+		List<HashMap> deptList = null;
+		DeptVO pdVO = new DeptVO();
+		pdVO.setDeptno(i_deptno);
+		deptList = 
+				deptLogic.getDeptList(pdVO);
+		req.setAttribute("deptList", deptList);
+		return "dept/deptUpdateForm";
+	}
+	@RequestMapping(value="/dept/deptInsert.hy")
+	public String deptInsert(HttpServletRequest req)
+	{
+		DeptVO pdVO = new DeptVO();
+		pdVO.setDeptno
+		(Integer.parseInt(req.getParameter("deptno")));
+		pdVO.setDname
+		(HangulConversion.toKor(req.getParameter("dname")));
+		pdVO.setLoc
+		(HangulConversion.toKor(req.getParameter("loc")));
+		int result = deptLogic.deptInsert(pdVO);
+		return "dept/getDeptList";
+	}
+	@RequestMapping(value="/dept/deptDelete.hy")
+	public String deptDelete(HttpServletRequest req)
+	{
+		logger.info("noAll:"+req.getParameter("noAll"));
+		String p_noAll = req.getParameter("noAll");
+		String[] depts = null;
+		if(p_noAll!=null){
+			StringTokenizer st = 
+					new StringTokenizer(p_noAll,",");
+			int size = st.countTokens();
+			depts = new String[size];
+			for(int j=0;j<size;j++){
+				depts[j] = st.nextToken();
+			}
+		}
+		logger.info("depts.length:"+depts.length);
+		int result = deptLogic.deptDelete(depts);
+		return "dept/getDeptList";
+	}
+	@RequestMapping(value="/dept/deptUpdate.hy")
+	public String deptUpdate(HttpServletRequest req)
+	{
+		logger.info("deptUpdate 호출 성공");
+		DeptVO pdVO = new DeptVO();
+		int i_deptno = 0;
+		if(req.getParameter("deptno")!=null){
+			i_deptno = 
+				Integer.parseInt(req.getParameter("deptno"));
+		}
+		pdVO.setDeptno(i_deptno);
+		pdVO.setDname
+		(HangulConversion.toKor(req.getParameter("dname")));
+		pdVO.setLoc
+		(HangulConversion.toKor(req.getParameter("loc")));
+		int result = 0;
+		result = deptLogic.deptUpdate(pdVO);
+		return "redirect:deptUpdateOk.jsp";
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+package com.hy;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.vo.DeptVO;
+import com.vo.EmpVO;
+@Service
+public class EmpLogic {
+	Logger logger = Logger.getLogger(EmpLogic.class);
+	public DeptDaoImpl deptDaoImpl = null;
+	@Autowired
+	public EmpDaoImpl empDaoImpl = null;
+	public void setEmpDaoImpl(EmpDaoImpl empDaoImpl) {
+		this.empDaoImpl = empDaoImpl;
+	}
+	public void setDeptDaoImpl(DeptDaoImpl deptDaoImpl)
+	{
+		this.deptDaoImpl = deptDaoImpl;
+	}
+	public int eudEmp(EmpVO peVO) {
+		logger.info("empInsert ȣ�� ����");
+		int result = 0;
+		peVO.setEmpno(9003);
+		peVO.setEname("������");
+		peVO.setMgr(7902);
+		peVO.setJob("CLERK");
+		peVO.setHiredate("");
+		peVO.setSal(2300);
+		peVO.setComm(500);
+		peVO.setDeptno(91);
+		try {
+		/*	
+			DeptVO pdVO = new DeptVO();
+			pdVO.setDeptno(90);
+			pdVO.setDname("����");
+			pdVO.setLoc("��õ");
+			deptDaoImpl.deptInsert(pdVO);
+		*/	
+		///////// TR ����  ��  /////////
+			result = empDaoImpl.empInsert(peVO);
+/*			peVO = null;
+			peVO = new EmpVO();
+			peVO.setEmpno(9001);
+			peVO.setEname("������");
+			empDaoImpl.empUpdate(peVO);*/
+		} catch (DataAccessException de) {
+			throw de;
+		}
+		return result;
+	}
+}
+
+
+
+
+
+
+
+

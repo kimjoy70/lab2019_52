@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<bean id="default-handler-mapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+	<bean name="/di/hello.sp4" class="com.di.HelloController"/>
+ 	<!-- 공통업무 -->
+  	<bean id="list-controller" class="com.di.ListController">
+		<property name="methodNameResolver" ref="list-resolver"/>
+		<!-- <property name="commonLogic" ref="common-logic"/> -->
+  	</bean>
+	<bean id="list-resolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/common/doLogin.dk">doLogin</prop>
+				<prop key="/common/getBoardMastList.dk">getBoardMastList</prop>
+				<prop key="/common/cudBoardMast.dk">cudBoardMast</prop>				
+				<prop key="/common/getBoardList.dk">getBoardList</prop>
+				<prop key="/common/getBoardFileList.dk">getBoardFileList</prop>
+				<prop key="/common/fileDownload.dk">fileDownload</prop>				
+				<prop key="/common/cudSmBoard.dk">cudSmBoard</prop>
+				<prop key="/common/getCommonCodeList.dk">getCommonCodeList</prop>
+				<prop key="/common/getWorkProcessList.dk">getWorkProcessList</prop>
+				<prop key="/common/getWorkProcessListCR.dk">getWorkProcessListCR</prop>
+				<prop key="/common/getWorkProcessListTW.dk">getWorkProcessListTW</prop>
+				<prop key="/common/getWorkStepList.dk">getWorkStepList</prop>
+				<prop key="/common/getProcessWSLStatusList.dk">getProcessWSLStatusList</prop>
+				<prop key="/common/getProcessWSLList.dk">getProcessWSLList</prop>
+				<prop key="/common/getProcessCRMList.dk">getProcessCRMList</prop>
+				<prop key="/common/getProcessTWLList.dk">getProcessTWLList</prop>
+				<prop key="/common/getCommonCodeListSelect.dk">getCommonCodeListSelect</prop>
+				<prop key="/common/getBotcatCodeList.dk">getBotcatCodeList</prop>	
+				<prop key="/common/getUserList.dk">getUserList</prop>
+				<prop key="/common/getUsgGroupList.dk">getUsgGroupList</prop>
+				<prop key="/common/getUsgGroupListSelect.dk">getUsgGroupListSelect</prop>				
+				<prop key="/common/getSelfEmpList.dk">getSelfEmpList</prop>
+				<prop key="/common/getExchagerateList.dk">getExchagerateList</prop>
+				<prop key="/common/cudSmExchange.dk">cudSmExchange</prop>
+				<prop key="/common/cudSmExchangeDelete.dk">cudSmExchangeDelete</prop>
+				<prop key="/common/cudSmExchangeInsert.dk">cudSmExchangeInsert</prop>
+				<prop key="/common/getZipCodeList.dk">getZipCodeList</prop>
+				<prop key="/common/sendMail.dk">sendMail</prop>
+				<prop key="/common/getArriveList.dk">getArriveList</prop>
+				<prop key="/common/ibatisTest.dk">ibatisTest</prop>
+				<prop key="/common/getMenuList.dk">getMenuList</prop>
+				<prop key="/common/getRoleInfo.dk">getRoleInfo</prop>
+			</props>
+		</property>
+	</bean>	
+</beans>

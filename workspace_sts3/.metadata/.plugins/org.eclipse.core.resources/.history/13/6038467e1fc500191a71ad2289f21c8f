@@ -1,0 +1,59 @@
+package com.erp;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.StringTokenizer;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.util.HangulConversion;
+import com.vo.DeptVO;
+
+@Controller 
+public class DeptController {
+	Logger logger = 
+			Logger.getLogger(DeptController.class);
+	@Autowired
+	public DeptLogic deptLogic = null;
+	@RequestMapping(value="/dept/deptInsert.hy")
+	public String deptInsert(HttpServletRequest req)
+	{
+		DeptVO pdVO = new DeptVO();
+		pdVO.setDeptno
+		(Integer.parseInt(req.getParameter("deptno")));
+		pdVO.setDname
+		(HangulConversion.toKor(req.getParameter("dname")));
+		pdVO.setLoc
+		(HangulConversion.toKor(req.getParameter("loc")));
+		int result = deptLogic.deptInsert(pdVO);
+		return "dept/getDeptList";
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+package com.hy;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.vo.DeptVO;
+import com.vo.EmpVO;
+@Service
+public class EmpLogic {
+	Logger logger = Logger.getLogger(EmpLogic.class);
+	public DeptDaoImpl deptDaoImpl = null;
+	@Autowired
+	public EmpDaoImpl empDaoImpl = null;
+	//<property name="empDaoImpl" ref="emp-daoimpl"/>
+	public void setEmpDaoImpl(EmpDaoImpl empDaoImpl) {
+		this.empDaoImpl = empDaoImpl;
+	}
+	public void setDeptDaoImpl(DeptDaoImpl deptDaoImpl)
+	{
+		this.deptDaoImpl = deptDaoImpl;
+	}
+	/*@Autowired
+	public DeptDaoImpl deptDaoImpl = null;
+	public void setDeptDaoImpl(DeptDaoImpl deptDaoImpl) {
+		this.deptDaoImpl = deptDaoImpl;
+	}*/
+	public List<EmpVO> getEmpList(EmpVO peVO) {
+		List<EmpVO> empList = 
+				empDaoImpl.getEmpList(peVO);
+		return empList;
+	}
+/*	public int cudEmp(EmpVO peVO){
+		int result = 0;
+		//사원등록이니?
+		if("empInsert".equals(peVO.getCommand())){
+			
+		}
+		//사원수정이니?
+		else if("empUpdate".equals(peVO.getCommand())){
+			
+		}
+		//사원 퇴사했니?
+		else if("empDelete".equals(peVO.getCommand())){
+			
+		}
+		return result;
+	}*/
+	@Transactional(propagation=Propagation.REQUIRED,rollbackFor={DataAccessException.class})
+	@Pointcut(value="execution(* com.movie.*Logic.*(..))")
+	public int eudEmp(EmpVO peVO) {
+		logger.info("empInsert 호출 성공");
+		int result = 0;
+		peVO.setEmpno(9003);
+		peVO.setEname("강감찬");
+		peVO.setMgr(7902);
+		peVO.setJob("CLERK");
+		peVO.setHiredate("");
+		peVO.setSal(2300);
+		peVO.setComm(500);
+		peVO.setDeptno(91);
+		try {
+		//아래 코드에서 객체 주입을 받지 못하면
+		//NullPointerException	
+		///////// TR 연습 시작 /////////
+		/*	
+			DeptVO pdVO = new DeptVO();
+			pdVO.setDeptno(90);
+			pdVO.setDname("개발");
+			pdVO.setLoc("인천");
+			deptDaoImpl.deptInsert(pdVO);
+		*/	
+		///////// TR 연습  끝  /////////
+			result = empDaoImpl.empInsert(peVO);
+/*			peVO = null;
+			peVO = new EmpVO();
+			peVO.setEmpno(9001);
+			peVO.setEname("김유신");
+			empDaoImpl.empUpdate(peVO);*/
+		} catch (DataAccessException de) {
+			throw de;
+		}
+		return result;
+	}
+	public int empDelete(String[] emps) {
+		int result = empDaoImpl.empDelete(emps);
+		return result;
+	}
+	public int empUpdate(EmpVO peVO) {
+		int result = empDaoImpl.empUpdate(peVO);
+		return result;
+	}
+	public HashMap<String,Object> proc_emp_sal_update(EmpVO peVO) {
+		logger.info("proc_emp_sal_update 호출 성공");
+		HashMap<String,Object> pMapEmp = null;
+		pMapEmp = empDaoImpl.proc_emp_sal_update(peVO);
+		return pMapEmp;
+	}
+	public String proc_emp_sal_update2(EmpVO peVO) {
+		logger.info("proc_emp_sal_update2 호출 성공");
+		String msg = empDaoImpl.proc_emp_sal_update2(peVO);
+		return msg;
+	}
+	public HashMap<String,Object> getEmp2(EmpVO peVO) {
+		logger.info("getEmp2 호출 성공");
+		HashMap<String,Object> pMapEmp = null;
+		pMapEmp = empDaoImpl.getEmp2(peVO);
+		return pMapEmp;
+	}
+}
+
+
+
+
+
+
+
+

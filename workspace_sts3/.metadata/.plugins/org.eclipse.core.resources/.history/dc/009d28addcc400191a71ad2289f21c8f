@@ -1,0 +1,80 @@
+package com.hy;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.dao.DataAccessException;
+
+import com.vo.DeptVO;
+import com.vo.EmpVO;
+
+public class EmpDaoImpl implements EmpMapper{
+	Logger logger =   
+			Logger.getLogger(EmpDaoImpl.class);
+	public SqlSessionTemplate sqlSessionTemplate = null;
+	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
+		this.sqlSessionTemplate = sqlSessionTemplate;
+	}
+	@Override
+	public List<EmpVO> getEmpList(EmpVO peVO) {
+		logger.info("getEmpList 호출 성공");
+		return sqlSessionTemplate.selectList("getEmpList",peVO);
+	}
+	@Override
+	public int empInsert(EmpVO peVO) throws DataAccessException {
+		int result =  
+			sqlSessionTemplate.insert("empInsert",peVO);
+		return result;
+	}
+	@Override
+	public int empDelete(String[] emps) {
+		int result = 
+				sqlSessionTemplate.delete("empDelete",emps);
+		return result;
+	}
+	@Override
+	public int empUpdate(EmpVO peVO) throws DataAccessException{
+		int result = 
+				sqlSessionTemplate.update("empUpdate",peVO);
+		return result;
+	}    
+	public HashMap<String,Object> proc_emp_sal_update(EmpVO evo){
+		HashMap<String,Object> pMapEmp = 
+				new HashMap<String,Object>();
+		pMapEmp.put("pempno", evo.getEmpno());
+		//pMapEmp.put("msg", "");  
+		sqlSessionTemplate.selectOne("proc_emp_sal_update",pMapEmp);
+		String msg = null;
+		msg = pMapEmp.get("msg").toString();
+		logger.info("msg: "+pMapEmp.get("msg"));
+		return pMapEmp;
+	}
+	public String proc_emp_sal_update2(EmpVO evo){
+		HashMap<String,Object> pMapEmp = 
+				new HashMap<String,Object>();
+		pMapEmp.put("pempno", evo.getEmpno());
+		//pMapEmp.put("msg", "");  
+		sqlSessionTemplate.selectOne("proc_emp_sal_update2",pMapEmp);
+		String msg = null;
+		msg = pMapEmp.get("msg").toString();
+		logger.info("msg: "+pMapEmp.get("msg"));
+		return msg;
+	}
+	public HashMap<String,Object> getEmp2(EmpVO peVO) {
+		HashMap<String,Object> pMapEmp = 
+				new HashMap<String,Object>();
+		pMapEmp.put("pempno", peVO.getEmpno());
+		sqlSessionTemplate.selectOne("getEmp2",pMapEmp);
+		String msg = null;
+		msg = pMapEmp.get("msg").toString();
+		logger.info("msg: "+pMapEmp.get("msg"));
+		return pMapEmp;
+	}
+
+}
+
+
+
+

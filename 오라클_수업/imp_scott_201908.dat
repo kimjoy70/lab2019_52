@@ -1,0 +1,6 @@
+FILE="C:\git_2019\lab2019_52\오라클_수업\scott_201908.DMP"
+LOG="C:\git_2019\lab2019_52\오라클_수업\imp_scott_201908.log"
+FROMUSER=scott
+TOUSER=HR
+IGNORE=Y
+FEEDBACK=1000

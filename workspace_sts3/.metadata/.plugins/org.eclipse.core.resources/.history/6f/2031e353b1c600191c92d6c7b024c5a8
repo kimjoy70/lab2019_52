@@ -1,0 +1,11 @@
+package com.sts3.sample;
+
+import org.junit.Test;
+
+public class SampleTests {
+	private Restaurant restaurant;
+	@Test
+	public void testExist() {
+		assertNotNull(restaurant);
+	}
+}

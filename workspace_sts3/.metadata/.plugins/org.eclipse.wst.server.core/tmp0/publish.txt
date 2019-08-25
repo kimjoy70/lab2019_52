@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Sun Aug 25 06:51:37 KST 2019
+org.eclipse.jst.jee.server\:/binary\:C\:\\workspace_sts3\\spring4\\WebContent\\WEB-INF\\lib\\spring-web-4.3.25.RELEASE.jar=WEB-INF/lib/spring-web-4.3.25.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\kimjoy\\.m2\\repository\\org\\springframework\\spring-web\\5.1.9.RELEASE\\spring-web-5.1.9.RELEASE.jar=WEB-INF/lib/spring-web-5.1.9.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\workspace_sts3\\spring4\\WebContent\\WEB-INF\\lib\\spring-web-4.3.14.RELEASE.jar=WEB-INF/lib/spring-web-4.3.14.RELEASE.jar

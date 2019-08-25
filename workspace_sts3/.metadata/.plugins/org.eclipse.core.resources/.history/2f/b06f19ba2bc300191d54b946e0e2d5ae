@@ -1,0 +1,11 @@
+package com.di;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+public class ListController extends MultiActionController {
+	public ModelAndView getInsaList() {
+		ModelAndView mav = new ModelAndView();
+		return mav;
+	}
+}
