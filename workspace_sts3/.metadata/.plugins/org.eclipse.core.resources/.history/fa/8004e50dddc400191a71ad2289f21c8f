@@ -1,0 +1,13 @@
+package com.hy;
+
+import java.util.List;
+
+import com.vo.DeptVO;
+import com.vo.EmpVO;
+
+public interface EmpMapper {
+	public List<EmpVO> getEmpList(EmpVO dvo);
+	public int empInsert(EmpVO dvo);
+	public int empUpdate(EmpVO dvo);
+	public int empDelete(String[] emps);
+}

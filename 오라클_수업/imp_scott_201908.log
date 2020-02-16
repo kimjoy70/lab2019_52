@@ -1,0 +1,6525 @@
+
+다음에 접속됨: Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+익스포트 파일은 규정 경로를 거쳐 EXPORT:V11.01.00 에 의해 생성되었습니다
+
+경고: 객체는 다른 사용자 SCOTT(이)가 엑스포트한 것입니다.
+
+KO16MSWIN949 문자집합과 AL16UTF16 NCHAR 문자 집합에 임포트가 완성되었습니다
+AL32UTF8 문자 집합을 사용해서 서버를 임포트합니다 (문자집합 변환이 가능합니다)
+. SCOTT 객체를 HR(으)로 임포트하는 중입니다
+. . 테이블                         "A_TB"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                          "AAA"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                      "ACBOARD"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                      "ADDRESS"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ADDRESS"."ADDR_SI" (actual: 20, maximum: 18)
+열 1 5711              
+열 2 463824            
+열 3 경기              
+열 4 성남시 분당구     
+열 5 서현동            
+열 6 245~279           
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ADDRESS"."ADDR_SI" (actual: 20, maximum: 18)
+열 1 14659             
+열 2 667822            
+열 3 경남              
+열 4 하동군            
+열 5 화개면            
+열 6 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ADDRESS"."ADDR_SI" (actual: 20, maximum: 18)
+열 1 14666             
+열 2 667841            
+열 3 경남              
+열 4 하동군            
+열 5 횡천면            
+열 6 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ADDRESS"."ADDR_SI" (actual: 20, maximum: 18)
+열 1 21897             
+열 2 704916            
+열 3 대구              
+열 4 달서구            
+열 5 성당2동           
+열 6 490~505           
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ADDRESS"."ADDR_SI" (actual: 20, maximum: 18)
+열 1 19645             
+열 2 790828            
+열 3 경북              
+열 4 포항시 남구       
+열 5 상도동            
+열 6 136~680           
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ADDRESS"."ADDR_SI" (actual: 20, maximum: 18)
+열 1 19653             
+열 2 790830            
+열 3 경북              
+열 4 포항시 남구       
+열 5 송도동            
+열 6 436~475           
+                                                            0 행이 임포트되었습니다
+. . 테이블                  "ADDRESSLIST"(를)을 임포트 중
+                                                            9 행이 임포트되었습니다
+. . 테이블                  "AJAX_REPORT"(를)을 임포트 중
+                                                           41 행이 임포트되었습니다
+. . 테이블                       "ANIMAL"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                      "ARTICLE"(를)을 임포트 중
+                                                            2 행이 임포트되었습니다
+. . 테이블                   "ATTACHMENT"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                       "BASKET"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                      "BMEMBER"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                        "BOARD"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                    "BOARD_EJB"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블               "BOARD_MASTER_T"(를)을 임포트 중
+                                                            6 행이 임포트되었습니다
+. . 테이블                  "BOARD_SUB_T"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                       "BOARD1"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                   "BOARD1_TBL"(를)을 임포트 중
+                                                           21 행이 임포트되었습니다
+. . 테이블                       "BOARD2"(를)을 임포트 중
+                                                           15 행이 임포트되었습니다
+. . 테이블                    "BOARDSRUS"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                        "BONUS"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "BOOK"(를)을 임포트 중
+                                                            9 행이 임포트되었습니다
+. . 테이블                    "BOOKORDER"(를)을 임포트 중
+                                                           16 행이 임포트되었습니다
+. . 테이블                      "BOOKREG"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                        "BOOKS"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."BOOKS"."INFO" (actual: 520, maximum: 500)
+열 1 A01002
+열 2 A01
+열 3 해바라기가 피지 않는 여름 
+열 4 미치오 슈스케 
+열 5 들녁
+열 6 72000
+열 7 일본 미스터리계의 대표적인 작가 미치오 슈스케의 소...
+열 8 0
+열 9 l9788975278396.jpg
+열 10 28-4월 -2011:15:09:22
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."BOOKS"."INFO" (actual: 548, maximum: 500)
+열 1 A02014
+열 2 A02
+열 3 열혈강의 객체 중심 JAVA - 안드로이드를 이용한 색다...
+열 4 강요천
+열 5 프리렉
+열 6 24000
+열 7 Java로 풀어가는 쉽고 새로운 객체지향『객체 중심 Ja...
+열 8 0
+열 9 l9788965400035.jpg
+열 10 29-4월 -2011:14:02:05
+                                                           15 행이 임포트되었습니다
+. . 테이블                         "CART"(를)을 임포트 중
+                                                           37 행이 임포트되었습니다
+. . 테이블                     "CATEGORY"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "CH8_MEMBER"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                   "CH9_BTABLE"(를)을 임포트 중
+                                                            2 행이 임포트되었습니다
+. . 테이블                     "CH9_CART"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                 "CH9_CATEGORY"(를)을 임포트 중
+                                                            6 행이 임포트되었습니다
+. . 테이블                   "CH9_MEMBER"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                   "CH9_PORDER"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                  "CH9_PRODUCT"(를)을 임포트 중
+                                                            9 행이 임포트되었습니다
+. . 테이블                  "CHAT_MEMBER"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                       "CLINIC"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "CODE_DEPT"(를)을 임포트 중
+                                                           14 행이 임포트되었습니다
+. . 테이블                   "CODE_JIKCH"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."CODE_JIKCH"."JIKCH_NAME" (actual: 22, maximum: 20)
+열 1 02
+열 2 마케팅담당 이사
+                                                            4 행이 임포트되었습니다
+. . 테이블                   "CODE_JIKGB"(를)을 임포트 중
+                                                            9 행이 임포트되었습니다
+. . 테이블                "CODE_RELIGION"(를)을 임포트 중
+                                                            6 행이 임포트되었습니다
+. . 테이블                  "CODE_SCHOOL"(를)을 임포트 중
+                                                            7 행이 임포트되었습니다
+. . 테이블                "COMCOSTTARGET"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "COMCOSTTARGETB"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                     "COMMENTS"(를)을 임포트 중
+                                                            3 행이 임포트되었습니다
+. . 테이블                       "COMMON"(를)을 임포트 중
+                                                           55 행이 임포트되었습니다
+. . 테이블                "COMMON_CODE_T"(를)을 임포트 중
+                                                           13 행이 임포트되었습니다
+. . 테이블                   "DEPARTMENT"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "DEPT"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                    "DEPT_COPY"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                     "DISCOUNT"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "DISTRIBUTE"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                       "DOCTOR"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                          "EMP"(를)을 임포트 중
+                                                           15 행이 임포트되었습니다
+. . 테이블                      "EMP_LAB"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "EMP_LEVEL"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                     "EMPLOYEE"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "EVENT_INFO"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                   "EXAM_PAPER"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                     "FAQ_INFO"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                         "FEED"(를)을 임포트 중
+                                                            3 행이 임포트되었습니다
+. . 테이블                        "GENRE"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                    "GUESTBOOK"(를)을 임포트 중
+                                                           10 행이 임포트되었습니다
+. . 테이블                    "HANDPHONE"(를)을 임포트 중
+                                                            7 행이 임포트되었습니다
+. . 테이블             "HD_COMMON_CODE_T"(를)을 임포트 중
+                                                            3 행이 임포트되었습니다
+. . 테이블                   "HD_GENRE_T"(를)을 임포트 중
+                                                            6 행이 임포트되었습니다
+. . 테이블                   "HD_GRADE_T"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."HD_GRADE_T"."GRADE_NAME" (actual: 22, maximum: 18)
+열 1 lev001
+열 2 12세이용가        
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."HD_GRADE_T"."GRADE_NAME" (actual: 22, maximum: 18)
+열 1 lev002
+열 2 15세이용가        
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."HD_GRADE_T"."GRADE_NAME" (actual: 22, maximum: 18)
+열 1 lev003
+열 2 18세이용가        
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "HD_MOVIE_T"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."HD_MOVIE_T"."MOVIE_NAME" (actual: 23, maximum: 18)
+열 1 2008120101
+열 2 과속스캔들        
+열 3 현대
+열 4 대한민국
+열 5 강형철
+열 6 차태현
+열 7 20081210
+열 8 20081212
+열 9 gc0003
+열 10 lev003
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."HD_MOVIE_T"."MOVIE_NAME" (actual: 24, maximum: 18)
+열 1 2008120201
+열 2 1724기방난동사건  
+열 3 삼성
+열 4 대한민국
+열 5 여균동
+열 6 이정재
+열 7 20081120
+열 8 20081130
+열 9 gc0003
+열 10 lev002
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."HD_MOVIE_T"."MOVIE_NAME" (actual: 22, maximum: 18)
+열 1 2008120301
+열 2 순정만화          
+열 3 삼성
+열 4 대한민국
+열 5 류장하
+열 6 유지태
+열 7 20081125
+열 8 20081128
+열 9 gc0005
+열 10 lev002
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."HD_MOVIE_T"."MOVIE_NAME" (actual: 20, maximum: 18)
+열 1 2008120401
+열 2 쏘우              
+열 3 소니
+열 4 미국
+열 5 데이빗해클
+열 6 토빈벨
+열 7 20081110
+열 8 20081120
+열 9 gc0004
+열 10 lev003
+                                                            0 행이 임포트되었습니다
+. . 테이블             "HD_VIDEO_DELAY_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블       "HD_VIDEO_LOAN_DETAIL_T"(를)을 임포트 중
+                                                           12 행이 임포트되었습니다
+. . 테이블         "HD_VIDEO_LOAN_MAST_T"(를)을 임포트 중
+                                                            9 행이 임포트되었습니다
+. . 테이블              "HD_VIDEO_LOSS_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블            "HD_VIDEO_MEMBER_T"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                   "HD_VIDEO_T"(를)을 임포트 중
+                                                           16 행이 임포트되었습니다
+. . 테이블                     "HOSPITAL"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "IBB_BOARD"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                      "IBBTEST"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                "ID_REPOSITORY"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                        "IMAGE"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "INTRO_MEMBER_T"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                         "ITEM"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ITEM"."DESCRIPTION" (actual: 72, maximum: 50)
+열 1 1
+열 2 레몬
+열 3 300
+열 4 레몬에 포함되어 있는 쿠엔산은 피로회복에 좋습니다.
+열 5 lemon.jpg
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "JSF_COMMON"(를)을 임포트 중
+                                                           55 행이 임포트되었습니다
+. . 테이블                 "JSF_DISCOUNT"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "JSF_DISTRIBUTE"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블               "JSF_EVENT_INFO"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                 "JSF_FAQ_INFO"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블              "JSF_MEMBER_INFO"(를)을 임포트 중
+                                                            3 행이 임포트되었습니다
+. . 테이블               "JSF_MOVIE_INFO"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블          "JSF_MOVIE_ROOM_INFO"(를)을 임포트 중
+                                                           20 행이 임포트되었습니다
+. . 테이블       "JSF_MOVIE_THEATER_INFO"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_MOVIE_THEATER_INFO"."ADDRESS" (actual: 41, maximum: 30)
+열 1 1
+열 2 노원
+열 3 서울특별시 노원구 중계동 506-1
+열 4 7호선 하계역 6번출구에서 직진, 노원구민회관에서 좌...
+열 5 146, 105, 1131, 1135, 1137, 1140
+열 6 노원구 최초의 멀티플렉스 영화관! 고객에게 가장 친숙...
+열 7 10
+열 8 102
+열 9 1544-2100
+열 10 4WAY 입체음향 DTS, 퍼스트 클래스, 최고급 틸딩좌석,...
+                                                            1 행이 임포트되었습니다
+. . 테이블              "JSF_NOTICE_INFO"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                 "JSF_QNA_INFO"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블              "JSF_REGION_INFO"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 20
+열 2 인천/경기
+열 3 평택
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 21
+열 2 인천/경기
+열 3 안산
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 22
+열 2 인천/경기
+열 3 동인천
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 23
+열 2 인천/경기
+열 3 김포
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 24
+열 2 인천/경기
+열 3 용인
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 40
+열 2 대전/충청
+열 3 서대전
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 41
+열 2 대전/충청
+열 3 청주
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 42
+열 2 대전/충청
+열 3 조치원
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 50
+열 2 광주/전라
+열 3 목포
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 51
+열 2 광주/전라
+열 3 여수
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 52
+열 2 광주/전라
+열 3 전주
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 60
+열 2 대구/경북
+열 3 대구수성
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 61
+열 2 대구/경북
+열 3 김천
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 62
+열 2 대구/경북
+열 3 안동
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 70
+열 2 부산/경남
+열 3 해운대
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 71
+열 2 부산/경남
+열 3 화명
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."JSF_REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 72
+열 2 부산/경남
+열 3 덕천
+                                                            8 행이 임포트되었습니다
+. . 테이블              "JSF_RESERVATION"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블 "JSF_RESERVATION_HISTORY_INFO"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                 "JSF_SCHEDULE"(를)을 임포트 중
+                                                           11 행이 임포트되었습니다
+. . 테이블               "JSF_STAR_POINT"(를)을 임포트 중
+                                                           15 행이 임포트되었습니다
+. . 테이블                          "KIM"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "LEC_BOARD"(를)을 임포트 중
+                                                          122 행이 임포트되었습니다
+. . 테이블                      "LECTURE"(를)을 임포트 중
+                                                           10 행이 임포트되었습니다
+. . 테이블                      "LOB_TBL"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                 "MANUFACTURED"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "MEDICALHISTORY"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                       "MEMBER"(를)을 임포트 중
+                                                            2 행이 임포트되었습니다
+. . 테이블                  "MEMBER_AJAX"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                  "MEMBER_INFO"(를)을 임포트 중
+                                                            3 행이 임포트되었습니다
+. . 테이블                     "MEMBER_X"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                      "MEMBER2"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "MEMBER2019"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                      "MEMBERS"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "MEMO"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                     "MKADDRTB"(를)을 임포트 중
+                                                            7 행이 임포트되었습니다
+. . 테이블            "MM_ONHAND_STOCK_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블            "MM_PACKING_MAST_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블             "MM_SHIPINV_DET_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블            "MM_SHIPINV_MAST_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블          "MM_TRANSPORT_RATE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                     "MOD_TEST"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                        "MOVIE"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "MOVIE_INFO"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블              "MOVIE_ROOM_INFO"(를)을 임포트 중
+                                                           20 행이 임포트되었습니다
+. . 테이블           "MOVIE_THEATER_INFO"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."MOVIE_THEATER_INFO"."ADDRESS" (actual: 41, maximum: 30)
+열 1 1
+열 2 노원
+열 3 서울특별시 노원구 중계동 506-1
+열 4 7호선 하계역 6번출구에서 직진, 노원구민회관에서 좌...
+열 5 146, 105, 1131, 1135, 1137, 1140
+열 6 노원구 최초의 멀티플렉스 영화관! 고객에게 가장 친숙...
+열 7 10
+열 8 102
+                                                            1 행이 임포트되었습니다
+. . 테이블                     "NEWSLIST"(를)을 임포트 중
+                                                           15 행이 임포트되었습니다
+. . 테이블                  "NOTICE_INFO"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                    "ONJ_BOARD"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "ONLINE_SUBJECT"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                  "ORDER_BOOKS"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                      "ORDER_T"(를)을 임포트 중
+                                                           10 행이 임포트되었습니다
+. . 테이블                       "ORDERS"(를)을 임포트 중
+                                                            2 행이 임포트되었습니다
+. . 테이블                       "PBOARD"(를)을 임포트 중
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+...........................................................................
+.........................
+                                                      1000000 행이 임포트되었습니다
+. . 테이블                    "PERSONNEL"(를)을 임포트 중
+                                                          112 행이 임포트되었습니다
+. . 테이블               "PERSONNEL_BACK"(를)을 임포트 중
+                                                          112 행이 임포트되었습니다
+. . 테이블              "PERSONNEL_BASIC"(를)을 임포트 중
+                                                           10 행이 임포트되었습니다
+. . 테이블                   "PLAN_TABLE"(를)을 임포트 중
+                                                          292 행이 임포트되었습니다
+. . 테이블             "PM_PRGOF_ORDER_T"(를)을 임포트 중
+...
+                                                         3013 행이 임포트되었습니다
+. . 테이블                        "POINT"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                      "POINT_P"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                         "POST"(를)을 임포트 중
+                                                           10 행이 임포트되었습니다
+. . 테이블                       "QATB01"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블        "QM_BILL_OF_MATERIAL_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블              "QM_ORDER_RULE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블            "QM_PRODUCT_SPEC_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블      "QM_REQUEST_SPEC_IMAGE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블           "QM_SPEC_CHEMICAL_S"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블           "QM_SPEC_CHEMICAL_T"(를)을 임포트 중
+.......................
+                                                        23293 행이 임포트되었습니다
+. . 테이블                "QM_SPEC_DET_S"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                "QM_SPEC_DET_T"(를)을 임포트 중
+.......................
+                                                        23293 행이 임포트되었습니다
+. . 테이블               "QM_SPEC_MAST_S"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "QM_SPEC_MAST_T"(를)을 임포트 중
+.......................
+                                                        23293 행이 임포트되었습니다
+. . 테이블                 "QM_SPEC_MS_S"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                "QM_SPEC_VAL_S"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                "QM_SPEC_VAL_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블              "QM_STAND_HARD_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "QM_STAND_THK_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "QM_STAND_WDT_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                     "QNA_INFO"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                  "REGION_INFO"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 20
+열 2 인천/경기
+열 3 평택
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 21
+열 2 인천/경기
+열 3 안산
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 22
+열 2 인천/경기
+열 3 동인천
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 23
+열 2 인천/경기
+열 3 김포
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 24
+열 2 인천/경기
+열 3 용인
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 40
+열 2 대전/충청
+열 3 서대전
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 41
+열 2 대전/충청
+열 3 청주
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 42
+열 2 대전/충청
+열 3 조치원
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 50
+열 2 광주/전라
+열 3 목포
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 51
+열 2 광주/전라
+열 3 여수
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 52
+열 2 광주/전라
+열 3 전주
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 60
+열 2 대구/경북
+열 3 대구수성
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 61
+열 2 대구/경북
+열 3 김천
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 62
+열 2 대구/경북
+열 3 안동
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 70
+열 2 부산/경남
+열 3 해운대
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 71
+열 2 부산/경남
+열 3 화명
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."REGION_INFO"."REGION_NAME" (actual: 13, maximum: 10)
+열 1 72
+열 2 부산/경남
+열 3 덕천
+                                                            8 행이 임포트되었습니다
+. . 테이블                        "REPLE"(를)을 임포트 중
+                                                            2 행이 임포트되었습니다
+. . 테이블                        "REPLY"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                  "RESERVATION"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블     "RESERVATION_HISTORY_INFO"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "RESTAURANT"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."RESTAURANT"."RES_TIME" (actual: 58, maximum: 50)
+열 1 4
+열 2 숲풀림철판곱창
+열 3 02-2026-8256
+열 4 서울특별시 금천구  98 (가산동아이티캐슬 111호 (가산...
+열 5 0
+열 6 0
+열 7 gopchang.jpg
+열 8 순대볶음집!숲풀림 철판곱창 곱창구이가 먹고싶어 찾아...
+열 9 오전 11:00-오후 23:00 주말 오전 11:00-오후 20:00
+열 10 37.4798346
+열 11 126.8811806
+                                                            4 행이 임포트되었습니다
+. . 테이블       "RM_MATERIAL_CHEMICAL_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블           "RM_MATERIAL_SPEC_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블            "RM_ONHAND_STOCK_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                      "S_BOARD"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                        "S_EMP"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "SALE_HIST"(를)을 임포트 중
+                                                           36 행이 임포트되었습니다
+. . 테이블                     "SALGRADE"(를)을 임포트 중
+                                                           40 행이 임포트되었습니다
+. . 테이블                    "SAM_TAB02"(를)을 임포트 중
+                                                           19 행이 임포트되었습니다
+. . 테이블                     "SCHEDULE"(를)을 임포트 중
+                                                           11 행이 임포트되었습니다
+. . 테이블                   "SEARCHWORD"(를)을 임포트 중
+                                                           11 행이 임포트되었습니다
+. . 테이블                  "SHOP_BTABLE"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "SHOP_CART"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                  "SHOP_MEMBER"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                  "SHOP_PORDER"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                 "SHOP_PRODUCT"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                  "SM_ARRIVE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블      "SM_BUSINESS_PLAN_MAST_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블     "SM_BUSINESS_PLAN_PRICE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블           "SM_BUSINESS_PLAN_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블           "SM_CLAIM_REQUEST_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블         "SM_COLLECT_RECEIPT_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블         "SM_CUSTOMER_ARRIVE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블  "SM_CUSTOMER_BASEPRICE_DET_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블      "SM_CUSTOMER_BASEPRICE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블            "SM_CUSTOMER_DET_T"(를)을 임포트 중
+                                                           12 행이 임포트되었습니다
+. . 테이블            "SM_CUSTOMER_MAN_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블           "SM_CUSTOMER_MAST_T"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 39, maximum: 30)
+열 1 2127
+열 2 (주)호성금속
+열 3 6038126389
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 송진의
+열 17 
+열 18 제조업,부동산
+열 19 전자부품, 자동차부품외,임대
+열 20 
+열 21 부산 강서구 송정동 1583-3
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 40, maximum: 30)
+열 1 2123
+열 2 (주)합천철강
+열 3 6098126451
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 김진균
+열 17 
+열 18 제조, 도매외
+열 19 철강, 금속찬및 1차금속제품외
+열 20 
+열 21 경상남도 창원시 팔용동 21-6
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 35, maximum: 30)
+열 1 1000
+열 2 동국산업(주)
+열 3 5068500830
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10489
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 1
+열 14 
+열 15 S0051
+열 16 이  온  영
+열 17 
+열 18 제조,건설
+열 19 냉간압연,도금,토목공사외
+열 20 
+열 21 포항시 남구 장흥동 547
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 N
+열 88 
+열 89 
+열 90 11-2월 -2008:16:48:27
+열 91 1111
+열 92 10489
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 43, maximum: 30)
+열 1 3175
+열 2 진방스틸코리아 주식
+열 3 5068151082
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 1048C
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 홍순철
+열 17 
+열 18 제조,건설, 도매
+열 19 비철금속철강제품,철구조물공사
+열 20 
+열 21 경북 포항시 남구 호동 605
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 C
+열 92 1048C
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 35, maximum: 30)
+열 1 2128
+열 2 태성공업(주)
+열 3 6108122718
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 민정
+열 17 
+열 18 제조업,부동산
+열 19 자동차부품,선박부품,임대
+열 20 
+열 21 울산 남 여천 299-2
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 34, maximum: 30)
+열 1 4003
+열 2 (주)대덕금속
+열 3 5068119781
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 1048C
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 이 덕 수
+열 17 
+열 18 제 조
+열 19 표면처리,강판제조및가공
+열 20 790840
+열 21 경북 포항 남 대송 옥명리 547-1번지
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27  
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 C
+열 92 1048C
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 38, maximum: 30)
+열 1 3079
+열 2 (재)포항산업과학연
+열 3 5068202443
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10483
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 유상부
+열 17 
+열 18 서비스, 부동산
+열 19 과학기술연구개발, 시험분석
+열 20       
+열 21 경북 포항 남구 효자동 산32
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27  
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 3
+열 92 10483
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 42, maximum: 30)
+열 1 3171
+열 2 (주)텍크스틸
+열 3 5068149887
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10483
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 김세현
+열 17 
+열 18 제조,도소매
+열 19 철강재 및 임가공, 철강, 파이프
+열 20 
+열 21 경상북도 포항시 남구 호동 627 3층
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 3
+열 92 10483
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 33, maximum: 30)
+열 1 3179
+열 2 동국강재(주)
+열 3 5048101233
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10483
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 정영출 이형실
+열 17 
+열 18 제조, 부동산
+열 19 형강,파이프 및 건축자재
+열 20 
+열 21 대구 달성군 논공읍 북리 1-6
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 3
+열 92 10483
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 41, maximum: 30)
+열 1 1216
+열 2 한국보그워너모스텍(
+열 3 3038133660
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10481
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 알프레드  장인청
+열 17 
+열 18 제조,도매,부동산
+열 19 자동차엔진,부품및부속품,임대
+열 20 
+열 21 경기 평택 청북면 어연리 893-1
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 1
+열 92 10481
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 38, maximum: 30)
+열 1 2152
+열 2 유전철강(주)
+열 3 6068114204
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 류재기
+열 17 
+열 18 도매,제조,부동산
+열 19 철강제품,기계가공,용접제관
+열 20 
+열 21 경남 창원 팔용동 43-5
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 38, maximum: 30)
+열 1 2155
+열 2 (주)대하강업
+열 3 6068144203
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 안덕중
+열 17 
+열 18 제조,도매,건설
+열 19 철재,비철금,강구조물공사업
+열 20 
+열 21 부산 강서 송정동 1646
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 33, maximum: 30)
+열 1 1252
+열 2 (주)아이엠씨
+열 3 3038144906
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10481
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 황진호
+열 17 
+열 18 제조업
+열 19 건축용데크플레이트제조
+열 20 
+열 21 충청북도 음성군 감곡면 문촌리 1
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 1
+열 92 10481
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 31, maximum: 30)
+열 1 1253
+열 2 삼부강업(주)
+열 3 1338128200
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10481
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 이기태
+열 17 
+열 18 제조,도매
+열 19 철강자재절단가공,철강
+열 20 
+열 21 경기도 시흥시 정왕동 1280-3 시
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 1
+열 92 10481
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 33, maximum: 30)
+열 1 1171
+열 2 (주)아이템인터내셔
+열 3 2148619612
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10481
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 이홍렬
+열 17 
+열 18 서비스,도.소매
+열 19 정보처리데이터베이스업
+열 20 137072
+열 21 1330-18
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27  
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 1
+열 92 10481
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 40, maximum: 30)
+열 1 2138
+열 2 하성강구조건설(주)
+열 3 3118507138
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 유수완
+열 17 
+열 18 제조업,건설업,도매업
+열 19 금속조립구조재,조립식철공외
+열 20 
+열 21 충남 당진 송악 중흥리 359-9
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 35, maximum: 30)
+열 1 2137
+열 2 (주)아이엠
+열 3 6158139586
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 문인곤
+열 17 
+열 18 제조
+열 19 전자,자동차부품,산업기계
+열 20 
+열 21 경남 김해 진례 고모리 53-1
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 44, maximum: 30)
+열 1 2139
+열 2 부산가설정공
+열 3 6210836484
+열 4 
+열 5 4104181120626
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 김광부
+열 17 
+열 18 제조,도소매,서비스
+열 19 건축자재,전기용품,건축자재임대
+열 20 
+열 21 부산 기장 기장 서부리 380-1
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 31, maximum: 30)
+열 1 2140
+열 2 (주)성훈철강
+열 3 6138111205
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 김종갑
+열 17 
+열 18 제조,도소매
+열 19 철재류,농원용파이프외
+열 20 
+열 21 경남 진주 상평동 55-34
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 34, maximum: 30)
+열 1 1256
+열 2 (주)대창스틸
+열 3 3128505400
+열 4 
+열 5 1101110276116
+열 6 
+열 7 
+열 8 10481
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 문창복
+열 17 
+열 18 제조업
+열 19 냉간압연,압출및인발제품
+열 20 336875
+열 21 충청남도 아산시 둔포면 운용리 1
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 A
+열 79 A
+열 80 A
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 14-11월-2007:10:31:05
+열 91 1111
+열 92 10481
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 41, maximum: 30)
+열 1 1257
+열 2 주식회사명성기업
+열 3 1278126245
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10481
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 이은재
+열 17 
+열 18 제조,도매
+열 19 컨베어계산대,철재및 원목가구
+열 20 
+열 21 경기도 포천시 자작동 587-7 
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 1
+열 92 10481
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 38, maximum: 30)
+열 1 2114
+열 2 영일철강(주) 
+열 3 6098120194
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 김동호
+열 17 
+열 18 도매,제조
+열 19 철판및 형강류,철판절단가공
+열 20 
+열 21 경남 창원 팔용 8-25
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."CUS_NAM" (actual: 54, maximum: 36)
+열 1 tess
+열 2 일이삼사오육칠팔구십일이삼사오육칠팔
+열 3 2333333333
+열 4 1234561234567
+열 5 1234561212121
+열 6 
+열 7 
+열 8 
+열 9 0
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 20
+열 15 S0051
+열 16 
+열 17 
+열 18 
+열 19 
+열 20 
+열 21 
+열 22 
+열 23 20071211
+열 24 N
+열 25 
+열 26 
+열 27 
+열 28 0
+열 29 0
+열 30 1
+열 31 1
+열 32 10
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 10
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 10
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 
+열 78 
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 0
+열 85 
+열 86 
+열 87 
+열 88 13-12월-2007:11:51:42
+열 89 1111
+열 90 13-12월-2007:18:24:37
+열 91 1111
+열 92 
+열 93 
+열 94 0
+열 95 
+열 96 
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 31, maximum: 30)
+열 1 1043
+열 2 (주)미륭산업
+열 3 1398122975
+열 4 
+열 5 4010131323675
+열 6 032-819-4292
+열 7 032-819-4297
+열 8 10481
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 60
+열 14 
+열 15 S0051
+열 16 김 홍 걸
+열 17 
+열 18 제조,무역
+열 19 승강기구축물,산업기계
+열 20 405310
+열 21 인천 남동구 고잔동 661 101-1
+열 22 
+열 23 
+열 24 
+열 25 7500
+열 26 5000
+열 27  
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 3500
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 1
+열 92 10481
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 32, maximum: 30)
+열 1 3186
+열 2 (주)STX
+열 3 6098101917
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10483
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 홍경진
+열 17 
+열 18 서비스외
+열 19 지주사업, 조선기자재외
+열 20 
+열 21 경남 진해 원포동 100
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 3
+열 92 10483
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 31, maximum: 30)
+열 1 3082
+열 2 (주)거양
+열 3 5068104575
+열 4 
+열 5 1746110005618
+열 6 0562-261-3801
+열 7 0562-261-4835
+열 8 10483
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 26
+열 14 15
+열 15 S0051
+열 16 윤 혜 관
+열 17 
+열 18 제조업
+열 19 기타제1차비철금속산업
+열 20 791940
+열 21 경북 포항 북 흥해 학천 806-3
+열 22 
+열 23 
+열 24 
+열 25 2000
+열 26 1500
+열 27  
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 200
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 3
+열 92 10483
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 31, maximum: 30)
+열 1 3055
+열 2 대한판넬강재(주)
+열 3 5048127174
+열 4 
+열 5 1701110137548
+열 6 054-382-0071
+열 7 054-382-3799
+열 8 10483
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 24
+열 14 15
+열 15 S0051
+열 16 이 장 호
+열 17 
+열 18 제 조
+열 19 금속판넬,칼라쉬트철판
+열 20 716820
+열 21 경상북도 군위군 효령면 고곡리 1408-50번지
+열 22 
+열 23 
+열 24 
+열 25 2000
+열 26 1500
+열 27  
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 1500
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 3
+열 92 10483
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 37, maximum: 30)
+열 1 3188
+열 2 해인스틸
+열 3 5140851455
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10483
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 여상종
+열 17 
+열 18 제조,도매
+열 19 철강제품,철강제품절단가공
+열 20 
+열 21 대구광역시 달서구 월암동 1075
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 3
+열 92 10483
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 34, maximum: 30)
+열 1 2161
+열 2 동아타이어공업(주)
+열 3 6218101580
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 김만수
+열 17 
+열 18 제조업
+열 19 타이어및튜브,전기절연물
+열 20 
+열 21 경상남도 양산시 유산동 90
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."SM_CUSTOMER_MAST_T"."KINDS" (actual: 34, maximum: 30)
+열 1 2049
+열 2 진일농공사
+열 3 6131790742
+열 4 
+열 5 
+열 6 
+열 7 
+열 8 10482
+열 9 
+열 10 Y
+열 11 Y
+열 12 S0401
+열 13 0
+열 14 
+열 15 S0051
+열 16 정 두 환
+열 17 
+열 18 도매업,제조,소매
+열 19 농공업자재,아연도강관외
+열 20 
+열 21 경남 진주 하대 233-3번지
+열 22 
+열 23 
+열 24 
+열 25 0
+열 26 0
+열 27 
+열 28 0
+열 29 0
+열 30 0
+열 31 0
+열 32 0
+열 33 0
+열 34 0
+열 35 0
+열 36 0
+열 37 0
+열 38 0
+열 39 0
+열 40 0
+열 41 0
+열 42 0
+열 43 0
+열 44 0
+열 45 0
+열 46 0
+열 47 0
+열 48 0
+열 49 0
+열 50 0
+열 51 0
+열 52 0
+열 53 0
+열 54 0
+열 55 0
+열 56 0
+열 57 0
+열 58 0
+열 59 0
+열 60 0
+열 61 0
+열 62 0
+열 63 0
+열 64 0
+열 65 0
+열 66 0
+열 67 0
+열 68 0
+열 69 0
+열 70 0
+열 71 0
+열 72 0
+열 73 0
+열 74 0
+열 75 0
+열 76 
+열 77 0
+열 78 0
+열 79 
+열 80 
+열 81 
+열 82 
+열 83 
+열 84 
+열 85 
+열 86 Y
+열 87 Y
+열 88 
+열 89 
+열 90 
+열 91 2
+열 92 10482
+열 93 
+열 94 0
+열 95 
+열 96 1054KR
+열 97 
+열 98 
+열 99 
+열 100 
+열 101 
+열 102 
+열 103 
+열 104 
+열 105 
+열 106 
+열 107 
+열 108 
+열 109 
+열 110 
+열 111 
+열 112 
+열 113 
+열 114 
+열 115 
+열 116 
+열 117 
+열 118 N
+열 119 1
+열 120 S0651
+열 121 
+.
+                                                         1052 행이 임포트되었습니다
+. . 테이블       "SM_CUSTOMER_SECURITY_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블      "SM_CUSTOMER_VALUATION_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블              "SM_ESTIMATION_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블               "SM_ORDER_DET_T"(를)을 임포트 중
+................
+                                                        16452 행이 임포트되었습니다
+. . 테이블              "SM_ORDER_MAST_T"(를)을 임포트 중
+......
+                                                         6621 행이 임포트되었습니다
+. . 테이블            "SM_PLAN_RECEVIE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블     "SM_REQUEST_CHANGE_DATE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블   "SM_REQUEST_CHANGE_DEPART_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블          "SM_RETURN_REQUEST_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블              "SM_SALE_ALLOT_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블       "SM_SALE_CONFIRM_MAST_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블           "SM_SALEDIV_ALLOT_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블           "SM_SALES_ESTMATE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블              "SM_SALES_PLAN_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블      "SM_TRANS_COLLECT_PLAN_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블       "SM_TRANS_RECEIPT_REG_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블     "SM_TRANSACTION_COLLECT_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                  "SNS_MESSAGE"(를)을 임포트 중
+                                                            3 행이 임포트되었습니다
+. . 테이블                    "SNS_REPLY"(를)을 임포트 중
+                                                            3 행이 임포트되었습니다
+. . 테이블                   "STAR_POINT"(를)을 임포트 중
+                                                           15 행이 임포트되었습니다
+. . 테이블                 "STRUTS_BOARD"(를)을 임포트 중
+                                                           11 행이 임포트되었습니다
+. . 테이블                      "STUDENT"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "SW_DESIGN"(를)을 임포트 중
+                                                            4 행이 임포트되었습니다
+. . 테이블                "T_BUDGETGUBUN"(를)을 임포트 중
+                                                           12 행이 임포트되었습니다
+. . 테이블                  "T_BUDGETHIS"(를)을 임포트 중
+                                                           32 행이 임포트되었습니다
+. . 테이블               "T_BUDGETMEMBER"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                   "T_DAYSTOCK"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                      "T_DUMMY"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "T_GIFTMEM"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                  "T_GIFTORDER"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."T_GIFTORDER"."NAME_VC" (actual: 12, maximum: 10)
+열 1 2
+열 2 마크로스
+열 3 11
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."T_GIFTORDER"."NAME_VC" (actual: 12, maximum: 10)
+열 1 4
+열 2 마크로스
+열 3 9
+                                                            2 행이 임포트되었습니다
+. . 테이블                  "T_GIFTPOINT"(를)을 임포트 중
+                                                           12 행이 임포트되었습니다
+. . 테이블                    "T_GREPORT"(를)을 임포트 중
+                                                          150 행이 임포트되었습니다
+. . 테이블                 "T_HOLHISTORY"(를)을 임포트 중
+                                                           20 행이 임포트되었습니다
+. . 테이블                    "T_LETITBE"(를)을 임포트 중
+                                                           34 행이 임포트되었습니다
+. . 테이블                "T_ORDERBASKET"(를)을 임포트 중
+                                                           54 행이 임포트되었습니다
+. . 테이블                   "T_WORKTIME"(를)을 임포트 중
+                                                           15 행이 임포트되었습니다
+. . 테이블             "TAKE_EXAMINATION"(를)을 임포트 중
+                                                            8 행이 임포트되었습니다
+. . 테이블                         "TCOM"(를)을 임포트 중
+                                                            8 행이 임포트되었습니다
+. . 테이블                        "TDEPT"(를)을 임포트 중
+                                                           10 행이 임포트되었습니다
+. . 테이블                    "TELEPHONE"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "TEMP"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19970101
+열 2 김길동
+열 3 25-1월 -1974:00:00:00
+열 4 AA0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 등산
+열 9 100000000
+열 10 부장
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19960101
+열 2 홍길동
+열 3 22-3월 -1973:00:00:00
+열 4 AB0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 낚시
+열 9 72000000
+열 10 과장
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19970201
+열 2 박문수
+열 3 15-4월 -1975:00:00:00
+열 4 AC0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 바둑
+열 9 50000000
+열 10 과장
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19930331
+열 2 정도령
+열 3 25-5월 -1976:00:00:00
+열 4 BA0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 노래
+열 9 70000000
+열 10 차장
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19950303
+열 2 이순신
+열 3 15-6월 -1973:00:00:00
+열 4 BB0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 
+열 9 56000000
+열 10 대리
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19966102
+열 2 지문덕
+열 3 05-7월 -1972:00:00:00
+열 4 BC0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 
+열 9 45000000
+열 10 과장
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19930402
+열 2 강감찬
+열 3 15-8월 -1972:00:00:00
+열 4 CA0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 
+열 9 64000000
+열 10 차장
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19960303
+열 2 설까치
+열 3 25-9월 -1971:00:00:00
+열 4 CB0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 
+열 9 35000000
+열 10 사원
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19970112
+열 2 연흥부
+열 3 05-11월-1976:00:00:00
+열 4 CC0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 
+열 9 45000000
+열 10 대리
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 19960212
+열 2 배뱅이
+열 3 15-12월-1972:00:00:00
+열 4 CD0001
+열 5 정규
+열 6 Y
+열 7 
+열 8 
+열 9 39000000
+열 10 과장
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000101
+열 2 이태백
+열 3 25-1월 -1980:00:00:00
+열 4 AA0001
+열 5 인턴
+열 6 Y
+열 7 123-4567
+열 8 등산
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000102
+열 2 김설악
+열 3 22-3월 -1980:00:00:00
+열 4 AB0001
+열 5 인턴
+열 6 Y
+열 7 234-5678
+열 8 낚시
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000203
+열 2 최오대
+열 3 15-4월 -1980:00:00:00
+열 4 AC0001
+열 5 인턴
+열 6 Y
+열 7 345-6789
+열 8 바둑
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000334
+열 2 박지리
+열 3 25-5월 -1980:00:00:00
+열 4 BA0001
+열 5 인턴
+열 6 Y
+열 7 456-7890
+열 8 노래
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000305
+열 2 정북악
+열 3 15-6월 -1980:00:00:00
+열 4 BB0001
+열 5 인턴
+열 6 Y
+열 7 567-8901
+열 8 독서
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20006106
+열 2 유도봉
+열 3 05-7월 -1980:00:00:00
+열 4 BC0001
+열 5 인턴
+열 6 Y
+열 7 678-9012
+열 8 술
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000407
+열 2 윤주왕
+열 3 15-8월 -1980:00:00:00
+열 4 CA0001
+열 5 인턴
+열 6 Y
+열 7 789-0123
+열 8 오락
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000308
+열 2 강월악
+열 3 25-9월 -1980:00:00:00
+열 4 CB0001
+열 5 인턴
+열 6 Y
+열 7 890-1234
+열 8 골프
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000119
+열 2 장금강
+열 3 05-11월-1980:00:00:00
+열 4 CC0001
+열 5 인턴
+열 6 Y
+열 7 901-2345
+열 8 술
+열 9 30000000
+열 10 수습
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEMP"."EMP_TYPE" (actual: 6, maximum: 4)
+열 1 20000210
+열 2 나한라
+열 3 15-12월-1980:00:00:00
+열 4 CD0001
+열 5 인턴
+열 6 Y
+열 7 012-3456
+열 8 독서
+열 9 30000000
+열 10 수습
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "TEST"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                     "TEST_BBS"(를)을 임포트 중
+...........................................................................
+.........................
+                                                       100000 행이 임포트되었습니다
+. . 테이블                   "TEST_TABLE"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                       "TEST01"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                       "TEST02"(를)을 임포트 중
+                                                            9 행이 임포트되었습니다
+. . 테이블                       "TEST04"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                       "TEST05"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                       "TEST11"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."TEST11"."DEPT" (actual: 21, maximum: 20)
+열 1 공과대학
+열 2 항공우주공학과
+열 3 120
+열 4 140
+열 5 140
+열 6 120
+                                                           11 행이 임포트되었습니다
+. . 테이블                       "TEST13"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                       "TEST14"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                "TOAD_PLAN_SQL"(를)을 임포트 중
+                                                           64 행이 임포트되었습니다
+. . 테이블              "TOAD_PLAN_TABLE"(를)을 임포트 중
+                                                          409 행이 임포트되었습니다
+. . 테이블                    "USER_INFO"(를)을 임포트 중
+                                                            7 행이 임포트되었습니다
+. . 테이블                       "USERTB"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                        "VIDEO"(를)을 임포트 중
+                                                            1 행이 임포트되었습니다
+. . 테이블                    "YES_CATE1"(를)을 임포트 중
+                                                            5 행이 임포트되었습니다
+. . 테이블                    "YES_GOODS"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."YES_GOODS"."BOOK_MAKER" (actual: 24, maximum: 20)
+열 1 456124012
+열 2 가즈아~!
+열 3 349000
+열 4 오라클바보멍청이
+열 5 49
+열 6 NEW
+열 7 2018/11/20
+열 8 2
+열 9 자바도바보멍청이
+                                                          805 행이 임포트되었습니다
+. . 테이블                "ZD_DOC_MAST_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블              "ZD_NEXT_DOCNO_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                 "ZE_ENV_FTP_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                     "ZE_ENV_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "ZIPCODE_T"(를)을 임포트 중
+..
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 3490
+열 2 410759
+열 3 경기
+열 4 고양시 일산동구
+열 5 정발산동
+열 6  
+열 7 
+열 8 밤가시마을건영빌라5단지아파트 501-510
+열 9 20081117
+열 10 경기 고양시 일산동구 정발산동 밤가시마을건영빌라5단...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 3491
+열 2 410761
+열 3 경기
+열 4 고양시 일산동구
+열 5 정발산동
+열 6  
+열 7 
+열 8 밤가시마을건영빌라9단지아파트 901-912
+열 9 20081117
+열 10 경기 고양시 일산동구 정발산동 밤가시마을건영빌라9단....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 59, maximum: 50)
+열 1 4630
+열 2 415780
+열 3 경기
+열 4 김포시
+열 5 장기동
+열 6  
+열 7 
+열 8 고창마을대원칸타빌타운하우스아파트 101-105
+열 9 20100721
+열 10 경기 김포시 장기동 고창마을대원칸타빌타운하우스아파.....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8875
+열 2 446706
+열 3 경기
+열 4 용인시 기흥구
+열 5 보라동
+열 6  
+열 7 
+열 8 한보라마을휴먼시아4단지아파트 401-408
+열 9 20071129
+열 10 경기 용인시 기흥구 보라동 한보라마을휴먼시아4단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8876
+열 2 446752
+열 3 경기
+열 4 용인시 기흥구
+열 5 보라동
+열 6  
+열 7 
+열 8 한보라마을휴먼시아5단지아파트 501-507
+열 9 20071129
+열 10 경기 용인시 기흥구 보라동 한보라마을휴먼시아5단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8877
+열 2 446755
+열 3 경기
+열 4 용인시 기흥구
+열 5 보라동
+열 6  
+열 7 
+열 8 한보라마을휴먼시아6단지아파트 601-611
+열 9 20100224
+열 10 경기 용인시 기흥구 보라동 한보라마을휴먼시아6단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 8878
+열 2 446800
+열 3 경기
+열 4 용인시 기흥구
+열 5 보라동
+열 6  
+열 7 
+열 8 한보라마을1단지한양수자인아파트 101-109
+열 9 20091216
+열 10 경기 용인시 기흥구 보라동 한보라마을1단지한양수자인...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 8879
+열 2 446801
+열 3 경기
+열 4 용인시 기흥구
+열 5 보라동
+열 6  
+열 7 
+열 8 한보라마을2단지일성트루엘아파트 201-206
+열 9 20091216
+열 10 경기 용인시 기흥구 보라동 한보라마을2단지일성트루엘...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8909
+열 2 446566
+열 3 경기
+열 4 용인시 기흥구
+열 5 보정동
+열 6  
+열 7 
+열 8 신촌마을포스홈타운1단지아파트 201-212
+열 9 20071129
+열 10 경기 용인시 기흥구 보정동 신촌마을포스홈타운1단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8910
+열 2 446756
+열 3 경기
+열 4 용인시 기흥구
+열 5 보정동
+열 6  
+열 7 
+열 8 신촌마을포스홈타운2단지아파트 301-308
+열 9 20071129
+열 10 경기 용인시 기흥구 보정동 신촌마을포스홈타운2단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8708
+열 2 447754
+열 3 경기
+열 4 오산시
+열 5 내삼미동
+열 6  
+열 7 
+열 8 죽미마을휴먼시아10단지아파트 1001-1013
+열 9 20091216
+열 10 경기 오산시 내삼미동 죽미마을휴먼시아10단지아파트 ...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 6814
+열 2 429906
+열 3 경기
+열 4 시흥시
+열 5 은행동
+열 6  
+열 7 
+열 8 시흥은행4차대우푸르지오아파트 401-416
+열 9 20080306
+열 10 경기 시흥시 은행동 시흥은행4차대우푸르지오아파트 4....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8787
+열 2 446757
+열 3 경기
+열 4 용인시 기흥구
+열 5 공세동
+열 6  
+열 7 
+열 8 한보라마을휴먼시아7단지아파트 701-710
+열 9 20071129
+열 10 경기 용인시 기흥구 공세동 한보라마을휴먼시아7단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8788
+열 2 446758
+열 3 경기
+열 4 용인시 기흥구
+열 5 공세동
+열 6  
+열 7 
+열 8 한보라마을휴먼시아9단지아파트 901-908
+열 9 20071129
+열 10 경기 용인시 기흥구 공세동 한보라마을휴먼시아9단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8789
+열 2 446783
+열 3 경기
+열 4 용인시 기흥구
+열 5 공세동
+열 6  
+열 7 
+열 8 탑실마을대주피오레1단지아파트 101-109
+열 9 20091216
+열 10 경기 용인시 기흥구 공세동 탑실마을대주피오레1단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8790
+열 2 446784
+열 3 경기
+열 4 용인시 기흥구
+열 5 공세동
+열 6  
+열 7 
+열 8 탑실마을대주피오레2단지아파트 201-215
+열 9 20091216
+열 10 경기 용인시 기흥구 공세동 탑실마을대주피오레2단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 8962
+열 2 446586
+열 3 경기
+열 4 용인시 기흥구
+열 5 신갈동
+열 6  
+열 7 
+열 8 녹원마을새천년그린빌1단지아파트 101-107
+열 9 20071129
+열 10 경기 용인시 기흥구 신갈동 녹원마을새천년그린빌1단지...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 8963
+열 2 446587
+열 3 경기
+열 4 용인시 기흥구
+열 5 신갈동
+열 6  
+열 7 
+열 8 녹원마을새천년그린빌4단지아파트 401-414
+열 9 20071129
+열 10 경기 용인시 기흥구 신갈동 녹원마을새천년그린빌4단지...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 8964
+열 2 446588
+열 3 경기
+열 4 용인시 기흥구
+열 5 신갈동
+열 6  
+열 7 
+열 8 녹원마을새천년그린빌5단지아파트 501-519
+열 9 20071129
+열 10 경기 용인시 기흥구 신갈동 녹원마을새천년그린빌5단지...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 8965
+열 2 446764
+열 3 경기
+열 4 용인시 기흥구
+열 5 신갈동
+열 6  
+열 7 
+열 8 녹원마을새천년그린빌2단지아파트 201-204
+열 9 20071129
+열 10 경기 용인시 기흥구 신갈동 녹원마을새천년그린빌2단지...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 8966
+열 2 446768
+열 3 경기
+열 4 용인시 기흥구
+열 5 신갈동
+열 6  
+열 7 
+열 8 녹원마을새천년그린빌3단지아파트 301-309
+열 9 20071129
+열 10 경기 용인시 기흥구 신갈동 녹원마을새천년그린빌3단지...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 11114
+열 2 445793
+열 3 경기
+열 4 화성시
+열 5 능동
+열 6  
+열 7 
+열 8 숲속마을모아미래도1단지아파트 841-856
+열 9 20080626
+열 10 경기 화성시 능동 숲속마을모아미래도1단지아파트 841...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 56, maximum: 50)
+열 1 11115
+열 2 445835
+열 3 경기
+열 4 화성시
+열 5 능동
+열 6  
+열 7 
+열 8 숲속마을자연앤경남아너스빌아파트 831-836
+열 9 20091216
+열 10 경기 화성시 능동 숲속마을자연앤경남아너스빌아파트 ...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 62, maximum: 50)
+열 1 11116
+열 2 445826
+열 3 경기
+열 4 화성시
+열 5 능동
+열 6  
+열 7 
+열 8 동탄숲속마을자연앤경남아너스빌아파트 801-809
+열 9 20090622
+열 10 경기 화성시 능동 동탄숲속마을자연앤경남아너스빌아파....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 5701
+열 2 463899
+열 3 경기
+열 4 성남시 분당구
+열 5 삼평동
+열 6  
+열 7 
+열 8 봇들마을9단지금호어울림아파트 901-914
+열 9 20100721
+열 10 경기 성남시 분당구 삼평동 봇들마을9단지금호어울림아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9076
+열 2 448525
+열 3 경기
+열 4 용인시 수지구
+열 5 상현1동
+열 6  
+열 7 
+열 8 상현마을현대2차아이파크아파트 201-207
+열 9 20060401
+열 10 경기 용인시 수지구 상현1동 상현마을현대2차아이파크...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 9077
+열 2 448527
+열 3 경기
+열 4 용인시 수지구
+열 5 상현1동
+열 6  
+열 7 
+열 8 서원마을현대아이파크아파트3단지 301-306
+열 9 20060401
+열 10 경기 용인시 수지구 상현1동 서원마을현대아이파크아파...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 9091
+열 2 448526
+열 3 경기
+열 4 용인시 수지구
+열 5 상현2동
+열 6  
+열 7 
+열 8 만현마을현대아이파크아파트5단지 501-507
+열 9 20060401
+열 10 경기 용인시 수지구 상현2동 만현마을현대아이파크아파...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 9092
+열 2 448926
+열 3 경기
+열 4 용인시 수지구
+열 5 상현2동
+열 6  
+열 7 
+열 8 만현마을현대아이파크2단지아파트 201-207
+열 9 20080626
+열 10 경기 용인시 수지구 상현2동 만현마을현대아이파크2단...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9020
+열 2 446727
+열 3 경기
+열 4 용인시 기흥구
+열 5 청덕동
+열 6  
+열 7 
+열 8 휴먼시아물푸레마을7단지아파트 701-706
+열 9 20091216
+열 10 경기 용인시 기흥구 청덕동 휴먼시아물푸레마을7단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9021
+열 2 446782
+열 3 경기
+열 4 용인시 기흥구
+열 5 청덕동
+열 6  
+열 7 
+열 8 휴먼시아물푸레마을6단지아파트 601-606
+열 9 20091216
+열 10 경기 용인시 기흥구 청덕동 휴먼시아물푸레마을6단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9022
+열 2 446921
+열 3 경기
+열 4 용인시 기흥구
+열 5 청덕동
+열 6  
+열 7 
+열 8 휴먼시아물푸레마을1단지아파트 101-108
+열 9 20090223
+열 10 경기 용인시 기흥구 청덕동 휴먼시아물푸레마을1단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9023
+열 2 446922
+열 3 경기
+열 4 용인시 기흥구
+열 5 청덕동
+열 6  
+열 7 
+열 8 휴먼시아물푸레마을2단지아파트 201-206
+열 9 20090223
+열 10 경기 용인시 기흥구 청덕동 휴먼시아물푸레마을2단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9024
+열 2 446922
+열 3 경기
+열 4 용인시 기흥구
+열 5 청덕동
+열 6  
+열 7 
+열 8 휴먼시아물푸레마을5단지아파트 501-511
+열 9 20090223
+열 10 경기 용인시 기흥구 청덕동 휴먼시아물푸레마을5단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9025
+열 2 446923
+열 3 경기
+열 4 용인시 기흥구
+열 5 청덕동
+열 6  
+열 7 
+열 8 휴먼시아물푸레마을3단지아파트 301-335
+열 9 20090223
+열 10 경기 용인시 기흥구 청덕동 휴먼시아물푸레마을3단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9026
+열 2 446929
+열 3 경기
+열 4 용인시 기흥구
+열 5 청덕동
+열 6  
+열 7 
+열 8 휴먼시아물푸레마을9단지아파트 901-913
+열 9 20090223
+열 10 경기 용인시 기흥구 청덕동 휴먼시아물푸레마을9단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 57, maximum: 50)
+열 1 9027
+열 2 446727
+열 3 경기
+열 4 용인시 기흥구
+열 5 청덕동
+열 6  
+열 7 
+열 8 물푸레마을호반베르디움8단지아파트 801-807
+열 9 20091216
+열 10 경기 용인시 기흥구 청덕동 물푸레마을호반베르디움8단...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 57, maximum: 50)
+열 1 9030
+열 2 446831
+열 3 경기
+열 4 용인시 기흥구
+열 5 하갈동
+열 6  
+열 7 
+열 8 청명호수마을신안인스빌1단지아파트 101-112
+열 9 20100721
+열 10 경기 용인시 기흥구 하갈동 청명호수마을신안인스빌1단...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 57, maximum: 50)
+열 1 9031
+열 2 446831
+열 3 경기
+열 4 용인시 기흥구
+열 5 하갈동
+열 6  
+열 7 
+열 8 청명호수마을신안인스빌2단지아파트 201-204
+열 9 20100721
+열 10 경기 용인시 기흥구 하갈동 청명호수마을신안인스빌2단....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 11173
+열 2 445725
+열 3 경기
+열 4 화성시
+열 5 반송동
+열 6  
+열 7 
+열 8 시범한빛마을동탄아이파크아파트 221-228
+열 9 20070329
+열 10 경기 화성시 반송동 시범한빛마을동탄아이파크아파트 ...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 11174
+열 2 445733
+열 3 경기
+열 4 화성시
+열 5 반송동
+열 6  
+열 7 
+열 8 시범한빛마을삼부르네상스아파트 201-210
+열 9 20070329
+열 10 경기 화성시 반송동 시범한빛마을삼부르네상스아파트 ...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 11175
+열 2 445734
+열 3 경기
+열 4 화성시
+열 5 반송동
+열 6  
+열 7 
+열 8 시범다은마을우남퍼스트빌아파트 349-356
+열 9 20070329
+열 10 경기 화성시 반송동 시범다은마을우남퍼스트빌아파트 ...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 11176
+열 2 445735
+열 3 경기
+열 4 화성시
+열 5 반송동
+열 6  
+열 7 
+열 8 시범한빛마을한화꿈에그린아파트 231-236
+열 9 20070329
+열 10 경기 화성시 반송동 시범한빛마을한화꿈에그린아파트 ...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 11177
+열 2 445757
+열 3 경기
+열 4 화성시
+열 5 반송동
+열 6  
+열 7 
+열 8 동탄나루마을한화꿈에그린아파트 621-630
+열 9 20100721
+열 10 경기 화성시 반송동 동탄나루마을한화꿈에그린아파트 ...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 68, maximum: 50)
+열 1 11178
+열 2 445736
+열 3 경기
+열 4 화성시
+열 5 반송동
+열 6  
+열 7 
+열 8 시범다은마을월드메르디앙반도유보라아파트 331-348
+열 9 20070703
+열 10 경기 화성시 반송동 시범다은마을월드메르디앙반도유보...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 6351
+열 2 443770
+열 3 경기
+열 4 수원시 영통구
+열 5 망포동
+열 6  
+열 7 
+열 8 망포마을현대1차아이파크아파트 101-109
+열 9 20070103
+열 10 경기 수원시 영통구 망포동 망포마을현대1차아이파크아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 6352
+열 2 443777
+열 3 경기
+열 4 수원시 영통구
+열 5 망포동
+열 6  
+열 7 
+열 8 망포마을현대2차아이파크아파트 201-205
+열 9 20070103
+열 10 경기 수원시 영통구 망포동 망포마을현대2차아이파크아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 8815
+열 2 446578
+열 3 경기
+열 4 용인시 기흥구
+열 5 구갈동
+열 6  
+열 7 
+열 8 강남마을7단지계룡리슈빌아파트 701-707
+열 9 20071129
+열 10 경기 용인시 기흥구 구갈동 강남마을7단지계룡리슈빌아....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 55, maximum: 50)
+열 1 5917
+열 2 463963
+열 3 경기
+열 4 성남시 분당구
+열 5 판교동
+열 6  
+열 7 
+열 8 판교원마을현대힐스테이트아파트 1101-1113
+열 9 20100721
+열 10 경기 성남시 분당구 판교동 판교원마을현대힐스테이트...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 9108
+열 2 448739
+열 3 경기
+열 4 용인시 수지구
+열 5 성복동
+열 6  
+열 7 
+열 8 버들치마을경남아너스빌1차아파트 101-111
+열 9 20070903
+열 10 경기 용인시 수지구 성복동 버들치마을경남아너스빌1차...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 9172
+열 2 448954
+열 3 경기
+열 4 용인시 수지구
+열 5 죽전1동
+열 6  
+열 7 
+열 8 도담마을죽전보성아이월드아파트  401-404
+열 9 20080827
+열 10 경기 용인시 수지구 죽전1동 도담마을죽전보성아이월드....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 52, maximum: 50)
+열 1 10145
+열 2 413785
+열 3 경기
+열 4 파주시
+열 5 교하읍
+열 6 동패리
+열 7 
+열 8 책향기마을동문굿모닝힐아파트 1001-1016
+열 9 20060701
+열 10 경기 파주시 교하읍 동패리 책향기마을동문굿모닝힐아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 52, maximum: 50)
+열 1 10146
+열 2 413788
+열 3 경기
+열 4 파주시
+열 5 교하읍
+열 6 동패리
+열 7 
+열 8 책향기마을우남퍼스트빌아파트 1401-1412
+열 9 20060701
+열 10 경기 파주시 교하읍 동패리 책향기마을우남퍼스트빌아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 65, maximum: 50)
+열 1 10147
+열 2 413792
+열 3 경기
+열 4 파주시
+열 5 교하읍
+열 6 동패리
+열 7 
+열 8 숲속길마을월드메르디앙센트럴파크아파트 701-707
+열 9 20070103
+열 10 경기 파주시 교하읍 동패리 숲속길마을월드메르디앙센....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 59, maximum: 50)
+열 1 11433
+열 2 445836
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범복사꽃마을상록하늘채아파트 801-812
+열 9 20091216
+열 10 경기 화성시 향남읍 행정리 향남시범복사꽃마을상록하...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 61, maximum: 50)
+열 1 11434
+열 2 445781
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범살구꽃마을풍림아이원아파트 1401-1414
+열 9 20100224
+열 10 경기 화성시 향남읍 행정리 향남시범살구꽃마을풍림아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 62, maximum: 50)
+열 1 11435
+열 2 445806
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범복사꽃마을한국아델리움아파트 901-909
+열 9 20100224
+열 10 경기 화성시 향남읍 행정리 향남시범복사꽃마을한국아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 62, maximum: 50)
+열 1 11436
+열 2 445821
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범넓은들마을신명스카이뷰아파트 301-309
+열 9 20090622
+열 10 경기 화성시 향남읍 행정리 향남시범넓은들마을신명스...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9299
+열 2 449856
+열 3 경기
+열 4 용인시 처인구
+열 5 모현면
+열 6 일산리
+열 7 
+열 8 효천마을신안인스빌2단지아파트 201-207
+열 9 20090223
+열 10 경기 용인시 처인구 모현면 일산리 효천마을신안인스빌...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 9300
+열 2 449856
+열 3 경기
+열 4 용인시 처인구
+열 5 모현면
+열 6 일산리
+열 7 
+열 8 효천마을신안인스빌1단지아파트 101-105
+열 9 20090622
+열 10 경기 용인시 처인구 모현면 일산리 효천마을신안인스빌...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 11429
+열 2 445803
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범넓은들마을우미린아파트 101-110
+열 9 20100224
+열 10 경기 화성시 향남읍 행정리 향남시범넓은들마을우미린...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 56, maximum: 50)
+열 1 11430
+열 2 445823
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범복사꽃마을휴먼시아아파트 701-711
+열 9 20090622
+열 10 경기 화성시 향남읍 행정리 향남시범복사꽃마을휴먼시...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 59, maximum: 50)
+열 1 11431
+열 2 445822
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범넓은들마을에일린의뜰아파트 401-408
+열 9 20090622
+열 10 경기 화성시 향남읍 행정리 향남시범넓은들마을에일린...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 58, maximum: 50)
+열 1 11432
+열 2 445829
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범살구꽃마을신영지웰아파트 1201-1206
+열 9 20090622
+열 10 경기 화성시 향남읍 행정리 향남시범살구꽃마을신영지....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 61, maximum: 50)
+열 1 11437
+열 2 445834
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범살구꽃마을한일베라체아파트 1301-1306
+열 9 20090622
+열 10 경기 화성시 향남읍 행정리 향남시범살구꽃마을한일베...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 11212
+열 2 445779
+열 3 경기
+열 4 화성시
+열 5 병점동
+열 6  
+열 7 
+열 8 안화마을우남퍼스트빌2차아파트 201-208
+열 9 20070103
+열 10 경기 화성시 병점동 안화마을우남퍼스트빌2차아파트 2...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 11213
+열 2 445779
+열 3 경기
+열 4 화성시
+열 5 병점동
+열 6  
+열 7 
+열 8 구봉마을우남퍼스트빌1차아파트 101-105
+열 9 20070103
+열 10 경기 화성시 병점동 구봉마을우남퍼스트빌1차아파트 1...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 11252
+열 2 445737
+열 3 경기
+열 4 화성시
+열 5 봉담읍
+열 6 와우리
+열 7 
+열 8 해오름마을봉담그대가2단지아파트 201-202
+열 9 20090223
+열 10 경기 화성시 봉담읍 와우리 해오름마을봉담그대가2단지...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 11253
+열 2 445737
+열 3 경기
+열 4 화성시
+열 5 봉담읍
+열 6 와우리
+열 7 
+열 8 해오름마을봉담그대가1단지아파트 101-105
+열 9 20090223
+열 10 경기 화성시 봉담읍 와우리 해오름마을봉담그대가1단지...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 64, maximum: 50)
+열 1 11438
+열 2 445814
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범살구꽃마을화성파크드림아파트 1501-1511
+열 9 20090622
+열 10 경기 화성시 향남읍 행정리 향남시범살구꽃마을화성파...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 64, maximum: 50)
+열 1 11439
+열 2 445824
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범살구꽃마을대방노블랜드아파트 1001-1012
+열 9 20090622
+열 10 경기 화성시 향남읍 행정리 향남시범살구꽃마을대방노...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 67, maximum: 50)
+열 1 11440
+열 2 445825
+열 3 경기
+열 4 화성시
+열 5 향남읍
+열 6 행정리
+열 7 
+열 8 향남시범살구꽃마을제일오투그란데아파트 1101-1106
+열 9 20090622
+열 10 경기 화성시 향남읍 행정리 향남시범살구꽃마을제일오.....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 12135
+열 2 621790
+열 3 경남
+열 4 김해시
+열 5 장유면
+열 6 삼문리
+열 7 
+열 8 석봉마을대동피렌체2단지아파트 201-204
+열 9 20091216
+열 10 경남 김해시 장유면 삼문리 석봉마을대동피렌체2단지아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 12136
+열 2 621790
+열 3 경남
+열 4 김해시
+열 5 장유면
+열 6 삼문리
+열 7 
+열 8 석봉마을대동피렌체3단지아파트 301-303
+열 9 20091216
+열 10 경남 김해시 장유면 삼문리 석봉마을대동피렌체3단지아.....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 21820
+열 2 704967
+열 3 대구
+열 4 달서구
+열 5 본리동
+열 6  
+열 7 
+열 8 성당래미안e-편한세상1단지아파트 101-110
+열 9 20080827
+열 10 대구 달서구 본리동 성당래미안e-편한세상1단지아파트...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 21821
+열 2 704968
+열 3 대구
+열 4 달서구
+열 5 본리동
+열 6  
+열 7 
+열 8 성당래미안e-편한세상2단지아파트 201-219
+열 9 20080827
+열 10 대구 달서구 본리동 성당래미안e-편한세상2단지아파트.....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 57, maximum: 50)
+열 1 9093
+열 2 448524
+열 3 경기
+열 4 용인시 수지구
+열 5 상현2동
+열 6  
+열 7 
+열 8 만현마을현대아이파크아파트10단지 1001-1011
+열 9 20060401
+열 10 경기 용인시 수지구 상현2동 만현마을현대아이파크아파....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 21904
+열 2 704969
+열 3 대구
+열 4 달서구
+열 5 성당2동
+열 6  
+열 7 
+열 8 성당래미안e-편한세상3단지아파트 301-309
+열 9 20080827
+열 10 대구 달서구 성당2동 성당래미안e-편한세상3단지아파트....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 20165
+열 2 506739
+열 3 광주
+열 4 광산구
+열 5 수완동
+열 6  
+열 7 
+열 8 해솔마을현진에버빌1단지아파트 101-110
+열 9 20091216
+열 10 광주 광산구 수완동 해솔마을현진에버빌1단지아파트 1.....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 20283
+열 2 506735
+열 3 광주
+열 4 광산구
+열 5 월계동
+열 6  
+열 7 
+열 8 한국방송통신대학교광주전남지역대학
+열 9 20100721
+열 10 광주 광산구 월계동 한국방송통신대학교광주전남지역대...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 20339
+열 2 506860
+열 3 광주
+열 4 광산구
+열 5 흑석동
+열 6  
+열 7 
+열 8 장자울마을휴먼시아4단지아파트 401-407
+열 9 20091216
+열 10 광주 광산구 흑석동 장자울마을휴먼시아4단지아파트 4...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 20340
+열 2 506861
+열 3 광주
+열 4 광산구
+열 5 흑석동
+열 6  
+열 7 
+열 8 장자울마을휴먼시아5단지아파트 501-504
+열 9 20091216
+열 10 광주 광산구 흑석동 장자울마을휴먼시아5단지아파트 5...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 20118
+열 2 506845
+열 3 광주
+열 4 광산구
+열 5 산정동
+열 6  
+열 7 
+열 8 광주하남부영사랑으로1차아파트 101-109
+열 9 20091216
+열 10 광주 광산구 산정동 광주하남부영사랑으로1차아파트 1...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 20119
+열 2 506846
+열 3 광주
+열 4 광산구
+열 5 산정동
+열 6  
+열 7 
+열 8 광주하남부영사랑으로2차아파트 201-212
+열 9 20091216
+열 10 광주 광산구 산정동 광주하남부영사랑으로2차아파트 2.....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 59, maximum: 50)
+열 1 23605
+열 2 706946
+열 3 대구
+열 4 수성구
+열 5 범어3동
+열 6  
+열 7 
+열 8 범어월드메르디앙웨스턴카운티아파트 201-207
+열 9 20081117
+열 10 대구 수성구 범어3동 범어월드메르디앙웨스턴카운티아...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 62, maximum: 50)
+열 1 23606
+열 2 706958
+열 3 대구
+열 4 수성구
+열 5 범어3동
+열 6  
+열 7 
+열 8 범어동월드메르디앙이스턴카운티아파트 101-103
+열 9 20100721
+열 10 대구 수성구 범어3동 범어동월드메르디앙이스턴카운티...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 23655
+열 2 706950
+열 3 대구
+열 4 수성구
+열 5 상동
+열 6  
+열 7 
+열 8 수성동일하이빌레이크시티아파트 101-116
+열 9 20090622
+열 10 대구 수성구 상동 수성동일하이빌레이크시티아파트 10......
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 56, maximum: 50)
+열 1 28066
+열 2 612900
+열 3 부산
+열 4 해운대구
+열 5 반여1동
+열 6  
+열 7 
+열 8 해운대메가센텀한화꿈에그린아파트 101-118
+열 9 20080827
+열 10 부산 해운대구 반여1동 해운대메가센텀한화꿈에그린아....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 29712
+열 2 157796
+열 3 서울
+열 4 강서구
+열 5 우장산동
+열 6  
+열 7 
+열 8 우장산아이파크이편한세상아파트  101-142
+열 9 20081117
+열 10 서울 강서구 우장산동 우장산아이파크이편한세상아파트.....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 34991
+열 2 122714
+열 3 서울
+열 4 은평구
+열 5 갈현2동
+열 6  
+열 7 
+열 8 씨제이헬로비전드림씨티방송은평지점
+열 9 20090622
+열 10 서울 은평구 갈현2동 씨제이헬로비전드림씨티방송은평..........
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 59, maximum: 50)
+열 1 37688
+열 2 405761
+열 3 인천
+열 4 남동구
+열 5 구월2동
+열 6  
+열 7 
+열 8 구월힐스테이트&롯데캐슬골드아파트 1101-1511
+열 9 20071129
+열 10 인천 남동구 구월2동 구월힐스테이트&롯데캐슬골드아파...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 37731
+열 2 405788
+열 3 인천
+열 4 남동구
+열 5 논현동
+열 6  
+열 7 
+열 8 논현휴먼시아2단지범마을아파트 201-212
+열 9 20100224
+열 10 인천 남동구 논현동 논현휴먼시아2단지범마을아파트 2...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 37732
+열 2 405787
+열 3 인천
+열 4 남동구
+열 5 논현동
+열 6  
+열 7 
+열 8 등대마을논현주공14단지아파트 1401-1413
+열 9 20090622
+열 10 인천 남동구 논현동 등대마을논현주공14단지아파트 14...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 37733
+열 2 405789
+열 3 인천
+열 4 남동구
+열 5 논현동
+열 6  
+열 7 
+열 8 논현휴먼시아1단지숲속마을아파트 101-111
+열 9 20100224
+열 10 인천 남동구 논현동 논현휴먼시아1단지숲속마을아파트....
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 51, maximum: 50)
+열 1 38229
+열 2 404798
+열 3 인천
+열 4 서구
+열 5 검암동
+열 6  
+열 7 
+열 8 검암4차신명스카이뷰골드아파트 501-508
+열 9 20070903
+열 10 인천 서구 검암동 검암4차신명스카이뷰골드아파트 501...
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 56, maximum: 50)
+열 1 38235
+열 2 404770
+열 3 인천
+열 4 서구
+열 5 경서동
+열 6  
+열 7 
+열 8 한국남부발전(주)신인천천연가스발전본부
+열 9 20090929
+열 10 인천 서구 경서동 한국남부발전(주)신인천천연가스발전........
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 54, maximum: 50)
+열 1 48462
+열 2 330873
+열 3 충남
+열 4 천안시 동남구
+열 5 용곡동
+열 6  
+열 7 
+열 8 용곡마을세광2차엔리치타워아파트 201-215
+열 9 20081117
+열 10 충남 천안시 동남구 용곡동 용곡마을세광2차엔리치타워........
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZIPCODE_T"."APTNAME" (actual: 53, maximum: 50)
+열 1 50836
+열 2 360791
+열 3 충북
+열 4 청주시 상당구
+열 5 금천동
+열 6  
+열 7 
+열 8 장자마을부영e-그린타운2차아파트 601-606
+열 9 20060701
+열 10 충북 청주시 상당구 금천동 장자마을부영e-그린타운2차......
+                                                        51406 행이 임포트되었습니다
+. . 테이블                    "ZM_CODE_T"(를)을 임포트 중
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZM_CODE_T"."REF1_TXT" (actual: 54, maximum: 50)
+열 1 10481
+열 2 1048
+열 3 영업소구분
+열 4 1
+열 5 경인영업소
+열 6 0
+열 7 공통
+열 8 0
+열 9 공통
+열 10 Y
+열 11 
+열 12 
+열 13 Y
+열 14 
+열 15 
+열 16 
+열 17 
+열 18 
+열 19 
+열 20 
+열 21 
+열 22 1
+열 23 생산계획장표에서 나타내는 영업팀 구분
+열 24 
+열 25 
+열 26 
+열 27 
+열 28 
+열 29 
+열 30 
+열 31 
+열 32 
+열 33 MZTB03
+열 34 31-12월-1999:00:00:00
+열 35 31-12월-2999:00:00:00
+열 36 30-1월 -2008:00:00:00
+열 37 system
+열 38 30-1월 -2008:00:00:00
+열 39 system
+열 40 
+열 41 
+열 42 
+열 43 
+열 44 
+열 45 
+열 46 
+열 47 
+열 48 
+열 49 
+열 50 
+열 51 
+.
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZM_CODE_T"."MINOR_NAM" (actual: 52, maximum: 50)
+열 1 13674
+열 2 1367
+열 3 외주가공특기사항
+열 4 4
+열 5 급준도 : 1 이하  (급준도=파고/파장×100)
+열 6 0
+열 7 공통
+열 8 0
+열 9 공통
+열 10 Y
+열 11 
+열 12 
+열 13 
+열 14 
+열 15 
+열 16 
+열 17 
+열 18 
+열 19 
+열 20 
+열 21 
+열 22 
+열 23 
+열 24 
+열 25 
+열 26 
+열 27 
+열 28 
+열 29 
+열 30 
+열 31 
+열 32 
+열 33 
+열 34 
+열 35 
+열 36 
+열 37 
+열 38 
+열 39 
+열 40 
+열 41 
+열 42 
+열 43 
+열 44 
+열 45 
+열 46 
+열 47 
+열 48 
+열 49 
+열 50 
+열 51 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZM_CODE_T"."MINOR_NAM" (actual: 58, maximum: 50)
+열 1 136710
+열 2 1367
+열 3 외주가공특기사항
+열 4 10
+열 5 작업 완료 후 작업내역서 fax 송부 바랍니다.
+열 6 0
+열 7 공통
+열 8 0
+열 9 공통
+열 10 Y
+열 11 
+열 12 
+열 13 
+열 14 
+열 15 
+열 16 
+열 17 
+열 18 
+열 19 
+열 20 
+열 21 
+열 22 
+열 23 
+열 24 
+열 25 
+열 26 
+열 27 
+열 28 
+열 29 
+열 30 
+열 31 
+열 32 
+열 33 
+열 34 
+열 35 
+열 36 
+열 37 
+열 38 
+열 39 
+열 40 
+열 41 
+열 42 
+열 43 
+열 44 
+열 45 
+열 46 
+열 47 
+열 48 
+열 49 
+열 50 
+열 51 .
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZM_CODE_T"."MINOR_NAM" (actual: 66, maximum: 50)
+열 1 136721
+열 2 1367
+열 3 외주가공특기사항
+열 4 21
+열 5 H/R no. 마다 제조규격에 맞게 작업(코일 바뀜 금지)
+열 6 0
+열 7 공통
+열 8 0
+열 9 공통
+열 10 Y
+열 11 
+열 12 
+열 13 
+열 14 
+열 15 
+열 16 
+열 17 
+열 18 
+열 19 
+열 20 
+열 21 
+열 22 
+열 23 
+열 24 
+열 25 
+열 26 
+열 27 
+열 28 
+열 29 
+열 30 
+열 31 
+열 32 
+열 33 
+열 34 
+열 35 
+열 36 
+열 37 
+열 38 
+열 39 
+열 40 
+열 41 
+열 42 
+열 43 
+열 44 
+열 45 
+열 46 
+열 47 
+열 48 
+열 49 
+열 50 
+열 51 
+IMP-00019: ORACLE 12899 오류로 인하여 행이 거부되었습니다
+IMP-00003: ORACLE 오류 12899이(가) 발생했습니다.
+ORA-12899: value too large for column "HR"."ZM_CODE_T"."MINOR_NAM" (actual: 59, maximum: 50)
+열 1 136726
+열 2 1367
+열 3 외주가공특기사항
+열 4 26
+열 5 "입회예정이니, 작업 전 연락 부탁드립니다."
+열 6 0
+열 7 공통
+열 8 0
+열 9 공통
+열 10 Y
+열 11 
+열 12 
+열 13 
+열 14 
+열 15 
+열 16 
+열 17 
+열 18 
+열 19 
+열 20 
+열 21 
+열 22 
+열 23 
+열 24 
+열 25 
+열 26 
+열 27 
+열 28 
+열 29 
+열 30 
+열 31 
+열 32 
+열 33 
+열 34 
+열 35 
+열 36 
+열 37 
+열 38 
+열 39 
+열 40 
+열 41 
+열 42 
+열 43 
+열 44 
+열 45 
+열 46 
+열 47 
+열 48 
+열 49 
+열 50 
+열 51 .
+                                                         3068 행이 임포트되었습니다
+. . 테이블                 "ZM_COMPANY_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                   "ZM_GROUP_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "ZM_ROLE_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블              "ZM_USER_GROUP_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                    "ZM_USER_T"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                  "ZM_WINDOW_T"(를)을 임포트 중
+                                                          798 행이 임포트되었습니다
+. . 테이블                     "공급업체"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "상품"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "입고"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "판매"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+. . 테이블                         "회원"(를)을 임포트 중
+                                                            0 행이 임포트되었습니다
+IMP-00017: 다음 명령이 실패하고 ORACLE 2298 오류가 발생했습니다:
+ "ALTER TABLE "CART" ADD FOREIGN KEY ("B_CODE") REFERENCES "BOOKS" ("B_CODE")"
+ " ENABLE"
+IMP-00003: ORACLE 오류 2298이(가) 발생했습니다.
+ORA-02298: cannot validate (HR.SYS_C007753) - parent keys not found
+제약 조건을 사용으로 설정에 대한 정보...
+경고와 함께 임포트가 정상 종료되었습니다.

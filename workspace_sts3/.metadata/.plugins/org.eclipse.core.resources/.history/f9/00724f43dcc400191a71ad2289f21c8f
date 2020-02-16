@@ -1,0 +1,49 @@
+package com.hy;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.vo.DeptVO;
+@Service
+public class DeptLogic {
+	Logger logger = Logger.getLogger(DeptLogic.class);
+	@Autowired
+	public DeptDaoImpl deptDaoImpl = null;
+	public void setDeptDaoImpl(DeptDaoImpl deptDaoImpl) {
+		this.deptDaoImpl = deptDaoImpl;
+	}
+	public DeptVO test() {
+		DeptVO rdVO = deptDaoImpl.test();
+		return rdVO;
+	}
+	public List<HashMap> getDeptList(DeptVO pdVO) {
+		List<HashMap> deptList = 
+				deptDaoImpl.getDeptList(pdVO);
+		return deptList;
+	}
+	public int deptInsert(DeptVO pdVO) {
+		int result = deptDaoImpl.deptInsert(pdVO);
+		return result;
+	}
+	public int deptDelete(String[] depts) {
+		int result = deptDaoImpl.deptDelete(depts);
+		return result;
+	}
+	public int deptUpdate(DeptVO pdVO) {
+		int result = deptDaoImpl.deptUpdate(pdVO);
+		return 0;
+	}
+
+}
+
+
+
+
+
+
+
+
