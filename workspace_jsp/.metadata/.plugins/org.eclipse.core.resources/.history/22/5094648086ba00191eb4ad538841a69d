@@ -1,0 +1,16 @@
+package com.mvc2;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class ModelAndView {
+	HttpServletRequest req = null;
+	public ModelAndView(HttpServletRequest req) {
+		this.req = req;
+	}
+	public void setViewName(String viewName) {
+		
+	}
+	public void addObject(String name,Object obj) {
+		req.setAttribute(name, obj);
+	}
+}

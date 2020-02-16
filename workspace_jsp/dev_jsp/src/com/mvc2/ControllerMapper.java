@@ -23,6 +23,9 @@ public class ControllerMapper {
 			if("board".equals(work)) {
 				controller = new BoardController(requestName,ControllerMapper.crud);
 			}
+			else if("json".equals(work)) {
+				controller = new RestController(requestName,ControllerMapper.crud);
+			}
 		}
 		/*
 		else if(commands.length==3) {

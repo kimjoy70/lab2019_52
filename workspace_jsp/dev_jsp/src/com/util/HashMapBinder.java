@@ -44,29 +44,32 @@ public class HashMapBinder {
 		}
 		//첨부파일에 대한 정보를 받아오는 코드 추가
 		Enumeration<String> files = multi.getFileNames();
-		//이렇게 읽어온 파일이름을 객체로 만들어준다.
-		File file = null;
-		while(files.hasMoreElements()) {
-			String fname = files.nextElement();
-			logger.info("fname:"+fname);//bs_file
-			String filename = multi.getFilesystemName(fname);
-			logger.info("filename:"+filename);//첨부파일이름
-			pMap.put("bs_file", filename);
-			//file객체 생성하기 -> 왜냐하면 첨부파일의 크기를 알고 싶어요....
-			//file = multi.getFile(filename);
-			file = new File(filename);
-			logger.info("file:"+file);
-		}
-		//첨부파일의 크기를 담을 수 있는 변수
-		double size = 0;
-		if(file != null) {
-			size = file.length();//파일 크기가 저장 5.2MB
-			logger.info("size:"+size);
-			size = size/(1024);
-			logger.info("size/1024:"+size);
-			pMap.put("bs_size", size);
-		}
-		
+		if(files!=null) {
+			//이렇게 읽어온 파일이름을 객체로 만들어준다.
+			File file = null;
+			while(files.hasMoreElements()) {
+				String fname = files.nextElement();
+				logger.info("fname:"+fname);//bs_file
+				String filename = multi.getFilesystemName(fname);
+				logger.info("filename:"+filename);//첨부파일이름
+				pMap.put("bs_file", filename);
+				//file객체 생성하기 -> 왜냐하면 첨부파일의 크기를 알고 싶어요....
+				//file = multi.getFile(filename);
+				if(filename !=null && filename.length()>1) {
+					file = new File(realFolder+"\\"+filename);
+				}
+				logger.info("file:"+file);
+			}
+			//첨부파일의 크기를 담을 수 있는 변수
+			double size = 0;
+			if(file != null) {
+				size = file.length();//파일 크기가 저장 5.2MB
+				logger.info("size:"+size);
+				size = size/(1024);
+				logger.info("size/1024:"+size);
+				pMap.put("bs_size", size);
+			}
+		}//////////////end of 파일이 있을 때만
 	}	
 	public void bindPost(Map<String,Object> pMap) {
 		pMap.clear();

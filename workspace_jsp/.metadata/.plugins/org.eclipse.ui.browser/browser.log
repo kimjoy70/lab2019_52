@@ -195,3 +195,14 @@
 
 7월 31, 2019 21:49:16.82 NEW SESSION
 7월 31, 2019 21:49:16.82 [15944:7204:0731/214916.808:ERROR:socket_stream.cc(219)] Closing stream with result -2
+
+8월 05, 2019 08:53:42.43 NEW SESSION
+8월 05, 2019 08:53:42.43 [28136:2344:0805/085342.427:ERROR:bookmark_model_associator.cc(988)] Bookmarks persistence error was encountered: Native version (7) does not match sync version (1)
+8월 05, 2019 09:00:18.67 [28136:2344:0805/090018.673:ERROR:http_bridge.cc(110)] NOT IMPLEMENTED
+8월 05, 2019 09:00:18.72 [28136:16496:0805/090018.724:ERROR:browser_process_sub_thread.cc(221)] Waited 15 ms for network service
+8월 05, 2019 09:00:18.75 
+8월 05, 2019 09:00:18.75 KLIB_SelfTest return : KLR_OK
+8월 05, 2019 10:32:31.54 [15356:12772:0805/103231.543:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+
+8월 10, 2019 04:48:02.55 NEW SESSION
+8월 10, 2019 04:48:02.55 [15568:19548:0810/044802.554:ERROR:browser_process_sub_thread.cc(221)] Waited 11 ms for network service

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.mvc2019.ActionServlet&apos; to &apos;ActionServlet2019&apos;&#x0D;&#x0A;- Original project: &apos;dev_jsp&apos;&#x0D;&#x0A;- Original element: &apos;com.mvc2019.ActionServlet&apos;&#x0D;&#x0A;- Renamed element: &apos;com.mvc2019.ActionServlet2019&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ActionServlet&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.mvc2019{ActionServlet.java[ActionServlet" matchStrategy="1" name="ActionServlet2019" qualified="false" references="true" similarDeclarations="false" stamp="1565341399687" textual="false" version="1.0"/>
+</session>

@@ -47,10 +47,11 @@ public class BoardMasterDao {
 		sqlSession.commit();
 		return result;
 	}
-	public int totalRecord() {
+	public int totalRecord(BoardMasterVO pbmVO) {
+		logger.info("cb_search:"+pbmVO.getCb_search()+", tb_search:"+pbmVO.getTb_search());
 		int total = 0;
 		SqlSession sqlSession = sqlSessionFactory.openSession();
-		total=sqlSession.selectOne("totalRecord","test");
+		total=sqlSession.selectOne("totalRecord",pbmVO);
 		return total;
 	}
 	public void bmStepUpdate(Map<String, Object> pMap) {

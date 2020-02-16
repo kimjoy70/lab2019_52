@@ -8,8 +8,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class MyBatisCommonFactory {
-	private SqlSessionFactory sqlSessionFactory = null;
-	public void init() {
+	private static SqlSessionFactory sqlSessionFactory = null;
+	public static void init() {
 		try {
 			String resource = "com/mybatis/MapperConfig.xml";
 			/* String resource = "com/mybatis/Configuration.xml"; */
@@ -24,7 +24,7 @@ public class MyBatisCommonFactory {
 			e.getMessage();
 		}
 	}
-	public  SqlSessionFactory getSqlSessionFactory() {
+	public static SqlSessionFactory getSqlSessionFactory() {
 		init();
 		return sqlSessionFactory;
 	}
